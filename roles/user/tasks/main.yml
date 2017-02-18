@@ -1,0 +1,19 @@
+---
+- name: Add or update user and set password
+  action: user name={{ username }} password={{ password }} shell=/bin/bash
+
+- name: Change user directory permissions to 750
+  file: path=/home/{{ username }} state=directory mode=750
+
+- name: Add or udpate authorized key
+  action: authorized_key user={{ username }} key="{{ lookup('file', ssh_key) }}"
+  when: ssh_key is defined
+
+- name: Add user to sudoers
+  action: lineinfile dest=/etc/sudoers regexp="{{ username }} ALL" line="{{ username }} ALL=(ALL) NOPASSWD:ALL" state=present  
+  when: sudoers == 'yes' 
+
+- name: Remove user from sudoers
+  action: lineinfile dest=/etc/sudoers regexp="{{ username }} ALL" line="{{ username }} ALL=(ALL) NOPASSWD:ALL" state=absent
+  when: sudoers == 'no' 
+

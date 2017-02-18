@@ -1,0 +1,38 @@
+#!/bin/sh
+
+rm osa/doc/source/draft-operations-guide/openstack-operations/access-environment.rst
+rm osa/tests/roles/bootstrap-host/tasks/install-apt.yml
+cp repo/deploy-guide/source/app-networking.rst osa/deploy-guide/source/app-networking.rst
+cp repo/deploy-guide/source/deploymenthost.rst osa/deploy-guide/source/deploymenthost.rst
+cp repo/deploy-guide/source/overview-requirements.rst osa/deploy-guide/source/overview-requirements.rst
+cp repo/deploy-guide/source/targethosts-prepare.rst osa/deploy-guide/source/targethosts-prepare.rst
+cp repo/doc/source/developer-docs/quickstart-aio.rst osa/doc/source/developer-docs/quickstart-aio.rst
+cp repo/doc/source/draft-operations-guide/maintenance-tasks/rabbitmq-maintain.rst osa/doc/source/draft-operations-guide/maintenance-tasks/rabbitmq-maintain.rst
+cp repo/doc/source/draft-operations-guide/openstack-operations.rst osa/doc/source/draft-operations-guide/openstack-operations.rst
+cp repo/doc/source/index.rst osa/doc/source/index.rst
+cp repo/etc/openstack_deploy/openstack_user_config.yml.example osa/etc/openstack_deploy/openstack_user_config.yml.example
+cp repo/etc/openstack_deploy/user_variables.yml osa/etc/openstack_deploy/user_variables.yml
+cp repo/global-requirement-pins.txt osa/global-requirement-pins.txt
+cp repo/playbooks/defaults/repo_packages/gnocchi.yml osa/playbooks/defaults/repo_packages/gnocchi.yml
+cp repo/playbooks/defaults/repo_packages/nova_consoles.yml osa/playbooks/defaults/repo_packages/nova_consoles.yml
+cp repo/playbooks/defaults/repo_packages/openstack_services.yml osa/playbooks/defaults/repo_packages/openstack_services.yml
+cp repo/playbooks/defaults/repo_packages/openstack_testing.yml osa/playbooks/defaults/repo_packages/openstack_testing.yml
+cp repo/playbooks/inventory/group_vars/all.yml osa/playbooks/inventory/group_vars/all.yml
+cp repo/scripts/gate-check-commit.sh osa/scripts/gate-check-commit.sh
+cp repo/scripts/scripts-library.sh osa/scripts/scripts-library.sh
+cp repo/tests/bootstrap-aio.yml osa/tests/bootstrap-aio.yml
+cp repo/tests/roles/bootstrap-host/defaults/main.yml osa/tests/roles/bootstrap-host/defaults/main.yml
+cp repo/tests/roles/bootstrap-host/tasks/main.yml osa/tests/roles/bootstrap-host/tasks/main.yml
+cp repo/tests/roles/bootstrap-host/tasks/prepare_loopback_cinder.yml osa/tests/roles/bootstrap-host/tasks/prepare_loopback_cinder.yml
+cp repo/tests/roles/bootstrap-host/tasks/prepare_loopback_swap.yml osa/tests/roles/bootstrap-host/tasks/prepare_loopback_swap.yml
+cp repo/tests/roles/bootstrap-host/tasks/prepare_networking.yml osa/tests/roles/bootstrap-host/tasks/prepare_networking.yml
+cp repo/tests/roles/bootstrap-host/templates/user_variables.aio.yml.j2 osa/tests/roles/bootstrap-host/templates/user_variables.aio.yml.j2
+cp repo/tests/roles/bootstrap-host/vars/redhat.yml osa/tests/roles/bootstrap-host/vars/redhat.yml
+cp repo/tests/roles/bootstrap-host/vars/ubuntu.yml osa/tests/roles/bootstrap-host/vars/ubuntu.yml
+cp repo/doc/source/draft-operations-guide/openstack-operations/cli-operations.rst       osa/doc/source/draft-operations-guide/openstack-operations/cli-operations.rst
+cp repo/releasenotes/notes/Add-CentOS-support-9a63262163dfb678.yaml                     osa/releasenotes/notes/Add-CentOS-support-9a63262163dfb678.yaml
+cp repo/tests/roles/bootstrap-host/tasks/install_packages.yml                           osa/tests/roles/bootstrap-host/tasks/install_packages.yml
+cp repo/tests/roles/bootstrap-host/templates/redhat_interface_alias.cfg.j2              osa/tests/roles/bootstrap-host/templates/redhat_interface_alias.cfg.j2
+cp repo/tests/roles/bootstrap-host/templates/redhat_interface_default.cfg.j2            osa/tests/roles/bootstrap-host/templates/redhat_interface_default.cfg.j2
+cp repo/tests/roles/bootstrap-host/templates/redhat_interface_ifdown-post.cfg.j2        osa/tests/roles/bootstrap-host/templates/redhat_interface_ifdown-post.cfg.j2
+cp repo/tests/roles/bootstrap-host/templates/redhat_interface_ifup-post.cfg.j2          osa/tests/roles/bootstrap-host/templates/redhat_interface_ifup-post.cfg.j2

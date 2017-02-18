@@ -1,0 +1,7 @@
+--- 
+domain: 'icloudmon.local'
+locale: 'en_US.UTF-8'
+language: 'en_US:en'
+timezone: 'America/New_York'
+ntp_server: 'ns1.icloudmon.local'
+

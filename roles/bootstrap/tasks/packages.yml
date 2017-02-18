@@ -1,0 +1,25 @@
+---
+- name: Install packages
+  action: apt pkg={{ item }} state=installed
+  with_items:
+    - vim
+    - bridge-utils
+    - debootstrap
+    - ifenslave
+    - ifenslave-2.6
+    - lsof
+    - lvm2
+    - ntp
+    - ntpdate
+    - openssh-server
+    - sudo
+    - tcpdump
+    - vlan
+
+- name: Update modules for bonding
+  action: lineinfile dest=/etc/modules regexp="^bonding" line="bonding" state=present
+  reboot: yes
+
+- name: Update modules for vlan
+  action: lineinfile dest=/etc/modules regexp="^8021q" line="8021q" state=present
+  reboot: yes
