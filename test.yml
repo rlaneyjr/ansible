@@ -1,0 +1,11 @@
+---
+- name: Add or update the existing user on Ubuntu servers
+  hosts: test
+  roles:
+    - user
+ 
+  vars:
+    - username: cisco
+    - password: cisco
+    - ssh_key: '~/.ssh/cloud_id.pub'
+    - sudoers: yes
