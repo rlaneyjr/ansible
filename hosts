@@ -27,6 +27,9 @@ imoniot08
 imoniot09
 imoniot10
 
+[osa-servers:vars]
+ansible_become_pass=ralrox22
+
 [all-servers]
 imoniot01
 imoniot02

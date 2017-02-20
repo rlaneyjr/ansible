@@ -5,7 +5,5 @@
     - user
  
   vars:
-    - username: rlaney
-    - password: ralrox22
     - ssh_key: '~/.ssh/cloud_id.pub'
     - sudoers: yes

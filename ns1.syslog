@@ -1,0 +1,9 @@
+
+Feb 18 23:34:50 ns1 systemd[1]: Started Session 265 of user rlaney.
+
+Feb 18 23:34:51 ns1 ansible-setup: Invoked with filter=* gather_subset=['all'] fact_path=/etc/ansible/facts.d gather_timeout=10
+
+Feb 18 23:34:51 ns1 ansible-user: Invoked with comment=None ssh_key_bits=0 update_password=always non_unique=False force=False ssh_key_type=rsa ssh_key_passphrase=NOT_LOGGING_PARAMETER createhome=True uid=None home=None append=False      skeleton=None ssh_key_comment=ansible-generated on ns1.icloudmon.local group=None system=False state=present shell=/bin/bash expires=None ssh_key_file=None groups=None move_home=False password=NOT_LOGGING_PARAMETER name=rlaney            seuser=None remove=False login_class=None generate_ssh_key=None
+
+Feb 18 23:41:47 ns1 systemd[1]: Started Session 266 of user rlaney.
+
