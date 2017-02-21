@@ -1,6 +1,7 @@
 ---
 - name: Reboot server
-  hosts: server
-  sudo: yes
+  hosts: osa
   roles:
     - reboot 
+  vars:
+    reboot: "yes"

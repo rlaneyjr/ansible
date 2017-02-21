@@ -1,11 +1,10 @@
 ---
 - name: Add or update the existing user on Ubuntu servers
-  hosts: osa-servers
+  hosts: osa
   roles:
     - user
  
   vars:
-    - username: rlaney
-    - password: ralrox22
+    - username: 'rlaney'
     - ssh_key: '~/.ssh/cloud_id.pub'
-    - sudoers: yes
+    - sudoers: 'yes'

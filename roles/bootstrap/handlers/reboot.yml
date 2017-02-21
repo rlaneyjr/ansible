@@ -1,6 +1,6 @@
 ---
 - name: restart machine
-  command: reboot now
+  command: reboot now "Ansible updates triggered"
   async: 0
   poll: 0
   ignore_errors: true

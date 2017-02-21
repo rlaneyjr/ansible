@@ -1,6 +1,9 @@
 ---
 - name: Install packages
-  action: apt pkg={{ item }} state=installed
+  apt: 
+    name: '{{ item }}'
+    state: latest
+    only_upgrade:
   with_items:
     - vim
     - bridge-utils
@@ -17,9 +20,19 @@
     - vlan
 
 - name: Update modules for bonding
-  action: lineinfile dest=/etc/modules regexp="^bonding" line="bonding" state=present
-  reboot: yes
+  lineinfile:
+    dest: /etc/modules
+    regexp: "^bonding"
+    line: "bonding"
+    state: present
+  notify:
+    reboot: "yes"
 
 - name: Update modules for vlan
-  action: lineinfile dest=/etc/modules regexp="^8021q" line="8021q" state=present
-  reboot: yes
+  lineinfile:
+    dest: /etc/modules
+    regexp: "^8021q"
+    line: "8021q"
+    state: present
+  notify:
+    reboot: "yes"

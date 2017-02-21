@@ -1,6 +1,8 @@
 ---
-- name: Update APT package cache
-  action: apt update_cache=yes
-
 - name: Upgrade APT to the lastest packages
-  action: apt upgrade=dist
+  apt:
+    upgrade: dist
+
+- name: Update APT package cache
+  apt:
+    update_cache: yes

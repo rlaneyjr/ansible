@@ -1,22 +1,11 @@
 [local]
 localhost
 
-[test]
-172.16.1.151
-172.16.1.152
-
-[test:vars]
-ansible_user=cisco
-ansible_ssh_pass=cisco
-ansible_become=True
-ansible_become_method=sudo
-ansible_become_pass=cisco
-
 [dns]
 ns1
 ns2
 
-[osa-servers]
+[osa]
 imoniot01
 imoniot02
 imoniot03
@@ -27,14 +16,13 @@ imoniot08
 imoniot09
 imoniot10
 
-[osa-servers:vars]
-ansible_become_pass=ralrox22
-
-[all-servers]
+[all]
+ns1
+ns2
 imoniot01
 imoniot02
 imoniot03
-imoniot04
+virl
 imoniot05
 imoniot06
 imoniot07
@@ -49,22 +37,22 @@ virl
 ansible_user=virl
 ansible_ssh_pass=VIRL
 
-[switches]
+[sws]
 switch1
 switch2
 switch3
 
-[firewalls]
+[fws]
 tw-gw1
 tw-gw2
 
-[router]
+[rtr]
 het-remote01
 
 [ucs]
 imon-fi1
 
-[lab-devices]
+[lab]
 dc2-sw1
 dc2-eos1
 dc2-eos2
@@ -105,3 +93,21 @@ sc8-edge
 sc8-sat1
 dc3-sat2
 sc8-sat2
+
+[lab:vars]
+ansible_user=cisco
+ansible_ssh_pass=cisco
+
+[all:vars]
+ansible_become_pass=ralrox22
+
+[tst]
+172.16.1.151
+172.16.1.152
+
+[tst:vars]
+ansible_user=cisco
+ansible_ssh_pass=cisco
+ansible_become=True
+ansible_become_method=sudo
+ansible_become_pass=cisco
