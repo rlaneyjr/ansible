@@ -1,0 +1,14 @@
+---
+- name: Add our DNS domain and servers to resolvconf
+  blockinfile:
+    state: present
+    dest: /etc/resolvconf/resolv.conf.d/head
+    insertafter: "^#.*$"
+    owner: root
+    group: root
+    block: |
+      search icloudmon.local
+      nameserver 10.0.10.5
+      nameserver 10.0.10.6
+    marker: "# {mark} ANSIBLE MANAGED BLOCK"
+  notify: run resolvconf

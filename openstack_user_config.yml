@@ -57,7 +57,7 @@ global_overrides:
         host_bind_override: "eth11"
         container_mtu: "9000"
         type: "vlan"
-        range: "1:1"
+        range: "25:200"
         net_name: "vlan"
         group_binds:
           - neutron_linuxbridge_agent

@@ -2,6 +2,4 @@
 - name: Bootstrap Ubuntu OSA servers
   hosts: osa
   roles:
-    - user
     - bootstrap
-    - reboot

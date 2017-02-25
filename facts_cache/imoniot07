@@ -58,7 +58,7 @@
             "vlan_challenged": "off [fixed]"
         }, 
         "lacp_rate": "slow", 
-        "macaddress": "6a:2e:30:d8:5f:0f", 
+        "macaddress": "0e:71:f2:76:67:bc", 
         "miimon": "0", 
         "mode": "balance-rr", 
         "mtu": 1500, 
@@ -67,29 +67,29 @@
         "type": "bonding"
     }, 
     "ansible_cmdline": {
-        "BOOT_IMAGE": "/vmlinuz-4.4.0-63-generic", 
+        "BOOT_IMAGE": "/vmlinuz-4.4.0-64-generic", 
         "biosdevname": "0", 
         "net.ifnames": "0", 
         "ro": true, 
         "root": "/dev/mapper/imoniot07--vg-root"
     }, 
     "ansible_date_time": {
-        "date": "2017-02-20", 
-        "day": "20", 
-        "epoch": "1487645296", 
-        "hour": "21", 
-        "iso8601": "2017-02-21T02:48:16Z", 
-        "iso8601_basic": "20170220T214816342830", 
-        "iso8601_basic_short": "20170220T214816", 
-        "iso8601_micro": "2017-02-21T02:48:16.342964Z", 
-        "minute": "48", 
+        "date": "2017-02-25", 
+        "day": "25", 
+        "epoch": "1488031126", 
+        "hour": "08", 
+        "iso8601": "2017-02-25T13:58:46Z", 
+        "iso8601_basic": "20170225T085846691177", 
+        "iso8601_basic_short": "20170225T085846", 
+        "iso8601_micro": "2017-02-25T13:58:46.691339Z", 
+        "minute": "58", 
         "month": "02", 
-        "second": "16", 
-        "time": "21:48:16", 
+        "second": "46", 
+        "time": "08:58:46", 
         "tz": "EST", 
         "tz_offset": "-0500", 
-        "weekday": "Monday", 
-        "weekday_number": "1", 
+        "weekday": "Saturday", 
+        "weekday_number": "6", 
         "weeknumber": "08", 
         "year": "2017"
     }, 
@@ -206,6 +206,7 @@
     "ansible_distribution_version": "16.04", 
     "ansible_dns": {
         "nameservers": [
+            "209.18.47.62", 
             "209.18.47.61", 
             "209.18.47.62"
         ], 
@@ -224,7 +225,7 @@
         "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin", 
         "PWD": "/home/rlaney", 
         "SHELL": "/bin/bash", 
-        "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-fjmcehmndwhgyivsfatvetomuecenmpz; /usr/bin/python /home/rlaney/.ansible/tmp/ansible-tmp-1487645295.72-93822191489827/setup.py; rm -rf \"/home/rlaney/.ansible/tmp/ansible-tmp-1487645295.72-93822191489827/\" > /dev/null 2>&1", 
+        "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-gdyeyxbzoyjdbukkjiohsiwrxfpctajd; /usr/bin/python /home/rlaney/.ansible/tmp/ansible-tmp-1488031126.36-151784313001906/setup.py; rm -rf \"/home/rlaney/.ansible/tmp/ansible-tmp-1488031126.36-151784313001906/\" > /dev/null 2>&1", 
         "SUDO_GID": "1000", 
         "SUDO_UID": "1000", 
         "SUDO_USER": "rlaney", 
@@ -601,7 +602,7 @@
         "eth1", 
         "eth0"
     ], 
-    "ansible_kernel": "4.4.0-63-generic", 
+    "ansible_kernel": "4.4.0-64-generic", 
     "ansible_lo": {
         "active": true, 
         "device": "lo", 
@@ -697,16 +698,16 @@
     }, 
     "ansible_machine": "x86_64", 
     "ansible_machine_id": "7179f01d411a5bcf240c374058954387", 
-    "ansible_memfree_mb": 47024, 
+    "ansible_memfree_mb": 47445, 
     "ansible_memory_mb": {
         "nocache": {
-            "free": 47961, 
-            "used": 326
+            "free": 47952, 
+            "used": 335
         }, 
         "real": {
-            "free": 47024, 
+            "free": 47445, 
             "total": 48287, 
-            "used": 1263
+            "used": 842
         }, 
         "swap": {
             "cached": 0, 
@@ -722,7 +723,7 @@
             "fstype": "ext4", 
             "mount": "/", 
             "options": "rw,relatime,errors=remount-ro,data=ordered", 
-            "size_available": 97148502016, 
+            "size_available": 96793116672, 
             "size_total": 105058197504, 
             "uuid": "5481a7a9-e73a-41a0-88c8-955a52e5208a"
         }, 
@@ -731,7 +732,7 @@
             "fstype": "ext2", 
             "mount": "/boot", 
             "options": "rw,relatime,block_validity,barrier,user_xattr,acl", 
-            "size_available": 309757952, 
+            "size_available": 259634176, 
             "size_total": 494512128, 
             "uuid": "224c8a2c-6633-4bcf-9264-9b3c91b187d4"
         }
@@ -852,7 +853,7 @@
     ], 
     "ansible_system_capabilities_enforced": "True", 
     "ansible_system_vendor": "NA", 
-    "ansible_uptime_seconds": 16402, 
+    "ansible_uptime_seconds": 10595, 
     "ansible_user_dir": "/root", 
     "ansible_user_gecos": "root", 
     "ansible_user_gid": 0, 
