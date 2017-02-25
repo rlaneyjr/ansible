@@ -33,3 +33,4 @@ cp repo-osa/scripts/scripts-library.sh osa/scripts/scripts-library.sh
 cp repo-osa/tests/roles/bootstrap-host/tasks/prepare_ceph.yml osa/tests/roles/bootstrap-host/tasks/prepare_ceph.yml
 cp repo-osa/tests/roles/bootstrap-host/templates/user_variables.aio.yml.j2 osa/tests/roles/bootstrap-host/templates/user_variables.aio.yml.j2
 cp repo-osa/tests/test_inventory.py osa/tests/test_inventory.py
+cp repo-osa/requirements.txt osa/requirements.txt
