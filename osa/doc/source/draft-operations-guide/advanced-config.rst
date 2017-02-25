@@ -17,7 +17,7 @@ Including the openstack-ansible repository within another project can be
 done in several ways:
 
 - A git submodule pointed to a released tag.
-- A script to automatically perform a git checkout of Openstack-Ansible.
+- A script to automatically perform a git checkout of OpenStack-Ansible.
 
 When including OpenStack-Ansible in a project, consider using a parallel
 directory structure as shown in the ``ansible.cfg`` files section.
@@ -61,26 +61,26 @@ For more information about forks, please see the following references:
 .. _forks: http://docs.ansible.com/ansible/intro_configuration.html#forks
 .. _Ansible Performance Tuning: https://www.ansible.com/blog/ansible-performance-tuning
 
-ansible.cfg files
-~~~~~~~~~~~~~~~~~
+Including OpenStack-Ansible with your Ansible structure
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can create your own playbook, variable, and role structure while still
-including the OpenStack-Ansible roles and libraries by putting an
-``ansible.cfg`` file in your ``playbooks`` directory.
+including the OpenStack-Ansible roles and libraries by setting environment
+variables or by adjusting ``/usr/local/bin/openstack-ansible.rc``.
 
-The relevant options for Ansible 1.9 (included in OpenStack-Ansible)
-are as follows:
+The relevant environment variables for Ansible 1.9 (included in
+OpenStack-Ansible) are as follows:
 
-``library``
+``ANSIBLE_LIBRARY``
   This variable should point to
   ``openstack-ansible/playbooks/library``. Doing so allows roles and
   playbooks to access OpenStack-Ansible's included Ansible modules.
-``roles_path``
+``ANSIBLE_ROLES_PATH``
   This variable should point to
   ``openstack-ansible/playbooks/roles``. This allows Ansible to
   properly look up any OpenStack-Ansible roles that extension roles
   may reference.
-``inventory``
+``ANSIBLE_INVENTORY``
   This variable should point to
   ``openstack-ansible/playbooks/inventory``. With this setting,
   extensions have access to the same dynamic inventory that
@@ -100,7 +100,7 @@ Consider this directory structure::
     |  |
     |  |- playbooks
 
-The variables in ``my_project/custom_stuff/playbooks/ansible.cfg`` would use
+The environment variables set would use
 ``../openstack-ansible/playbooks/<directory>``.
 
 env.d
@@ -147,8 +147,11 @@ sourced alongside those used exclusively by OpenStack-Ansible.
 Ordering and precedence
 -----------------------
 
-``user_*.yml`` variables are just YAML variable files. They will be sourced
-in alphanumeric order by ``openstack-ansible``.
+``user_*.yml`` files contain YAML variables which are applied as extra-vars
+when executing ``openstack-ansible`` to run playbooks. They will be sourced
+in alphanumeric order by ``openstack-ansible``. If duplicate variables occur
+in the ``user_*.yml`` files, the variable in the last file read will take
+precedence.
 
 .. _adding-galaxy-roles:
 
@@ -277,12 +280,12 @@ Example task using the config_template module
      config_template:
        src: test.ini.j2
        dest: /tmp/test.ini
-       config_overrides: {{ test_overrides }}
+       config_overrides: "{{ test_overrides }}"
        config_type: ini
 
 
-Example overrides dictionary(hash)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Example overrides dictionary (hash)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: yaml
 
@@ -291,8 +294,8 @@ Example overrides dictionary(hash)
        new_item: 12345
 
 
-Original template file test.ini.j2
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Original template file ``test.ini.j2``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: ini
 
@@ -301,8 +304,8 @@ Original template file test.ini.j2
    value2 = 123
 
 
-Rendered on disk file /tmp/test.ini
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Rendered on disk file ``/tmp/test.ini``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: ini
 
@@ -314,7 +317,7 @@ Rendered on disk file /tmp/test.ini
 
 In this task the ``test.ini.j2`` file is a template which will be rendered and
 written to disk at ``/tmp/test.ini``. The **config_overrides** entry is a
-dictionary(hash) which allows a deployer to set arbitrary data as overrides to
+dictionary (hash) which allows a deployer to set arbitrary data as overrides to
 be written into the configuration file at run time. The **config_type** entry
 specifies the type of configuration file the module will be interacting with;
 available options are "yaml", "json", and "ini".

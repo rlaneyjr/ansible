@@ -49,8 +49,6 @@ needed in an environment, it is possible to create additional nodes.
 
       # /opt/openstack-ansible/scripts/inventory-manage.py  \
         -l |awk '/<NEW INFRA NODE>/ {print $2}' |sort -u | tee /root/add_host.limit
-      #/opt/openstack-ansible/scripts/inventory-manage.py  \
-        -l | grep 'horizon' | head -1 | awk '{print $2}' >> /root/add_host.limit
 
 #. Run the ``setup-everything.yml`` playbook with the
    ``limit`` argument.
@@ -254,10 +252,10 @@ Having a plan in place for how you will manage these types of events is a vital
 part of maintaining your OpenStack environment.
 
 For a Compute host, shut down the instance on the host before
-it goes down. For a Block Storage (cinder) host, shut down any instances with
-volumes attached that require that mount point. Unmount the drive within
-your operating system and re-mount the drive once the Block Storage
-host is back online.
+it goes down. For a Block Storage (cinder) host using non-redundant storage,
+shut down any instances with volumes attached that require that mount point.
+Unmount the drive within your operating system and re-mount the drive once the
+Block Storage host is back online.
 
 Shutting down the Compute host
 ------------------------------
@@ -309,7 +307,7 @@ If a Compute host needs to be shut down:
 Shutting down the Block Storage host
 ------------------------------------
 
-If a Block Storage host needs to be shut down:
+If a LVM backed Block Storage host needs to be shut down:
 
 #. Disable the ``cinder-volume`` service:
 

@@ -1,8 +1,5 @@
 ---
 - name: Shutdown Servers
-  hosts: osa
-  tasks:
-    command: "shutdown -h now"
-    async: 0
-    poll: 0
-    ignore_errors: true
+  hosts: all
+  become: yes
+  command: shutdown -h now

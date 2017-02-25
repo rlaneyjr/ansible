@@ -1,5 +1,5 @@
 ---
-# Copyright 2016, Rackspace US, Inc.
+# Copyright 2017, Logan Vig <logan2211@gmail.com>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,16 +13,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-neutron_dns_domain: "{{ dhcp_domain }}"
-neutron_service_in_ldap: "{{ service_ldap_backend_enabled }}"
-
-neutron_galera_user: neutron
-neutron_galera_database: neutron
-neutron_galera_address: "{{ galera_address }}"
-
-# Ensure that the package state matches the global setting
-neutron_package_state: "{{ package_state }}"
-
-# venv fetch configuration
-neutron_venv_tag: "{{ venv_tag }}"
-neutron_venv_download_url: "{{ venv_base_download_url }}/neutron-{{ openstack_release }}-{{ ansible_architecture | lower }}.tgz"
+- name: Set haproxy service state
+  haproxy:
+    socket: /var/run/haproxy.stat
+    host: "{{ inventory_hostname }}"
+    state: "{{ haproxy_state | default('enabled') }}"
+    shutdown_sessions: "{{ haproxy_shutdown_sessions | default(False) | bool }}"
+    wait: "{{ haproxy_wait | default(True) | bool }}"
+    wait_interval: "{{ haproxy_wait_interval | default(5) }}"
+    wait_retries: "{{ haproxy_wait_retries | default(24) }}"
+  delegate_to: "{{ item }}"
+  with_items: "{{ groups['haproxy'] }}"

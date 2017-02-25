@@ -16,9 +16,7 @@ imoniot08
 imoniot09
 imoniot10
 
-[all]
-ns1
-ns2
+[srvs]
 imoniot01
 imoniot02
 imoniot03

@@ -1,18 +1,19 @@
 ---
 cidr_networks:
-  container: 172.29.236.0/22
-  tunnel: 172.29.240.0/22
-  storage: 172.29.244.0/22
+  container: 10.0.23.0/24
+  tunnel: 10.0.24.0/24
+  storage: 10.0.21.0/24
 
 used_ips:
-  - "172.29.236.1,172.29.236.50"
-  - "172.29.240.1,172.29.240.50"
-  - "172.29.244.1,172.29.244.50"
-  - "172.29.248.1,172.29.248.50"
+  - "10.0.23.1,10.0.23.10"
+  - "10.0.23.100,10.0.23.110"
+  - "10.0.23.200"
+  - "10.0.24.1,10.0.24.10"
+  - "10.0.21.1,10.0.21.10"
 
 global_overrides:
-  internal_lb_vip_address: 172.29.236.9
-  external_lb_vip_address: openstack.example.com
+  internal_lb_vip_address: 10.0.23.11
+  external_lb_vip_address: osa.icloudmon.local
   tunnel_bridge: "br-vxlan"
   management_bridge: "br-mgmt"
   provider_networks:
@@ -20,6 +21,7 @@ global_overrides:
         container_bridge: "br-mgmt"
         container_type: "veth"
         container_interface: "eth1"
+        container_mtu: "9000"
         ip_from_q: "container"
         type: "raw"
         group_binds:
@@ -31,6 +33,7 @@ global_overrides:
         container_bridge: "br-vxlan"
         container_type: "veth"
         container_interface: "eth10"
+        container_mtu: "9000"
         ip_from_q: "tunnel"
         type: "vxlan"
         range: "1:1000"
@@ -42,6 +45,7 @@ global_overrides:
         container_type: "veth"
         container_interface: "eth12"
         host_bind_override: "eth12"
+        container_mtu: "9000"
         type: "flat"
         net_name: "flat"
         group_binds:
@@ -50,6 +54,8 @@ global_overrides:
         container_bridge: "br-vlan"
         container_type: "veth"
         container_interface: "eth11"
+        host_bind_override: "eth11"
+        container_mtu: "9000"
         type: "vlan"
         range: "1:1"
         net_name: "vlan"
@@ -59,6 +65,7 @@ global_overrides:
         container_bridge: "br-storage"
         container_type: "veth"
         container_interface: "eth2"
+        container_mtu: "9000"
         ip_from_q: "storage"
         type: "raw"
         group_binds:
@@ -74,36 +81,36 @@ global_overrides:
 # galera, memcache, rabbitmq, utility
 shared-infra_hosts:
   infra1:
-    ip: 172.29.236.11
+    ip: 10.0.23.11
   infra2:
-    ip: 172.29.236.12
+    ip: 10.0.23.12
   infra3:
-    ip: 172.29.236.13
+    ip: 10.0.23.13
 
 # repository (apt cache, python packages, etc)
 repo-infra_hosts:
   infra1:
-    ip: 172.29.236.11
+    ip: 10.0.23.11
   infra2:
-    ip: 172.29.236.12
+    ip: 10.0.23.12
   infra3:
-    ip: 172.29.236.13
+    ip: 10.0.23.13
 
 # load balancer
 # Ideally the load balancer should not use the Infrastructure hosts.
 # Dedicated hardware is best for improved performance and security.
 haproxy_hosts:
   infra1:
-    ip: 172.29.236.11
+    ip: 10.0.23.11
   infra2:
-    ip: 172.29.236.12
+    ip: 10.0.23.12
   infra3:
-    ip: 172.29.236.13
+    ip: 10.0.23.13
 
 # rsyslog server
 log_hosts:
   log1:
-    ip: 172.29.236.14
+    ip: 10.0.23.14
 
 ###
 ### OpenStack
@@ -112,20 +119,20 @@ log_hosts:
 # keystone
 identity_hosts:
   infra1:
-    ip: 172.29.236.11
+    ip: 10.0.23.11
   infra2:
-    ip: 172.29.236.12
+    ip: 10.0.23.12
   infra3:
-    ip: 172.29.236.13
+    ip: 10.0.23.13
 
 # cinder api services
 storage-infra_hosts:
   infra1:
-    ip: 172.29.236.11
+    ip: 10.0.23.11
   infra2:
-    ip: 172.29.236.12
+    ip: 10.0.23.12
   infra3:
-    ip: 172.29.236.13
+    ip: 10.0.23.13
 
 # glance
 # The settings here are repeated for each infra host.
@@ -134,31 +141,31 @@ storage-infra_hosts:
 # each container could have different storage targets.
 image_hosts:
   infra1:
-    ip: 172.29.236.11
+    ip: 10.0.23.11
     container_vars:
       limit_container_types: glance
       glance_nfs_client:
-        - server: "172.29.244.15"
+        - server: "10.0.21.15"
           remote_path: "/images"
           local_path: "/var/lib/glance/images"
           type: "nfs"
           options: "_netdev,auto"
   infra2:
-    ip: 172.29.236.12
+    ip: 10.0.23.12
     container_vars:
       limit_container_types: glance
       glance_nfs_client:
-        - server: "172.29.244.15"
+        - server: "10.0.21.15"
           remote_path: "/images"
           local_path: "/var/lib/glance/images"
           type: "nfs"
           options: "_netdev,auto"
   infra3:
-    ip: 172.29.236.13
+    ip: 10.0.23.13
     container_vars:
       limit_container_types: glance
       glance_nfs_client:
-        - server: "172.29.244.15"
+        - server: "10.0.21.15"
           remote_path: "/images"
           local_path: "/var/lib/glance/images"
           type: "nfs"
@@ -167,79 +174,79 @@ image_hosts:
 # nova api, conductor, etc services
 compute-infra_hosts:
   infra1:
-    ip: 172.29.236.11
+    ip: 10.0.23.11
   infra2:
-    ip: 172.29.236.12
+    ip: 10.0.23.12
   infra3:
-    ip: 172.29.236.13
+    ip: 10.0.23.13
 
 # heat
 orchestration_hosts:
   infra1:
-    ip: 172.29.236.11
+    ip: 10.0.23.11
   infra2:
-    ip: 172.29.236.12
+    ip: 10.0.23.12
   infra3:
-    ip: 172.29.236.13
+    ip: 10.0.23.13
 
 # horizon
 dashboard_hosts:
   infra1:
-    ip: 172.29.236.11
+    ip: 10.0.23.11
   infra2:
-    ip: 172.29.236.12
+    ip: 10.0.23.12
   infra3:
-    ip: 172.29.236.13
+    ip: 10.0.23.13
 
 # neutron server, agents (L3, etc)
 network_hosts:
   infra1:
-    ip: 172.29.236.11
+    ip: 10.0.23.11
   infra2:
-    ip: 172.29.236.12
+    ip: 10.0.23.12
   infra3:
-    ip: 172.29.236.13
+    ip: 10.0.23.13
 
 # ceilometer (telemetry API)
 metering-infra_hosts:
   infra1:
-    ip: 172.29.236.11
+    ip: 10.0.23.11
   infra2:
-    ip: 172.29.236.12
+    ip: 10.0.23.12
   infra3:
-    ip: 172.29.236.13
+    ip: 10.0.23.13
 
 # aodh (telemetry alarm service)
 metering-alarm_hosts:
   infra1:
-    ip: 172.29.236.11
+    ip: 10.0.23.11
   infra2:
-    ip: 172.29.236.12
+    ip: 10.0.23.12
   infra3:
-    ip: 172.29.236.13
+    ip: 10.0.23.13
 
 # gnocchi (telemetry metrics storage)
 metrics_hosts:
   infra1:
-    ip: 172.29.236.11
+    ip: 10.0.23.11
   infra2:
-    ip: 172.29.236.12
+    ip: 10.0.23.12
   infra3:
-    ip: 172.29.236.13
+    ip: 10.0.23.13
 
 # nova hypervisors
 compute_hosts:
   compute1:
-    ip: 172.29.236.16
+    ip: 10.0.23.16
   compute2:
-    ip: 172.29.236.17
+    ip: 10.0.23.17
 
 # ceilometer compute agent (telemetry)
 metering-compute_hosts:
   compute1:
-    ip: 172.29.236.16
+    ip: 10.0.23.16
   compute2:
-    ip: 172.29.236.17
+    ip: 10.0.23.17
 
 # cinder volume hosts (NFS-backed)
 # The settings here are repeated for each infra host.
@@ -248,32 +255,41 @@ metering-compute_hosts:
 # each container could have different storage targets.
 storage_hosts:
   infra1:
-    ip: 172.29.236.11
+    ip: 10.0.23.11
     container_vars:
       cinder_backends:
         limit_container_types: cinder_volume
-        cinder_nfs_client:
+        nfs_volume:
+          volume_backend_name: NFS_VOLUME1
+          volume_driver: cinder.volume.drivers.nfs.NfsDriver
+          nfs_mount_options: "rsize=65535,wsize=65535,timeo=1200,actimeo=120"
           nfs_shares_config: /etc/cinder/nfs_shares
           shares:
-            - ip: "172.29.244.15"
+            - ip: "10.0.21.15"
               share: "/vol/cinder"
   infra2:
-    ip: 172.29.236.12
+    ip: 10.0.23.12
     container_vars:
       cinder_backends:
         limit_container_types: cinder_volume
-        cinder_nfs_client:
+        nfs_volume:
+          volume_backend_name: NFS_VOLUME1
+          volume_driver: cinder.volume.drivers.nfs.NfsDriver
+          nfs_mount_options: "rsize=65535,wsize=65535,timeo=1200,actimeo=120"
           nfs_shares_config: /etc/cinder/nfs_shares
           shares:
-            - ip: "172.29.244.15"
+            - ip: "10.0.21.15"
               share: "/vol/cinder"
   infra3:
-    ip: 172.29.236.13
+    ip: 10.0.23.13
     container_vars:
       cinder_backends:
         limit_container_types: cinder_volume
-        cinder_nfs_client:
+        nfs_volume:
+          volume_backend_name: NFS_VOLUME1
+          volume_driver: cinder.volume.drivers.nfs.NfsDriver
+          nfs_mount_options: "rsize=65535,wsize=65535,timeo=1200,actimeo=120"
           nfs_shares_config: /etc/cinder/nfs_shares
           shares:
-            - ip: "172.29.244.15"
+            - ip: "10.0.21.15"
               share: "/vol/cinder"
