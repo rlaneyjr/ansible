@@ -36,7 +36,7 @@ global_overrides:
         container_mtu: "9000"
         ip_from_q: "tunnel"
         type: "vxlan"
-        range: "1:1000"
+        range: "1000:2000"
         net_name: "vxlan"
         group_binds:
           - neutron_linuxbridge_agent
