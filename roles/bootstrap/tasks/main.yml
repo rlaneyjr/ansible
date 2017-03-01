@@ -2,3 +2,5 @@
 - include: dns.yml
 - include: apt.yml
 - include: packages.yml
+- include: locale.yml
+- include: interface_names.yml

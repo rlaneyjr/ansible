@@ -1,36 +1,20 @@
 #!/bin/sh
 
-cp repo-osa/doc/source/developer-docs/role-maturity-matrix.html     osa/doc/source/developer-docs/role-maturity-matrix.html
-cp repo-osa/doc/source/developer-docs/role-maturity.rst             osa/doc/source/developer-docs/role-maturity.rst
-cp repo-osa/playbooks/common-tasks/haproxy-endpoint-manage.yml      osa/playbooks/common-tasks/haproxy-endpoint-manage.yml
-cp repo-osa/README.rst osa/README.rst
-cp repo-osa/doc/source/developer-docs/additional-roles.rst osa/doc/source/developer-docs/additional-roles.rst
-cp repo-osa/doc/source/developer-docs/core-reviewers.rst osa/doc/source/developer-docs/core-reviewers.rst
-cp repo-osa/doc/source/developer-docs/quickstart-aio.rst osa/doc/source/developer-docs/quickstart-aio.rst
-cp repo-osa/doc/source/developer-docs/role-services.rst osa/doc/source/developer-docs/role-services.rst
-cp repo-osa/doc/source/draft-operations-guide/advanced-config.rst osa/doc/source/draft-operations-guide/advanced-config.rst
-cp repo-osa/doc/source/draft-operations-guide/maintenance-tasks/ansible-modules.rst osa/doc/source/draft-operations-guide/maintenance-tasks/ansible-modules.rst
-cp repo-osa/doc/source/draft-operations-guide/maintenance-tasks/backups.rst osa/doc/source/draft-operations-guide/maintenance-tasks/backups.rst
-cp repo-osa/doc/source/draft-operations-guide/maintenance-tasks/containers.rst osa/doc/source/draft-operations-guide/maintenance-tasks/containers.rst
-cp repo-osa/doc/source/draft-operations-guide/maintenance-tasks/galera.rst osa/doc/source/draft-operations-guide/maintenance-tasks/galera.rst
-cp repo-osa/doc/source/draft-operations-guide/maintenance-tasks/managing-swift.rst osa/doc/source/draft-operations-guide/maintenance-tasks/managing-swift.rst
-cp repo-osa/doc/source/draft-operations-guide/maintenance-tasks/scale-environment.rst osa/doc/source/draft-operations-guide/maintenance-tasks/scale-environment.rst
-cp repo-osa/doc/source/draft-operations-guide/openstack-operations/cli-operations.rst osa/doc/source/draft-operations-guide/openstack-operations/cli-operations.rst
-cp repo-osa/doc/source/draft-operations-guide/openstack-operations/managing-images.rst osa/doc/source/draft-operations-guide/openstack-operations/managing-images.rst
-cp repo-osa/doc/source/draft-operations-guide/openstack-operations/managing-instances.rst osa/doc/source/draft-operations-guide/openstack-operations/managing-instances.rst
-cp repo-osa/doc/source/draft-operations-guide/openstack-operations/network-service.rst osa/doc/source/draft-operations-guide/openstack-operations/network-service.rst
-cp repo-osa/doc/source/draft-operations-guide/openstack-operations/verify-deploy.rst osa/doc/source/draft-operations-guide/openstack-operations/verify-deploy.rst
-cp repo-osa/doc/source/draft-operations-guide/ref-info.rst osa/doc/source/draft-operations-guide/ref-info.rst
-cp repo-osa/doc/source/draft-operations-guide/troubleshooting.rst osa/doc/source/draft-operations-guide/troubleshooting.rst
-cp repo-osa/doc/source/index.rst osa/doc/source/index.rst
-cp repo-osa/global-requirement-pins.txt osa/global-requirement-pins.txt
-cp repo-osa/playbooks/inventory/env.d/ceilometer.yml osa/playbooks/inventory/env.d/ceilometer.yml
-cp repo-osa/playbooks/inventory/group_vars/all.yml osa/playbooks/inventory/group_vars/all.yml
-cp repo-osa/playbooks/inventory/group_vars/neutron_all.yml osa/playbooks/inventory/group_vars/neutron_all.yml
-cp repo-osa/playbooks/os-keystone-install.yml osa/playbooks/os-keystone-install.yml
-cp repo-osa/scripts/fastest-infra-wheel-mirror.py osa/scripts/fastest-infra-wheel-mirror.py
-cp repo-osa/scripts/scripts-library.sh osa/scripts/scripts-library.sh
-cp repo-osa/tests/roles/bootstrap-host/tasks/prepare_ceph.yml osa/tests/roles/bootstrap-host/tasks/prepare_ceph.yml
-cp repo-osa/tests/roles/bootstrap-host/templates/user_variables.aio.yml.j2 osa/tests/roles/bootstrap-host/templates/user_variables.aio.yml.j2
-cp repo-osa/tests/test_inventory.py osa/tests/test_inventory.py
+cp repo-osa/playbooks/common-tasks/dynamic-address-fact.yml osa/playbooks/common-tasks/dynamic-address-fact.yml
+cp repo-osa/lib/filesystem.py osa/lib/filesystem.py
+cp repo-osa/lib/manage.py osa/lib/manage.py
+cp repo-osa/playbooks/common-tasks/haproxy-endpoint-manage.yml osa/playbooks/common-tasks/haproxy-endpoint-manage.yml
+cp repo-osa/playbooks/galera-install.yml osa/playbooks/galera-install.yml
+cp repo-osa/playbooks/inventory/group_vars/galera_all.yml osa/playbooks/inventory/group_vars/galera_all.yml
+cp repo-osa/playbooks/inventory/group_vars/gnocchi_all.yml osa/playbooks/inventory/group_vars/gnocchi_all.yml
+cp repo-osa/playbooks/os-cinder-install.yml osa/playbooks/os-cinder-install.yml
+cp repo-osa/playbooks/os-gnocchi-install.yml osa/playbooks/os-gnocchi-install.yml
+cp repo-osa/playbooks/os-neutron-install.yml osa/playbooks/os-neutron-install.yml
+cp repo-osa/playbooks/os-nova-install.yml osa/playbooks/os-nova-install.yml
 cp repo-osa/requirements.txt osa/requirements.txt
+cp repo-osa/tests/bootstrap-aio.yml osa/tests/bootstrap-aio.yml
+cp repo-osa/tests/roles/bootstrap-host/templates/user_variables.aio.yml.j2 osa/tests/roles/bootstrap-host/templates/user_variables.aio.yml.j2
+cp repo-osa/tests/test_manage.py osa/tests/test_manage.py
+Only in repo-osa: .git
+Only in repo-osa: .gitignore
+Only in repo-osa: .gitreview
