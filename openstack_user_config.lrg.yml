@@ -1,0 +1,215 @@
+---
+cidr_networks:
+  container: 172.29.236.0/22
+  tunnel: 172.29.240.0/22
+  storage: 172.29.244.0/22
+
+used_ips:
+  - "172.29.236.1,172.29.236.255"
+  - "172.29.240.1,172.29.240.255"
+  - "172.29.244.1,172.29.244.255"
+
+global_overrides:
+  internal_lb_vip_address: 172.29.236.10
+  external_lb_vip_address: openstack.cunninghamshane.com
+  tunnel_bridge: "br-vxlan"
+  management_bridge: "br-mgmt"
+  provider_networks:
+    - network:
+        container_bridge: "br-mgmt"
+        container_type: "veth"
+        container_interface: "eth1"
+        ip_from_q: "container"
+        type: "raw"
+        group_binds:
+          - all_containers
+          - hosts
+        is_container_address: true
+        is_ssh_address: true
+    - network:
+        container_bridge: "br-vxlan"
+        container_type: "veth"
+        container_interface: "eth10"
+        ip_from_q: "tunnel"
+        type: "vxlan"
+        range: "1:1000"
+        net_name: "vxlan"
+        group_binds:
+          - neutron_linuxbridge_agent
+    - network:
+        container_bridge: "br-vlan"
+        container_type: "veth"
+        container_interface: "eth11"
+        type: "vlan"
+        range: "100:120"
+        net_name: "vlan"
+        group_binds:
+          - neutron_linuxbridge_agent
+    - network:
+        container_bridge: "br-storage"
+        container_type: "veth"
+        container_interface: "eth2"
+        ip_from_q: "storage"
+        type: "raw"
+        group_binds:
+          - glance_api
+          - cinder_api
+          - cinder_volume
+          - nova_compute
+
+shared-infra_hosts:
+  clusterinfra01:
+    ip: 10.240.0.1
+  clusterinfra02:
+    ip: 10.240.0.2
+  clusterinfra03:
+    ip: 10.240.0.3
+
+os-infra_hosts:
+  apiinfra01:
+    ip: 10.240.0.4
+  apiinfra02:
+    ip: 10.240.0.5
+  apiinfra03:
+    ip: 10.240.0.6
+
+storage-infra_hosts:
+  apiinfra01:
+    ip: 10.240.0.4
+  apiinfra02:
+    ip: 10.240.0.5
+  apiinfra03:
+    ip: 10.240.0.6
+
+repo-infra_hosts:
+  apiinfra01:
+    ip: 10.240.0.4
+  apiinfra02:
+    ip: 10.240.0.5
+  apiinfra03:
+    ip: 10.240.0.6
+
+identity_hosts:
+  apiinfra01:
+    ip: 10.240.0.4
+  apiinfra02:
+    ip: 10.240.0.5
+  apiinfra03:
+    ip: 10.240.0.6
+
+log_hosts:
+  logging01:
+    ip: 10.240.0.7
+
+network_hosts:
+  clusterinfra01:
+    ip: 10.240.0.1
+  clusterinfra02:
+    ip: 10.240.0.2
+  clusterinfra03:
+    ip: 10.240.0.3
+  apiinfra01:
+    ip: 10.240.0.4
+  apiinfra02:
+    ip: 10.240.0.5
+  apiinfra03:
+    ip: 10.240.0.6
+
+storage_hosts:
+  cinder01:
+    ip: 10.240.0.8
+    container_vars:
+      cinder_backends:
+        limit_container_types: cinder_volume
+        lvm:
+          volume_group: cinder-volumes
+          volume_driver: cinder.volume.drivers.lvm.LVMVolumeDriver
+          volume_backend_name: LVM_iSCSI
+  cinder02:
+    ip: 10.240.0.9
+    container_vars:
+      cinder_backends:
+        limit_container_types: cinder_volume
+        lvm:
+          volume_group: cinder-volumes
+          volume_driver: cinder.volume.drivers.lvm.LVMVolumeDriver
+          volume_backend_name: LVM_iSCSI
+  cinder03:
+    ip: 10.240.0.10
+    container_vars:
+      cinder_backends:
+        limit_container_types: cinder_volume
+        lvm:
+          volume_group: cinder-volumes
+          volume_driver: cinder.volume.drivers.lvm.LVMVolumeDriver
+          volume_backend_name: LVM_iSCSI
+  cinder04:
+    ip: 10.240.0.11
+    container_vars:
+      cinder_backends:
+        limit_container_types: cinder_volume
+        lvm:
+          volume_group: cinder-volumes
+          volume_driver: cinder.volume.drivers.lvm.LVMVolumeDriver
+          volume_backend_name: LVM_iSCSI
+  cinder05:
+    ip: 10.240.0.12
+    container_vars:
+      cinder_backends:
+        limit_container_types: cinder_volume
+        lvm:
+          volume_group: cinder-volumes
+          volume_driver: cinder.volume.drivers.lvm.LVMVolumeDriver
+          volume_backend_name: LVM_iSCSI
+
+compute_hosts:
+  compute01:
+    ip: 10.240.0.13
+  compute02:
+    ip: 10.240.0.14
+  compute03:
+    ip: 10.240.0.15
+  compute04:
+    ip: 10.240.0.16
+  compute05:
+    ip: 10.240.0.17
+  compute06:
+    ip: 10.240.0.18
+  compute07:
+    ip: 10.240.0.19
+  compute08:
+    ip: 10.240.0.20
+  compute09:
+    ip: 10.240.0.21
+  compute10:
+    ip: 10.240.0.22
+  compute11:
+    ip: 10.240.0.23
+  compute12:
+    ip: 10.240.0.24
+  compute13:
+    ip: 10.240.0.25
+  compute14:
+    ip: 10.240.0.26
+  compute15:
+    ip: 10.240.0.27
+  compute16:
+    ip: 10.240.0.28
+  compute17:
+    ip: 10.240.0.29
+  compute18:
+    ip: 10.240.0.30
+  compute19:
+    ip: 10.240.0.31
+  compute20:
+    ip: 10.240.0.32
+  compute21:
+    ip: 10.240.0.33
+  compute22:
+    ip: 10.240.0.34
+  compute23:
+    ip: 10.240.0.35
+  compute24:
+    ip: 10.240.0.36
+  compute25:
+    ip: 10.240.0.37
