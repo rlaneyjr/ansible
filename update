@@ -1,20 +1,34 @@
 #!/bin/sh
 
-cp repo-osa/playbooks/common-tasks/dynamic-address-fact.yml osa/playbooks/common-tasks/dynamic-address-fact.yml
-cp repo-osa/lib/filesystem.py osa/lib/filesystem.py
-cp repo-osa/lib/manage.py osa/lib/manage.py
-cp repo-osa/playbooks/common-tasks/haproxy-endpoint-manage.yml osa/playbooks/common-tasks/haproxy-endpoint-manage.yml
-cp repo-osa/playbooks/galera-install.yml osa/playbooks/galera-install.yml
-cp repo-osa/playbooks/inventory/group_vars/galera_all.yml osa/playbooks/inventory/group_vars/galera_all.yml
-cp repo-osa/playbooks/inventory/group_vars/gnocchi_all.yml osa/playbooks/inventory/group_vars/gnocchi_all.yml
-cp repo-osa/playbooks/os-cinder-install.yml osa/playbooks/os-cinder-install.yml
-cp repo-osa/playbooks/os-gnocchi-install.yml osa/playbooks/os-gnocchi-install.yml
-cp repo-osa/playbooks/os-neutron-install.yml osa/playbooks/os-neutron-install.yml
-cp repo-osa/playbooks/os-nova-install.yml osa/playbooks/os-nova-install.yml
-cp repo-osa/requirements.txt osa/requirements.txt
-cp repo-osa/tests/bootstrap-aio.yml osa/tests/bootstrap-aio.yml
-cp repo-osa/tests/roles/bootstrap-host/templates/user_variables.aio.yml.j2 osa/tests/roles/bootstrap-host/templates/user_variables.aio.yml.j2
-cp repo-osa/tests/test_manage.py osa/tests/test_manage.py
+cp repo-osa/releasenotes/notes/common-tags-9763f578ea5fe5b6.yaml               osa/releasenotes/notes/common-tags-9763f578ea5fe5b6.yaml
+cp repo-osa/releasenotes/notes/fix_lxc_hosts_membership-1f73f3114638c09e.yaml  osa/releasenotes/notes/fix_lxc_hosts_membership-1f73f3114638c09e.yaml
+cp repo-osa/deploy-guide/source/deploymenthost.rst osa/deploy-guide/source/deploymenthost.rst                                    
+cp repo-osa/doc/source/developer-docs/quickstart-aio.rst osa/doc/source/developer-docs/quickstart-aio.rst                        
+cp repo-osa/lib/generate.py osa/lib/generate.py                                                                                  
+cp repo-osa/playbooks/common-tasks/dynamic-address-fact.yml osa/playbooks/common-tasks/dynamic-address-fact.yml                  
+cp repo-osa/playbooks/common-tasks/dynamic-grouping.yml osa/playbooks/common-tasks/dynamic-grouping.yml                          
+cp repo-osa/playbooks/common-tasks/haproxy-endpoint-manage.yml osa/playbooks/common-tasks/haproxy-endpoint-manage.yml            
+cp repo-osa/playbooks/common-tasks/mysql-db-user.yml osa/playbooks/common-tasks/mysql-db-user.yml                                
+cp repo-osa/playbooks/common-tasks/os-log-dir-setup.yml osa/playbooks/common-tasks/os-log-dir-setup.yml                          
+cp repo-osa/playbooks/common-tasks/os-lxc-container-setup.yml osa/playbooks/common-tasks/os-lxc-container-setup.yml              
+cp repo-osa/playbooks/common-tasks/package-cache-proxy.yml osa/playbooks/common-tasks/package-cache-proxy.yml                    
+cp repo-osa/playbooks/common-tasks/rabbitmq-vhost-user.yml osa/playbooks/common-tasks/rabbitmq-vhost-user.yml                    
+cp repo-osa/playbooks/common-tasks/set-pip-upstream-url.yml osa/playbooks/common-tasks/set-pip-upstream-url.yml                  
+cp repo-osa/playbooks/common-tasks/set-upper-constraints.yml osa/playbooks/common-tasks/set-upper-constraints.yml                
+cp repo-osa/playbooks/defaults/repo_packages/gnocchi.yml osa/playbooks/defaults/repo_packages/gnocchi.yml                        
+cp repo-osa/playbooks/defaults/repo_packages/nova_consoles.yml osa/playbooks/defaults/repo_packages/nova_consoles.yml            
+cp repo-osa/playbooks/defaults/repo_packages/openstack_services.yml osa/playbooks/defaults/repo_packages/openstack_services.yml  
+cp repo-osa/playbooks/defaults/repo_packages/openstack_testing.yml osa/playbooks/defaults/repo_packages/openstack_testing.yml    
+cp repo-osa/playbooks/os-cinder-install.yml osa/playbooks/os-cinder-install.yml                                                  
+cp repo-osa/playbooks/os-glance-install.yml osa/playbooks/os-glance-install.yml                                                  
+cp repo-osa/playbooks/os-gnocchi-install.yml osa/playbooks/os-gnocchi-install.yml                                                
+cp repo-osa/playbooks/os-nova-install.yml osa/playbooks/os-nova-install.yml                                                      
+cp repo-osa/requirements.txt osa/requirements.txt                                                                                
+cp repo-osa/scripts/gate-check-commit.sh osa/scripts/gate-check-commit.sh                                                        
+cp repo-osa/scripts/scripts-library.sh osa/scripts/scripts-library.sh                                                            
+cp repo-osa/setup.py osa/setup.py                                                                                                
+cp repo-osa/tests/roles/bootstrap-host/vars/redhat.yml osa/tests/roles/bootstrap-host/vars/redhat.yml                            
+cp repo-osa/tests/test_inventory.py osa/tests/test_inventory.py                                                                  
 Only in repo-osa: .git
 Only in repo-osa: .gitignore
 Only in repo-osa: .gitreview
