@@ -71,7 +71,7 @@ container_skel:
       - neutron_sriov_nic_agent
       - nova_compute
     properties:
-      is_metal: True
+      is_metal: true
       service_name: nova
   nova_conductor_container:
     belongs_to:

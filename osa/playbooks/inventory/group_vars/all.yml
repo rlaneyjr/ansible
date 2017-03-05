@@ -27,7 +27,7 @@ ssh_delay: 5
 package_state: "latest"
 
 # Set "/var/log" to be a bind mount to the physical host.
-default_bind_mount_logs: True
+default_bind_mount_logs: true
 
 # Ensure that the package state matches the global setting
 ceph_client_package_state: "{{ package_state }}"
@@ -55,7 +55,7 @@ pip_upstream_url: "{{ (pip_offline_install | bool) | ternary('https://bootstrap.
 ## OpenStack source options
 # URL for the frozen internal openstack repo.
 repo_server_port: 8181
-repo_pkg_cache_enabled: True
+repo_pkg_cache_enabled: true
 repo_pkg_cache_port: 3142
 repo_pkg_cache_url: "http://{{ internal_lb_vip_address }}:{{ repo_pkg_cache_port }}"
 openstack_repo_url: "http://{{ internal_lb_vip_address }}:{{ repo_server_port }}"
@@ -88,12 +88,12 @@ rabbitmq_use_ssl: True
 rabbitmq_servers: "{% for host in groups[rabbitmq_host_group] %}{{ hostvars[host]['ansible_host'] }}{% if not loop.last %},{% endif %}{% endfor %}"
 
 ## Enable external SSL handling for general OpenStack services
-openstack_external_ssl: True
+openstack_external_ssl: true
 
 ## OpenStack global Endpoint Protos
 openstack_service_publicuri_proto: https
-openstack_service_adminuri_proto: http
-openstack_service_internaluri_proto: http
+#openstack_service_adminuri_proto: http
+#openstack_service_internaluri_proto: http
 
 ## SSL
 # These do not need to be configured unless you're creating certificates for
@@ -106,11 +106,11 @@ ssl_cipher_suite: "ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AE
 service_region: RegionOne
 
 ## OpenStack Domain
-openstack_domain: icloudmon.local
+openstack_domain: openstack.local
 lxc_container_domain: "{{ openstack_domain }}"
 
 ## DHCP Domain Name
-dhcp_domain: icloudmonlocal
+dhcp_domain: openstacklocal
 
 ## LDAP enabled toggle
 service_ldap_backend_enabled: "{{ keystone_ldap is defined and keystone_ldap.Default is defined }}"
@@ -149,7 +149,7 @@ cinder_service_port: 8776
 cinder_service_backup_program_enabled: "{{ groups['swift_all'] is defined and groups['swift_all'] | length > 0 }}"
 # cinder_backend_rbd_inuse: True if current host has an rbd backend
 cinder_backend_rbd_inuse: '{{ (cinder_backends|default("")|to_json).find("cinder.volume.drivers.rbd.RBDDriver") != -1 }}'
-# cinder_backends_rbd_inuse: True if at least 1 cinder_backend on any
+# cinder_backends_rbd_inuse: true if at least 1 cinder_backend on any
 # cinder_volume host uses Ceph RBD
 # http://stackoverflow.com/questions/9486393/jinja2-change-the-value-of-a-variable-inside-a-loop
 cinder_backends_rbd_inuse: >-
@@ -301,12 +301,12 @@ keystone_rabbitmq_telemetry_host_group: "{{ keystone_rabbitmq_host_group }}"
 keystone_ceilometer_enabled: "{{ (groups['ceilometer_all'] is defined) and (groups['ceilometer_all'] | length > 0) }}"
 
 keystone_service_adminuri_proto: "{{ openstack_service_adminuri_proto | default(keystone_service_proto) }}"
-keystone_service_adminuri_insecure: "{% if keystone_service_adminuri_proto == 'https' and (keystone_user_ssl_cert is not defined or haproxy_user_ssl_cert is not defined) | bool %}True{% else %}False{% endif %}"
+keystone_service_adminuri_insecure: "{% if keystone_service_adminuri_proto == 'https' and (keystone_user_ssl_cert is not defined or haproxy_user_ssl_cert is not defined) | bool %}true{% else %}false{% endif %}"
 keystone_service_adminuri: "{{ keystone_service_adminuri_proto }}://{{ internal_lb_vip_address }}:{{ keystone_admin_port }}"
 keystone_service_adminurl: "{{ keystone_service_adminuri }}/v3"
 
 keystone_service_internaluri_proto: "{{ openstack_service_internaluri_proto | default(keystone_service_proto) }}"
-keystone_service_internaluri_insecure: "{% if keystone_service_internaluri_proto == 'https' and (keystone_user_ssl_cert is not defined or haproxy_user_ssl_cert is not defined) | bool %}True{% else %}False{% endif %}"
+keystone_service_internaluri_insecure: "{% if keystone_service_internaluri_proto == 'https' and (keystone_user_ssl_cert is not defined or haproxy_user_ssl_cert is not defined) | bool %}true{% else %}false{% endif %}"
 keystone_service_internaluri: "{{ keystone_service_internaluri_proto }}://{{ internal_lb_vip_address }}:{{ keystone_service_port }}"
 keystone_service_internalurl: "{{ keystone_service_internaluri }}/v3"
 
@@ -439,9 +439,9 @@ openrc_region_name: "{{ service_region }}"
 # The openstack-ansible-security role provides security hardening for hosts
 # by applying security configurations from the STIG. Hardening is enabled by
 # default, but an option to opt out is available by setting the following
-# variable to 'False'.
+# variable to 'false'.
 # Docs: http://docs.openstack.org/developer/openstack-ansible-security/
-apply_security_hardening: False
+apply_security_hardening: true
 
 ## Ansible ssh configuration
 ansible_ssh_extra_args: >
@@ -459,7 +459,7 @@ ansible_ssh_extra_args: >
 ## ceph-ansible configuration
 mon_group_name: ceph-mon
 osd_group_name: ceph-osd
-ceph_stable: True
+ceph_stable: true
 # The _stable_release var is used by both the OSA ceph_client role and the
 # ceph-ansible roles. It is defaulted in ceph_client but set here to keep the
 # OSA/ceph-ansible integrations in sync.
@@ -468,7 +468,7 @@ fetch_directory: /etc/openstack_deploy/ceph-fetch/
 # tries to create /var/log/ceph as a directory and fails if the log link already
 # exists. we handle the log dir creation so this is not something we need
 # ceph-common to prepare for us.
-rbd_client_directories: False
+rbd_client_directories: false
 
 # Magnum
 magnum_bind_port: 9511

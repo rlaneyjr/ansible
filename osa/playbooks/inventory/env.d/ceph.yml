@@ -35,7 +35,7 @@ container_skel:
     contains:
       - ceph-osd
     properties:
-      is_metal: True
+      is_metal: true
       service_name: ceph
 
 physical_skel:

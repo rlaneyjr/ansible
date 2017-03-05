@@ -29,7 +29,7 @@ container_skel:
     contains:
     - ceilometer_agent_compute
     properties:
-      is_metal: True
+      is_metal: true
       service_name: ceilometer
 
 physical_skel:

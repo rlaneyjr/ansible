@@ -26,7 +26,7 @@ container_skel:
     contains:
       - swift_remote
     properties:
-      is_metal: True
+      is_metal: true
       service_name: swift
 
 

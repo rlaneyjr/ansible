@@ -52,11 +52,11 @@ container_skel:
     properties:
 # When using LVM or any iSCSI based (see LP#1226855) cinder backends, such as
 # NetApp with iSCSI protocol, it is advised to run cinder-volumes on metal.
-# If you are using a different backend you may want to remove "is_metal: True".
+# If you are using a different backend you may want to remove "is_metal: true".
 # Otherwise if cinder-volumes is already running in containers you may want to
 # leave is_metal off, alternatively you will have to migrate your volumes once
 # deployed on metal.
-      is_metal: True
+      is_metal: true
       service_name: cinder
 
 

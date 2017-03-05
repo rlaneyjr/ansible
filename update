@@ -1,7 +1,24 @@
 #!/bin/sh
 
-cp repo-osa/scripts/gate-check-commit.sh osa/scripts/gate-check-commit.sh
-cp repo-osa/tests/bootstrap-aio.yml osa/tests/bootstrap-aio.yml
+cp repo-osa/playbooks/inventory/group_vars/ceph_all.yml osa/playbooks/inventory/group_vars/ceph_all.yml
+cp repo-osa/playbooks/ceph-install.yml osa/playbooks/ceph-install.yml
+cp repo-osa/playbooks/inventory/env.d/ceilometer.yml osa/playbooks/inventory/env.d/ceilometer.yml
+cp repo-osa/playbooks/inventory/env.d/ceph.yml osa/playbooks/inventory/env.d/ceph.yml
+cp repo-osa/playbooks/inventory/env.d/cinder.yml osa/playbooks/inventory/env.d/cinder.yml
+cp repo-osa/playbooks/inventory/env.d/haproxy.yml osa/playbooks/inventory/env.d/haproxy.yml
+cp repo-osa/playbooks/inventory/env.d/ironic.yml osa/playbooks/inventory/env.d/ironic.yml
+cp repo-osa/playbooks/inventory/env.d/nova.yml osa/playbooks/inventory/env.d/nova.yml
+cp repo-osa/playbooks/inventory/env.d/swift-remote.yml osa/playbooks/inventory/env.d/swift-remote.yml
+cp repo-osa/playbooks/inventory/env.d/swift.yml osa/playbooks/inventory/env.d/swift.yml
+cp repo-osa/playbooks/inventory/group_vars/all.yml osa/playbooks/inventory/group_vars/all.yml
+cp repo-osa/playbooks/inventory/group_vars/galera_all.yml osa/playbooks/inventory/group_vars/galera_all.yml
+cp repo-osa/playbooks/inventory/group_vars/glance_all.yml osa/playbooks/inventory/group_vars/glance_all.yml
+cp repo-osa/playbooks/inventory/group_vars/neutron_agent.yml osa/playbooks/inventory/group_vars/neutron_agent.yml
+cp repo-osa/playbooks/inventory/group_vars/rabbitmq_all.yml osa/playbooks/inventory/group_vars/rabbitmq_all.yml
+cp repo-osa/playbooks/inventory/group_vars/utility_all.yml osa/playbooks/inventory/group_vars/utility_all.yml
+cp repo-osa/playbooks/os-glance-install.yml osa/playbooks/os-glance-install.yml
+cp repo-osa/playbooks/utility-install.yml osa/playbooks/utility-install.yml
+cp repo-osa/playbooks/vars/configs/haproxy_config.yml osa/playbooks/vars/configs/haproxy_config.yml
 Only in repo-osa: .git
 Only in repo-osa: .gitignore
 Only in repo-osa: .gitreview

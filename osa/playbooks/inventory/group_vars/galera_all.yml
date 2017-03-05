@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-galera_client_drop_config_file: True
+galera_client_drop_config_file: true
 
 # Ensure that the package state matches the global setting
 galera_server_package_state: "{{ package_state }}"
