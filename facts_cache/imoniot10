@@ -58,7 +58,7 @@
             "vlan_challenged": "off [fixed]"
         }, 
         "lacp_rate": "slow", 
-        "macaddress": "4a:12:b9:cf:eb:db", 
+        "macaddress": "4a:ae:e7:be:2a:4f", 
         "miimon": "0", 
         "mode": "balance-rr", 
         "mtu": 1500, 
@@ -74,23 +74,23 @@
         "root": "UUID=2c11af43-c3d0-4d22-bb04-884b0ebbe344"
     }, 
     "ansible_date_time": {
-        "date": "2017-02-25", 
-        "day": "25", 
-        "epoch": "1488031126", 
-        "hour": "08", 
-        "iso8601": "2017-02-25T13:58:46Z", 
-        "iso8601_basic": "20170225T085846818633", 
-        "iso8601_basic_short": "20170225T085846", 
-        "iso8601_micro": "2017-02-25T13:58:46.818767Z", 
-        "minute": "58", 
-        "month": "02", 
-        "second": "46", 
-        "time": "08:58:46", 
+        "date": "2017-03-04", 
+        "day": "04", 
+        "epoch": "1488640411", 
+        "hour": "10", 
+        "iso8601": "2017-03-04T15:13:31Z", 
+        "iso8601_basic": "20170304T101331063980", 
+        "iso8601_basic_short": "20170304T101331", 
+        "iso8601_micro": "2017-03-04T15:13:31.064123Z", 
+        "minute": "13", 
+        "month": "03", 
+        "second": "31", 
+        "time": "10:13:31", 
         "tz": "EST", 
         "tz_offset": "-0500", 
         "weekday": "Saturday", 
         "weekday_number": "6", 
-        "weeknumber": "08", 
+        "weeknumber": "09", 
         "year": "2017"
     }, 
     "ansible_default_ipv4": {
@@ -171,7 +171,8 @@
     "ansible_distribution_version": "16.04", 
     "ansible_dns": {
         "nameservers": [
-            "209.18.47.62", 
+            "10.0.10.5", 
+            "10.0.10.6", 
             "10.0.10.5", 
             "10.0.10.6", 
             "209.18.47.61"
@@ -191,7 +192,7 @@
         "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin", 
         "PWD": "/home/rlaney", 
         "SHELL": "/bin/bash", 
-        "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-xkfdrxcwjplyewwkphdvdsxkylsrpfsz; /usr/bin/python /home/rlaney/.ansible/tmp/ansible-tmp-1488031126.49-96678691499415/setup.py; rm -rf \"/home/rlaney/.ansible/tmp/ansible-tmp-1488031126.49-96678691499415/\" > /dev/null 2>&1", 
+        "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-araadukijpjohuteayhipgrnzvzuhxqr; /usr/bin/python /home/rlaney/.ansible/tmp/ansible-tmp-1488640409.36-104213613803877/setup.py; rm -rf \"/home/rlaney/.ansible/tmp/ansible-tmp-1488640409.36-104213613803877/\" > /dev/null 2>&1", 
         "SUDO_GID": "1000", 
         "SUDO_UID": "1000", 
         "SUDO_USER": "rlaney", 
@@ -420,16 +421,16 @@
     }, 
     "ansible_machine": "x86_64", 
     "ansible_machine_id": "fc2e47fa9133634ca5c8f723585c4c5e", 
-    "ansible_memfree_mb": 31354, 
+    "ansible_memfree_mb": 31555, 
     "ansible_memory_mb": {
         "nocache": {
-            "free": 31877, 
-            "used": 282
+            "free": 31927, 
+            "used": 232
         }, 
         "real": {
-            "free": 31354, 
+            "free": 31555, 
             "total": 32159, 
-            "used": 805
+            "used": 604
         }, 
         "swap": {
             "cached": 0, 
@@ -445,7 +446,7 @@
             "fstype": "ext4", 
             "mount": "/", 
             "options": "rw,relatime,errors=remount-ro,data=ordered", 
-            "size_available": 523780747264, 
+            "size_available": 523783577600, 
             "size_total": 555538440192, 
             "uuid": "2c11af43-c3d0-4d22-bb04-884b0ebbe344"
         }
@@ -566,7 +567,7 @@
     ], 
     "ansible_system_capabilities_enforced": "True", 
     "ansible_system_vendor": "Dell Inc.", 
-    "ansible_uptime_seconds": 10565, 
+    "ansible_uptime_seconds": 10120, 
     "ansible_user_dir": "/root", 
     "ansible_user_gecos": "root", 
     "ansible_user_gid": 0, 

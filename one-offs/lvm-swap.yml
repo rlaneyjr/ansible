@@ -1,0 +1,10 @@
+---
+- name: Modify swap lvm space Ubuntu OSA servers
+  hosts: osa
+  tasks:
+    - copy:
+        src: files/scripts/lvm-swap.sh
+        dest: /home/rlaney/lvm-swap.sh
+        owner: rlaney
+        group: rlaney
+        mode: 0755

@@ -1,0 +1,5 @@
+---
+- name: Modify network configs Ubuntu OSA servers
+  hosts: osa
+  roles:
+    - net-interface

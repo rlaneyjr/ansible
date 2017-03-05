@@ -1,9 +1,8 @@
 ---
 cidr_networks:
-  snet: 10.0.23.0/24
-  container: 10.0.26.0/24
+  container: 10.0.23.0/24
+  tunnel: 10.0.26.0/24
   storage: 10.0.27.0/24
-  tunnel: 10.0.28.0/24
 
 used_ips:
   - "10.0.23.1,10.0.23.200"
@@ -18,22 +17,12 @@ global_overrides:
   management_bridge: "br-mgmt"
   provider_networks:
     - network:
-        container_bridge: "br-snet"
-        container_type: "veth"
-        container_interface: "eth0"
-        container_mtu: "9000"
-        ip_from_q: "snet"
-        type: "raw"
-        group_binds:
-          - all_containers
-          - hosts
-    - network:
         container_bridge: "br-mgmt"
         container_type: "veth"
         container_interface: "eth1"
         container_mtu: "9000"
         ip_from_q: "container"
-        type: "vlan"
+        type: "raw"
         group_binds:
           - all_containers
           - hosts
@@ -53,8 +42,8 @@ global_overrides:
     - network:
         container_bridge: "br-vlan"
         container_type: "veth"
-        container_interface: "eth11"
-        host_bind_override: "eth11"
+        container_interface: "eth12"
+        host_bind_override: "eth12"
         container_mtu: "9000"
         type: "flat"
         net_name: "flat"
@@ -63,8 +52,8 @@ global_overrides:
     - network:
         container_bridge: "br-vlan"
         container_type: "veth"
-        container_interface: "eth12"
-        host_bind_override: "eth12"
+        container_interface: "eth11"
+        host_bind_override: "eth11"
         container_mtu: "9000"
         type: "vlan"
         range: "10:110,200:300"
@@ -77,7 +66,7 @@ global_overrides:
         container_interface: "eth2"
         container_mtu: "9000"
         ip_from_q: "storage"
-        type: "vlan"
+        type: "raw"
         group_binds:
           - glance_api
           - cinder_api
@@ -155,7 +144,7 @@ image_hosts:
     container_vars:
       limit_container_types: glance
       glance_nfs_client:
-        - server: "10.0.21.15"
+        - server: "10.0.27.109"
           remote_path: "/images"
           local_path: "/var/lib/glance/images"
           type: "nfs"
@@ -165,7 +154,7 @@ image_hosts:
     container_vars:
       limit_container_types: glance
       glance_nfs_client:
-        - server: "10.0.21.15"
+        - server: "10.0.27.109"
           remote_path: "/images"
           local_path: "/var/lib/glance/images"
           type: "nfs"
@@ -175,7 +164,7 @@ image_hosts:
     container_vars:
       limit_container_types: glance
       glance_nfs_client:
-        - server: "10.0.21.15"
+        - server: "10.0.27.109"
           remote_path: "/images"
           local_path: "/var/lib/glance/images"
           type: "nfs"

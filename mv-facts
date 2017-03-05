@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -e
+
+hosts="imoniot01 imoniot02 imoniot03 imoniot05 imoniot06 imoniot07 imoniot08 imoniot09"
+
+for h in $hosts; do
+    cp facts_cache/$h info/$h.yml
+done
+exit 0

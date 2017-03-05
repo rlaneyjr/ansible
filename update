@@ -2,3 +2,6 @@
 
 cp repo-osa/scripts/gate-check-commit.sh osa/scripts/gate-check-commit.sh
 cp repo-osa/tests/bootstrap-aio.yml osa/tests/bootstrap-aio.yml
+Only in repo-osa: .git
+Only in repo-osa: .gitignore
+Only in repo-osa: .gitreview

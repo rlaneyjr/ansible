@@ -27,7 +27,7 @@ container_skel:
       - haproxy
     properties:
       service_name: haproxy
-      is_metal: true
+      is_metal: True
 
 physical_skel:
   haproxy_containers:

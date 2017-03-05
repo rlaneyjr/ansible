@@ -1,0 +1,19 @@
+---
+- name: Transfer interface configuration files to each host
+  copy:
+    src: "~/Projects/ansible/roles/net-interface/files/interfaces"
+    dest: /etc/network/
+    backup: yes
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Transfer interface configuration files to each host
+  copy:
+    src: "~/Projects/ansible/roles/net-interface/files/{{ ansible_hostname }}.interfaces.cfg"
+    dest: /etc/network/interfaces.d/
+    backup: yes
+    owner: root
+    group: root
+    mode: 0644
+  notify: reboot server

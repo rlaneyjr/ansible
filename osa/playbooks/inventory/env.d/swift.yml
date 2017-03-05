@@ -42,7 +42,7 @@ container_skel:
     contains:
       - swift_acc
     properties:
-      is_metal: true
+      is_metal: True
       service_name: swift
   swift_obj_container:
     belongs_to:
@@ -50,7 +50,7 @@ container_skel:
     contains:
       - swift_obj
     properties:
-      is_metal: true
+      is_metal: True
       service_name: swift
   swift_cont_container:
     belongs_to:
@@ -58,7 +58,7 @@ container_skel:
     contains:
       - swift_cont
     properties:
-      is_metal: true
+      is_metal: True
       service_name: swift
 
 

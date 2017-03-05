@@ -25,4 +25,4 @@ lxc_container_config_list:
   - "lxc.aa_profile=unconfined"
 
 # Ensure that all neutron agent containers get a fixed mac address
-lxc_container_fixed_mac: true
+lxc_container_fixed_mac: True
