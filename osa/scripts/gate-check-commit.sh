@@ -30,6 +30,9 @@ export PYTHONUNBUFFERED=1
 # Extra options to pass to the AIO bootstrap process
 export BOOTSTRAP_OPTS=${BOOTSTRAP_OPTS:-''}
 
+# Ensure the terminal type is set
+export TERM=linux
+
 # This variable is being added to ensure the gate job executes an exit
 #  function at the end of the run.
 export OSA_GATE_JOB=true
@@ -151,8 +154,10 @@ if [[ "${ACTION}" == "upgrade" ]]; then
     # to bypass that for an automated test.
     export I_REALLY_KNOW_WHAT_I_AM_DOING=true
 
-    # Execute the upgrade script.
-    bash "$(dirname "${0}")/run-upgrade.sh"
+    # To execute the upgrade script we need to provide
+    # an affirmative response to the warning that the
+    # upgrade is irreversable.
+    echo 'YES' | bash "$(dirname "${0}")/run-upgrade.sh"
 
 fi
 
