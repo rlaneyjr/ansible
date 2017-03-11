@@ -25,8 +25,6 @@
     regexp: "^bonding"
     line: "bonding"
     state: present
-  notify:
-    reboot: "yes"
 
 - name: Update modules for vlan
   lineinfile:
@@ -34,5 +32,3 @@
     regexp: "^8021q"
     line: "8021q"
     state: present
-  notify:
-    reboot: "yes"
