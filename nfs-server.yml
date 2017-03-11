@@ -1,6 +1,6 @@
 ---
 - name: Install nfs-kernel-server
-  hosts: imoniot09
+  hosts: imon9
   tasks:
     - apt: 
         name: nfs-kernel-server
