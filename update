@@ -1,43 +1,4 @@
 #!/bin/sh
 
-cp repo-osa/etc/openstack_deploy/user_variables.yml.test.example                        osa/etc/openstack_deploy/user_variables.yml.test.example
-cp repo-osa/releasenotes/notes/ansible-hostname-bug-rabbitmq-7919f9311d61dcd6.yaml      osa/releasenotes/notes/ansible-hostname-bug-rabbitmq-7919f9311d61dcd6.yaml
-cp repo-osa/README.rst osa/README.rst
-cp repo-osa/deploy-guide/source/app-config-test.rst osa/deploy-guide/source/app-config-test.rst
-cp repo-osa/deploy-guide/source/app-networking.rst osa/deploy-guide/source/app-networking.rst
-cp repo-osa/deploy-guide/source/conf.py osa/deploy-guide/source/conf.py
-cp repo-osa/deploy-guide/source/configure.rst osa/deploy-guide/source/configure.rst
-cp repo-osa/deploy-guide/source/targethosts-networkconfig.rst osa/deploy-guide/source/targethosts-networkconfig.rst
-cp repo-osa/deploy-guide/source/targethosts-prepare.rst osa/deploy-guide/source/targethosts-prepare.rst
-cp repo-osa/doc/source/conf.py osa/doc/source/conf.py
-cp repo-osa/doc/source/developer-docs/additional-roles.rst osa/doc/source/developer-docs/additional-roles.rst
-cp repo-osa/doc/source/developer-docs/contribute.rst osa/doc/source/developer-docs/contribute.rst
-cp repo-osa/doc/source/developer-docs/core-reviewers.rst osa/doc/source/developer-docs/core-reviewers.rst
-cp repo-osa/doc/source/developer-docs/quickstart-aio.rst osa/doc/source/developer-docs/quickstart-aio.rst
-cp repo-osa/doc/source/developer-docs/scripts.rst osa/doc/source/developer-docs/scripts.rst
-cp repo-osa/doc/source/draft-operations-guide/advanced-config.rst osa/doc/source/draft-operations-guide/advanced-config.rst
-cp repo-osa/doc/source/draft-operations-guide/maintenance-tasks/rabbitmq-maintain.rst osa/doc/source/draft-operations-guide/maintenance-tasks/rabbitmq-maintain.rst
-cp repo-osa/doc/source/draft-operations-guide/troubleshooting.rst osa/doc/source/draft-operations-guide/troubleshooting.rst
 cp repo-osa/doc/source/index.rst osa/doc/source/index.rst
-cp repo-osa/doc/source/upgrade-guide/overview.rst osa/doc/source/upgrade-guide/overview.rst
-cp repo-osa/doc/source/upgrade-guide/script-upgrade.rst osa/doc/source/upgrade-guide/script-upgrade.rst
-cp repo-osa/etc/network/interfaces.d/openstack_interface.cfg.prod.example osa/etc/network/interfaces.d/openstack_interface.cfg.prod.example
-cp repo-osa/etc/openstack_deploy/openstack_user_config.yml.prod.example osa/etc/openstack_deploy/openstack_user_config.yml.prod.example
-cp repo-osa/etc/openstack_deploy/openstack_user_config.yml.test.example osa/etc/openstack_deploy/openstack_user_config.yml.test.example
 cp repo-osa/playbooks/defaults/repo_packages/openstack_services.yml osa/playbooks/defaults/repo_packages/openstack_services.yml
-cp repo-osa/playbooks/os-glance-install.yml osa/playbooks/os-glance-install.yml
-cp repo-osa/playbooks/os-neutron-install.yml osa/playbooks/os-neutron-install.yml
-cp repo-osa/playbooks/rabbitmq-install.yml osa/playbooks/rabbitmq-install.yml
-cp repo-osa/requirements.txt osa/requirements.txt
-cp repo-osa/scripts/bootstrap-ansible.sh osa/scripts/bootstrap-ansible.sh
-cp repo-osa/scripts/gate-check-commit.sh osa/scripts/gate-check-commit.sh
-cp repo-osa/scripts/run-upgrade.sh osa/scripts/run-upgrade.sh
-cp repo-osa/scripts/upgrade-utilities/playbooks/deploy-config-changes.yml osa/scripts/upgrade-utilities/playbooks/deploy-config-changes.yml
-cp repo-osa/scripts/upgrade-utilities/scripts/migrate_openstack_vars.py osa/scripts/upgrade-utilities/scripts/migrate_openstack_vars.py
-cp repo-osa/tests/roles/bootstrap-host/defaults/main.yml osa/tests/roles/bootstrap-host/defaults/main.yml
-cp repo-osa/tests/roles/bootstrap-host/tasks/install_packages.yml osa/tests/roles/bootstrap-host/tasks/install_packages.yml
-cp repo-osa/tests/roles/bootstrap-host/templates/apt-sources.list.j2 osa/tests/roles/bootstrap-host/templates/apt-sources.list.j2
-cp repo-osa/tests/roles/bootstrap-host/vars/redhat.yml osa/tests/roles/bootstrap-host/vars/redhat.yml
-Only in repo-osa: .git
-Only in repo-osa: .gitignore
-Only in repo-osa: .gitreview
