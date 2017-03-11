@@ -6,26 +6,26 @@ ns1
 ns2
 
 [osa]
-imoniot01
-imoniot02
-imoniot03
-imoniot05
-imoniot06
-imoniot07
-imoniot08
-imoniot09
+imon1
+imon2
+imon3
+imon5
+imon6
+imon7
+imon8
+imon9
 
 [srvs]
-imoniot01
-imoniot02
-imoniot03
+imon1
+imon2
+imon3
 virl
-imoniot05
-imoniot06
-imoniot07
-imoniot08
-imoniot09
-imoniot10
+imon5
+imon6
+imon7
+imon8
+imon9
+imon10
 
 [virl]
 virl
