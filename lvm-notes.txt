@@ -1,0 +1,229 @@
+
+lvreduce -L 8G /dev/mapper/imoniot05--vg-swap_1
+lvextend -r -L 139.5G /dev/imoniat03--vg/root
+
+Disk /dev/sda: 465.7 GiB, 500074307584 bytes, 976707632 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x61822215
+
+Device     Boot   Start       End   Sectors   Size Id Type
+/dev/sda1  *       2048    999423    997376   487M 83 Linux
+/dev/sda2       1001470 976705535 975704066 465.3G  5 Extended
+/dev/sda5       1001472 976705535 975704064 465.3G 8e Linux LVM
+
+
+Disk /dev/sdb: 2.3 TiB, 2500371439616 bytes, 4883537968 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: 53E25A9F-698D-4666-A04E-20E0A175382C
+
+Device     Start        End    Sectors  Size Type
+/dev/sdb1   2048 4883535871 4883533824  2.3T Linux LVM
+
+
+Disk /dev/mapper/imoniot05--vg-root: 417.3 GiB, 448027164672 bytes, 875053056 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/mapper/imoniot05--vg-swap_1: 48 GiB, 51531218944 bytes, 100646912 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+################################################################################
+root@imoniot01:~# lvreduce --help
+  lvreduce: Reduce the size of a logical volume
+
+lvreduce
+        [-A|--autobackup y|n]
+        [--commandprofile ProfileName]
+        [-d|--debug]
+        [-f|--force]
+        [-h|--help]
+        {-l|--extents [-]LogicalExtentsNumber[%{VG|LV|FREE|ORIGIN}] |
+         -L|--size [-]LogicalVolumeSize[bBsSkKmMgGtTpPeE]}
+        [-n|--nofsck]
+        [--noudevsync]
+        [-r|--resizefs]
+        [-t|--test]
+        [-v|--verbose]
+        [--version]
+        [-y|--yes]
+        LogicalVolume[Path]
+
+root@imoniot01:~# lvreduce -r -L 8G /dev/mapper/imoniat02--vg-swap_1
+fsck from util-linux 2.27.1
+fsadm: Filesystem "swap" on device "/dev/mapper/imoniat02--vg-swap_1" is not supported by this tool
+  fsadm failed: 1
+  Filesystem resize failed.
+
+root@imoniot01:~# lvreduce -L 8G /dev/mapper/imoniat02--vg-swap_1
+  WARNING: Reducing active and open logical volume to 8.00 GiB
+  THIS MAY DESTROY YOUR DATA (filesystem etc.)
+Do you really want to reduce swap_1? [y/n]: y
+  Size of logical volume imoniat02-vg/swap_1 changed from 119.99 GiB (30717 extents) to 8.00 GiB (2048 extents).
+  Logical volume swap_1 successfully resized.
+
+################################################################################
+root@imoniot01:~# lvextend --help
+  lvextend: Add space to a logical volume
+
+lvextend
+        [-A|--autobackup y|n]
+        [--alloc AllocationPolicy]
+        [--commandprofile ProfileName]
+        [-d|--debug]
+        [-f|--force]
+        [-h|--help]
+        [-i|--stripes Stripes [-I|--stripesize StripeSize]]
+        {-l|--extents [+]LogicalExtentsNumber[%{VG|LV|PVS|FREE|ORIGIN}] |
+         -L|--size [+]LogicalVolumeSize[bBsSkKmMgGtTpPeE]}
+         --poolmetadatasize [+]MetadataVolumeSize[bBsSkKmMgG]}
+        [-m|--mirrors Mirrors]
+        [--nosync]
+        [--use-policies]
+        [-n|--nofsck]
+        [--noudevsync]
+        [-r|--resizefs]
+        [-t|--test]
+        [--type VolumeType]
+        [-v|--verbose]
+        [--version]
+        LogicalVolume[Path] [ PhysicalVolumePath... ]
+
+root@imoniot01:~# lvextend -r -L 110G /dev/imoniat02-vg/root
+  Size of logical volume imoniat02-vg/root changed from 19.71 GiB (5045 extents) to 110.00 GiB (28160 extents).
+  Logical volume root successfully resized.
+resize2fs 1.42.13 (17-May-2015)
+Filesystem at /dev/mapper/imoniat02--vg-root is mounted on /; on-line resizing required
+old_desc_blocks = 2, new_desc_blocks = 7
+The filesystem on /dev/mapper/imoniat02--vg-root is now 28835840 (4k) blocks long.
+
+################################################################################
+Disk /dev/sdb: 2.2 TiB, 2398202363904 bytes, 4683988992 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/sda: 148 GiB, 158913789952 bytes, 310378496 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x86741e59
+
+Device     Boot   Start       End   Sectors   Size Id Type
+/dev/sda1  *       2048    999423    997376   487M 83 Linux
+/dev/sda2       1001470 310376447 309374978 147.5G  5 Extended
+/dev/sda5       1001472 310376447 309374976 147.5G 8e Linux LVM
+
+
+Disk /dev/mapper/imoniat03--vg-root: 139.5 GiB, 149786984448 bytes, 292552704 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/mapper/imoniat03--vg-swap_1: 8 GiB, 8589934592 bytes, 16777216 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+################################################################################
+root@imoniot03:~# fdisk /dev/sdb
+
+Welcome to fdisk (util-linux 2.27.1).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+Device does not contain a recognized partition table.
+The size of this disk is 2.2 TiB (2398202363904 bytes). DOS partition table format can not be used on drives for volumes larger than 2199023255040 bytes for 512-byte sectors. Use GUID partition table format (GPT).
+
+Created a new DOS disklabel with disk identifier 0xbf9c370d.
+
+Command (m for help): m
+
+Help:
+
+  DOS (MBR)
+   a   toggle a bootable flag
+   b   edit nested BSD disklabel
+   c   toggle the dos compatibility flag
+
+  Generic
+   d   delete a partition
+   F   list free unpartitioned space
+   l   list known partition types
+   n   add a new partition
+   p   print the partition table
+   t   change a partition type
+   v   verify the partition table
+   i   print information about a partition
+
+  Misc
+   m   print this menu
+   u   change display/entry units
+   x   extra functionality (experts only)
+
+  Script
+   I   load disk layout from sfdisk script file
+   O   dump disk layout to sfdisk script file
+
+  Save & Exit
+   w   write table to disk and exit
+   q   quit without saving changes
+
+  Create a new label
+   g   create a new empty GPT partition table
+   G   create a new empty SGI (IRIX) partition table
+   o   create a new empty DOS partition table
+   s   create a new empty Sun partition table
+
+
+Command (m for help): F
+Unpartitioned space /dev/sdb: 2.2 TiB, 2398201315328 bytes, 4683986944 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+
+Start        End    Sectors  Size
+ 2048 4683988991 4683986944  2.2T
+
+Command (m for help): i
+No partition is defined yet!
+
+Command (m for help): l
+
+ 0  Empty           24  NEC DOS         81  Minix / old Lin bf  Solaris
+ 1  FAT12           27  Hidden NTFS Win 82  Linux swap / So c1  DRDOS/sec (FAT-
+ 2  XENIX root      39  Plan 9          83  Linux           c4  DRDOS/sec (FAT-
+ 3  XENIX usr       3c  PartitionMagic  84  OS/2 hidden or  c6  DRDOS/sec (FAT-
+ 4  FAT16 <32M      40  Venix 80286     85  Linux extended  c7  Syrinx
+ 5  Extended        41  PPC PReP Boot   86  NTFS volume set da  Non-FS data
+ 6  FAT16           42  SFS             87  NTFS volume set db  CP/M / CTOS / .
+ 7  HPFS/NTFS/exFAT 4d  QNX4.x          88  Linux plaintext de  Dell Utility
+ 8  AIX             4e  QNX4.x 2nd part 8e  Linux LVM       df  BootIt
+ 9  AIX bootable    4f  QNX4.x 3rd part 93  Amoeba          e1  DOS access
+ a  OS/2 Boot Manag 50  OnTrack DM      94  Amoeba BBT      e3  DOS R/O
+ b  W95 FAT32       51  OnTrack DM6 Aux 9f  BSD/OS          e4  SpeedStor
+ c  W95 FAT32 (LBA) 52  CP/M            a0  IBM Thinkpad hi ea  Rufus alignment
+ e  W95 FAT16 (LBA) 53  OnTrack DM6 Aux a5  FreeBSD         eb  BeOS fs
+ f  W95 Ext'd (LBA) 54  OnTrackDM6      a6  OpenBSD         ee  GPT
+10  OPUS            55  EZ-Drive        a7  NeXTSTEP        ef  EFI (FAT-12/16/
+11  Hidden FAT12    56  Golden Bow      a8  Darwin UFS      f0  Linux/PA-RISC b
+12  Compaq diagnost 5c  Priam Edisk     a9  NetBSD          f1  SpeedStor
+14  Hidden FAT16 <3 61  SpeedStor       ab  Darwin boot     f4  SpeedStor
+16  Hidden FAT16    63  GNU HURD or Sys af  HFS / HFS+      f2  DOS secondary
+17  Hidden HPFS/NTF 64  Novell Netware  b7  BSDI fs         fb  VMware VMFS
+18  AST SmartSleep  65  Novell Netware  b8  BSDI swap       fc  VMware VMKCORE
+1b  Hidden W95 FAT3 70  DiskSecure Mult bb  Boot Wizard hid fd  Linux raid auto
+1c  Hidden W95 FAT3 75  PC/IX           bc  Acronis FAT32 L fe  LANstep
+1e  Hidden W95 FAT1 80  Old Minix       be  Solaris boot    ff  BBT
+
+Command (m for help):

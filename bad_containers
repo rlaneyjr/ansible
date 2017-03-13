@@ -1,0 +1,83 @@
+compute1
+compute2
+compute3
+infra1
+infra2
+infra3
+log1
+storage1
+storage2
+lxc-destroy -f -n infra1_aodh_container-efec4b1c
+lxc-destroy -f -n infra1_ceilometer_api_container-faf4f197
+lxc-destroy -f -n infra1_cinder_api_container-7ba7febf
+lxc-destroy -f -n infra1_cinder_scheduler_container-38c0b462
+lxc-destroy -f -n infra1_galera_container-bc5b6a86
+lxc-destroy -f -n infra1_glance_container-1309f2e3
+lxc-destroy -f -n infra1_gnocchi_container-13299fb7
+lxc-destroy -f -n infra1_heat_apis_container-d235ae01
+lxc-destroy -f -n infra1_heat_engine_container-9789a36c
+lxc-destroy -f -n infra1_horizon_container-93263d10
+lxc-destroy -f -n infra1_keystone_container-17c7ab2d
+lxc-destroy -f -n infra1_magnum_container-36826d60
+lxc-destroy -f -n infra1_memcached_container-5439a761
+lxc-destroy -f -n infra1_neutron_agents_container-0aba1447
+lxc-destroy -f -n infra1_neutron_server_container-e921c0d6
+lxc-destroy -f -n infra1_nova_api_metadata_container-914c6b24
+lxc-destroy -f -n infra1_nova_api_os_compute_container-6044e135
+lxc-destroy -f -n infra1_nova_api_placement_container-ee1c0c61
+lxc-destroy -f -n infra1_nova_conductor_container-8e646346
+lxc-destroy -f -n infra1_nova_console_container-9de0a086
+lxc-destroy -f -n infra1_nova_scheduler_container-7bdb6937
+lxc-destroy -f -n infra1_rabbit_mq_container-4209608b
+lxc-destroy -f -n infra1_repo_container-27e53691
+lxc-destroy -f -n infra1_utility_container-c5911885
+
+lxc-destroy -f -n infra2_aodh_container-dadcae5b
+lxc-destroy -f -n infra2_ceilometer_api_container-9cdfa9d6
+lxc-destroy -f -n infra2_cinder_api_container-03555688
+lxc-destroy -f -n infra2_cinder_scheduler_container-6821ea69
+lxc-destroy -f -n infra2_galera_container-a348fa6a
+lxc-destroy -f -n infra2_glance_container-c820383e
+lxc-destroy -f -n infra2_gnocchi_container-f2a4a6a7
+lxc-destroy -f -n infra2_heat_apis_container-58a24475
+lxc-destroy -f -n infra2_heat_engine_container-75c6d4b7
+lxc-destroy -f -n infra2_horizon_container-eb053658
+lxc-destroy -f -n infra2_keystone_container-bd2b05e2
+lxc-destroy -f -n infra2_magnum_container-601ec1d7
+lxc-destroy -f -n infra2_memcached_container-e1337194
+lxc-destroy -f -n infra2_neutron_agents_container-aa14a25e
+lxc-destroy -f -n infra2_neutron_server_container-7d62a594
+lxc-destroy -f -n infra2_nova_api_metadata_container-e5e177d2
+lxc-destroy -f -n infra2_nova_api_os_compute_container-a2fa59ab
+lxc-destroy -f -n infra2_nova_api_placement_container-efa774e4
+lxc-destroy -f -n infra2_nova_conductor_container-611150bc
+lxc-destroy -f -n infra2_nova_console_container-df58f15f
+lxc-destroy -f -n infra2_nova_scheduler_container-8c57cf31
+lxc-destroy -f -n infra2_rabbit_mq_container-93c835f6
+lxc-destroy -f -n infra2_repo_container-112b6d3c
+lxc-destroy -f -n infra2_utility_container-1ab9a793
+
+lxc-destroy -f -n infra3_aodh_container-3e62205a
+lxc-destroy -f -n infra3_ceilometer_api_container-8ce5503c
+lxc-destroy -f -n infra3_cinder_api_container-9896a9db
+lxc-destroy -f -n infra3_cinder_scheduler_container-4b98a950
+lxc-destroy -f -n infra3_galera_container-da407ecf
+lxc-destroy -f -n infra3_glance_container-29c085ab
+lxc-destroy -f -n infra3_gnocchi_container-b6ca55b5
+lxc-destroy -f -n infra3_heat_apis_container-428971d0
+lxc-destroy -f -n infra3_heat_engine_container-bb718651
+lxc-destroy -f -n infra3_horizon_container-b132a13a
+lxc-destroy -f -n infra3_keystone_container-290cfee4
+lxc-destroy -f -n infra3_magnum_container-e8c9cb6c
+lxc-destroy -f -n infra3_memcached_container-ab2f3192
+lxc-destroy -f -n infra3_neutron_agents_container-2ed86dc5
+lxc-destroy -f -n infra3_neutron_server_container-4bed6198
+lxc-destroy -f -n infra3_nova_api_metadata_container-28510d81
+lxc-destroy -f -n infra3_nova_api_os_compute_container-485296d8
+lxc-destroy -f -n infra3_nova_api_placement_container-c369679b
+lxc-destroy -f -n infra3_nova_conductor_container-817c7687
+lxc-destroy -f -n infra3_nova_console_container-2412c197
+lxc-destroy -f -n infra3_nova_scheduler_container-de588d33
+lxc-destroy -f -n infra3_rabbit_mq_container-14d54f73
+lxc-destroy -f -n infra3_repo_container-39d7eaee
+lxc-destroy -f -n infra3_utility_container-cb17478b

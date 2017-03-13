@@ -1,0 +1,330 @@
+{
+    "compute1": {
+        "ansible_host": "10.0.23.101",
+        "container_address": "10.0.23.101"
+    },
+    "compute2": {
+        "ansible_host": "10.0.23.102",
+        "container_address": "10.0.23.102"
+    },
+    "compute3": {
+        "ansible_host": "10.0.23.103",
+        "container_address": "10.0.23.103"
+    },
+    "infra1": {
+        "ansible_host": "10.0.23.105",
+        "container_address": "10.0.23.105"
+    },
+    "infra1_aodh_container-efec4b1c": {
+        "ansible_host": "10.0.23.53",
+        "container_address": "10.0.23.53"
+    },
+    "infra1_ceilometer_api_container-faf4f197": {
+        "ansible_host": "10.0.23.29",
+        "container_address": "10.0.23.29"
+    },
+    "infra1_cinder_api_container-7ba7febf": {
+        "ansible_host": "10.0.23.22",
+        "container_address": "10.0.23.22"
+    },
+    "infra1_cinder_scheduler_container-38c0b462": {
+        "ansible_host": "10.0.23.50",
+        "container_address": "10.0.23.50"
+    },
+    "infra1_galera_container-bc5b6a86": {
+        "ansible_host": "10.0.23.55",
+        "container_address": "10.0.23.55"
+    },
+    "infra1_glance_container-1309f2e3": {
+        "ansible_host": "10.0.23.80",
+        "container_address": "10.0.23.80"
+    },
+    "infra1_gnocchi_container-13299fb7": {
+        "ansible_host": "10.0.23.20",
+        "container_address": "10.0.23.20"
+    },
+    "infra1_heat_apis_container-d235ae01": {
+        "ansible_host": "10.0.23.54",
+        "container_address": "10.0.23.54"
+    },
+    "infra1_heat_engine_container-9789a36c": {
+        "ansible_host": "10.0.23.14",
+        "container_address": "10.0.23.14"
+    },
+    "infra1_horizon_container-93263d10": {
+        "ansible_host": "10.0.23.81",
+        "container_address": "10.0.23.81"
+    },
+    "infra1_keystone_container-17c7ab2d": {
+        "ansible_host": "10.0.23.70",
+        "container_address": "10.0.23.70"
+    },
+    "infra1_magnum_container-36826d60": {
+        "ansible_host": "10.0.23.56",
+        "container_address": "10.0.23.56"
+    },
+    "infra1_memcached_container-5439a761": {
+        "ansible_host": "10.0.23.15",
+        "container_address": "10.0.23.15"
+    },
+    "infra1_neutron_agents_container-0aba1447": {
+        "ansible_host": "10.0.23.7",
+        "container_address": "10.0.23.7"
+    },
+    "infra1_neutron_server_container-e921c0d6": {
+        "ansible_host": "10.0.23.27",
+        "container_address": "10.0.23.27"
+    },
+    "infra1_nova_api_metadata_container-914c6b24": {
+        "ansible_host": "10.0.23.41",
+        "container_address": "10.0.23.41"
+    },
+    "infra1_nova_api_os_compute_container-6044e135": {
+        "ansible_host": "10.0.23.40",
+        "container_address": "10.0.23.40"
+    },
+    "infra1_nova_api_placement_container-ee1c0c61": {
+        "ansible_host": "10.0.23.79",
+        "container_address": "10.0.23.79"
+    },
+    "infra1_nova_conductor_container-8e646346": {
+        "ansible_host": "10.0.23.60",
+        "container_address": "10.0.23.60"
+    },
+    "infra1_nova_console_container-9de0a086": {
+        "ansible_host": "10.0.23.93",
+        "container_address": "10.0.23.93"
+    },
+    "infra1_nova_scheduler_container-7bdb6937": {
+        "ansible_host": "10.0.23.82",
+        "container_address": "10.0.23.82"
+    },
+    "infra1_rabbit_mq_container-4209608b": {
+        "ansible_host": "10.0.23.77",
+        "container_address": "10.0.23.77"
+    },
+    "infra1_repo_container-27e53691": {
+        "ansible_host": "10.0.23.49",
+        "container_address": "10.0.23.49"
+    },
+    "infra1_utility_container-c5911885": {
+        "ansible_host": "10.0.23.45",
+        "container_address": "10.0.23.45"
+    },
+    "infra2": {
+        "ansible_host": "10.0.23.106",
+        "container_address": "10.0.23.106"
+    },
+    "infra2_aodh_container-dadcae5b": {
+        "ansible_host": "10.0.23.51",
+        "container_address": "10.0.23.51"
+    },
+    "infra2_ceilometer_api_container-9cdfa9d6": {
+        "ansible_host": "10.0.23.30",
+        "container_address": "10.0.23.30"
+    },
+    "infra2_cinder_api_container-03555688": {
+        "ansible_host": "10.0.23.69",
+        "container_address": "10.0.23.69"
+    },
+    "infra2_cinder_scheduler_container-6821ea69": {
+        "ansible_host": "10.0.23.33",
+        "container_address": "10.0.23.33"
+    },
+    "infra2_galera_container-a348fa6a": {
+        "ansible_host": "10.0.23.88",
+        "container_address": "10.0.23.88"
+    },
+    "infra2_glance_container-c820383e": {
+        "ansible_host": "10.0.23.48",
+        "container_address": "10.0.23.48"
+    },
+    "infra2_gnocchi_container-f2a4a6a7": {
+        "ansible_host": "10.0.23.11",
+        "container_address": "10.0.23.11"
+    },
+    "infra2_heat_apis_container-58a24475": {
+        "ansible_host": "10.0.23.99",
+        "container_address": "10.0.23.99"
+    },
+    "infra2_heat_engine_container-75c6d4b7": {
+        "ansible_host": "10.0.23.8",
+        "container_address": "10.0.23.8"
+    },
+    "infra2_horizon_container-eb053658": {
+        "ansible_host": "10.0.23.1",
+        "container_address": "10.0.23.1"
+    },
+    "infra2_keystone_container-bd2b05e2": {
+        "ansible_host": "10.0.23.47",
+        "container_address": "10.0.23.47"
+    },
+    "infra2_magnum_container-601ec1d7": {
+        "ansible_host": "10.0.23.19",
+        "container_address": "10.0.23.19"
+    },
+    "infra2_memcached_container-e1337194": {
+        "ansible_host": "10.0.23.78",
+        "container_address": "10.0.23.78"
+    },
+    "infra2_neutron_agents_container-aa14a25e": {
+        "ansible_host": "10.0.23.3",
+        "container_address": "10.0.23.3"
+    },
+    "infra2_neutron_server_container-7d62a594": {
+        "ansible_host": "10.0.23.73",
+        "container_address": "10.0.23.73"
+    },
+    "infra2_nova_api_metadata_container-e5e177d2": {
+        "ansible_host": "10.0.23.25",
+        "container_address": "10.0.23.25"
+    },
+    "infra2_nova_api_os_compute_container-a2fa59ab": {
+        "ansible_host": "10.0.23.91",
+        "container_address": "10.0.23.91"
+    },
+    "infra2_nova_api_placement_container-efa774e4": {
+        "ansible_host": "10.0.23.28",
+        "container_address": "10.0.23.28"
+    },
+    "infra2_nova_conductor_container-611150bc": {
+        "ansible_host": "10.0.23.89",
+        "container_address": "10.0.23.89"
+    },
+    "infra2_nova_console_container-df58f15f": {
+        "ansible_host": "10.0.23.86",
+        "container_address": "10.0.23.86"
+    },
+    "infra2_nova_scheduler_container-8c57cf31": {
+        "ansible_host": "10.0.23.95",
+        "container_address": "10.0.23.95"
+    },
+    "infra2_rabbit_mq_container-93c835f6": {
+        "ansible_host": "10.0.23.65",
+        "container_address": "10.0.23.65"
+    },
+    "infra2_repo_container-112b6d3c": {
+        "ansible_host": "10.0.23.90",
+        "container_address": "10.0.23.90"
+    },
+    "infra2_utility_container-1ab9a793": {
+        "ansible_host": "10.0.23.74",
+        "container_address": "10.0.23.74"
+    },
+    "infra3": {
+        "ansible_host": "10.0.23.108",
+        "container_address": "10.0.23.108"
+    },
+    "infra3_aodh_container-3e62205a": {
+        "ansible_host": "10.0.23.31",
+        "container_address": "10.0.23.31"
+    },
+    "infra3_ceilometer_api_container-8ce5503c": {
+        "ansible_host": "10.0.23.59",
+        "container_address": "10.0.23.59"
+    },
+    "infra3_cinder_api_container-9896a9db": {
+        "ansible_host": "10.0.23.39",
+        "container_address": "10.0.23.39"
+    },
+    "infra3_cinder_scheduler_container-4b98a950": {
+        "ansible_host": "10.0.23.57",
+        "container_address": "10.0.23.57"
+    },
+    "infra3_galera_container-da407ecf": {
+        "ansible_host": "10.0.23.71",
+        "container_address": "10.0.23.71"
+    },
+    "infra3_glance_container-29c085ab": {
+        "ansible_host": "10.0.23.37",
+        "container_address": "10.0.23.37"
+    },
+    "infra3_gnocchi_container-b6ca55b5": {
+        "ansible_host": "10.0.23.67",
+        "container_address": "10.0.23.67"
+    },
+    "infra3_heat_apis_container-428971d0": {
+        "ansible_host": "10.0.23.17",
+        "container_address": "10.0.23.17"
+    },
+    "infra3_heat_engine_container-bb718651": {
+        "ansible_host": "10.0.23.44",
+        "container_address": "10.0.23.44"
+    },
+    "infra3_horizon_container-b132a13a": {
+        "ansible_host": "10.0.23.84",
+        "container_address": "10.0.23.84"
+    },
+    "infra3_keystone_container-290cfee4": {
+        "ansible_host": "10.0.23.98",
+        "container_address": "10.0.23.98"
+    },
+    "infra3_magnum_container-e8c9cb6c": {
+        "ansible_host": "10.0.23.38",
+        "container_address": "10.0.23.38"
+    },
+    "infra3_memcached_container-ab2f3192": {
+        "ansible_host": "10.0.23.12",
+        "container_address": "10.0.23.12"
+    },
+    "infra3_neutron_agents_container-2ed86dc5": {
+        "ansible_host": "10.0.23.83",
+        "container_address": "10.0.23.83"
+    },
+    "infra3_neutron_server_container-4bed6198": {
+        "ansible_host": "10.0.23.58",
+        "container_address": "10.0.23.58"
+    },
+    "infra3_nova_api_metadata_container-28510d81": {
+        "ansible_host": "10.0.23.32",
+        "container_address": "10.0.23.32"
+    },
+    "infra3_nova_api_os_compute_container-485296d8": {
+        "ansible_host": "10.0.23.43",
+        "container_address": "10.0.23.43"
+    },
+    "infra3_nova_api_placement_container-c369679b": {
+        "ansible_host": "10.0.23.36",
+        "container_address": "10.0.23.36"
+    },
+    "infra3_nova_conductor_container-817c7687": {
+        "ansible_host": "10.0.23.87",
+        "container_address": "10.0.23.87"
+    },
+    "infra3_nova_console_container-2412c197": {
+        "ansible_host": "10.0.23.72",
+        "container_address": "10.0.23.72"
+    },
+    "infra3_nova_scheduler_container-de588d33": {
+        "ansible_host": "10.0.23.96",
+        "container_address": "10.0.23.96"
+    },
+    "infra3_rabbit_mq_container-14d54f73": {
+        "ansible_host": "10.0.23.16",
+        "container_address": "10.0.23.16"
+    },
+    "infra3_repo_container-39d7eaee": {
+        "ansible_host": "10.0.23.94",
+        "container_address": "10.0.23.94"
+    },
+    "infra3_utility_container-cb17478b": {
+        "ansible_host": "10.0.23.61",
+        "container_address": "10.0.23.61"
+    },
+    "log1": {
+        "ansible_host": "10.0.23.110",
+        "container_address": "10.0.23.110"
+    },
+    "log1_rsyslog_container-9d9b5477": {
+        "ansible_host": "10.0.23.64",
+        "container_address": "10.0.23.64"
+    },
+    "storage1": {
+        "ansible_host": "10.0.23.107",
+        "container_address": "10.0.23.107"
+    },
+    "storage2": {
+        "ansible_host": "10.0.23.109",
+        "container_address": "10.0.23.109"
+    }
+}

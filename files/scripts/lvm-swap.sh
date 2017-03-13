@@ -1,12 +1,15 @@
 #!/bin/sh
 
+# Run as root
+sudo -s
+
 set -e
 
-sudo swapoff /dev/$(hostname)-vg/swap_1
-sudo lvresize -L 15G /dev/$(hostname)-vg/swap_1
-sudo mkswap /dev/$(hostname)-vg/swap_1
-sudo swapon /dev/$(hostname)-vg/swap_1
+swapoff /dev/$(hostname)-vg/swap_1
+lvreduce -L 8G /dev/mapper/$(hostname)--vg-swap_1
+mkswap /dev/$(hostname)-vg/swap_1
+swapon /dev/$(hostname)-vg/swap_1
 
-sudo free -tm | grep -i swap
+free -tm | grep -i swap
 
 exit 0

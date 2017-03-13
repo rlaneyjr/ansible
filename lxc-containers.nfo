@@ -1,0 +1,179 @@
+lxc-destroy -f -n infra3_repo_container-39d7eaee
+
+root@imoniot05:~# lxc-ls -f
+NAME                                          STATE   AUTOSTART GROUPS            IPV4                     IPV6
+infra1_aodh_container-898cb90b                RUNNING 1         onboot, openstack 10.0.23.123              -
+infra1_aodh_container-efec4b1c                RUNNING 1         onboot, openstack 10.0.23.153              -
+infra1_ceilometer_api_container-bb2ae082      RUNNING 1         onboot, openstack 10.0.23.124              -
+infra1_ceilometer_api_container-faf4f197      RUNNING 1         onboot, openstack 10.0.23.129              -
+infra1_cinder_api_container-581bc51b          RUNNING 1         onboot, openstack 10.0.23.210, 10.0.27.168 -
+infra1_cinder_api_container-7ba7febf          RUNNING 1         onboot, openstack 10.0.23.122, 10.0.27.129 -
+infra1_cinder_scheduler_container-38c0b462    RUNNING 1         onboot, openstack 10.0.23.150              -
+infra1_cinder_scheduler_container-7d001494    RUNNING 1         onboot, openstack 10.0.23.204              -
+infra1_galera_container-bc5b6a86              RUNNING 1         onboot, openstack 10.0.23.155              -
+infra1_galera_container-e21f8018              RUNNING 1         onboot, openstack 10.0.23.116              -
+infra1_glance_container-1309f2e3              RUNNING 1         onboot, openstack 10.0.23.180, 10.0.27.145 -
+infra1_glance_container-19241310              RUNNING 1         onboot, openstack 10.0.23.145, 10.0.27.248 -
+infra1_gnocchi_container-13299fb7             RUNNING 1         onboot, openstack 10.0.23.120              -
+infra1_gnocchi_container-d9673b8b             RUNNING 1         onboot, openstack 10.0.23.175              -
+infra1_heat_apis_container-adb29e3a           RUNNING 1         onboot, openstack 10.0.23.178              -
+infra1_heat_apis_container-d235ae01           RUNNING 1         onboot, openstack 10.0.23.154              -
+infra1_heat_engine_container-5c834e3f         RUNNING 1         onboot, openstack 10.0.23.207              -
+infra1_heat_engine_container-9789a36c         RUNNING 1         onboot, openstack 10.0.23.114              -
+infra1_horizon_container-93263d10             RUNNING 1         onboot, openstack 10.0.23.181              -
+infra1_horizon_container-e1d4918c             RUNNING 1         onboot, openstack 10.0.23.227              -
+infra1_keystone_container-17c7ab2d            RUNNING 1         onboot, openstack 10.0.23.170              -
+infra1_keystone_container-2580dc47            RUNNING 1         onboot, openstack 10.0.23.150              -
+infra1_magnum_container-351be547              RUNNING 1         onboot, openstack 10.0.23.182              -
+infra1_magnum_container-36826d60              RUNNING 1         onboot, openstack 10.0.23.156              -
+infra1_memcached_container-3cc2d0f8           RUNNING 1         onboot, openstack 10.0.23.230              -
+infra1_memcached_container-5439a761           RUNNING 1         onboot, openstack 10.0.23.115              -
+infra1_neutron_agents_container-0aba1447      RUNNING 1         onboot, openstack 10.0.23.174, 10.0.26.174 -
+infra1_neutron_agents_container-f5c5205a      RUNNING 1         onboot, openstack 10.0.23.176, 10.0.26.142 -
+infra1_neutron_server_container-e921c0d6      RUNNING 1         onboot, openstack 10.0.23.127              -
+infra1_neutron_server_container-f70d711d      RUNNING 1         onboot, openstack 10.0.23.190              -
+infra1_nova_api_metadata_container-914c6b24   RUNNING 1         onboot, openstack 10.0.23.141              -
+infra1_nova_api_metadata_container-d189dd16   RUNNING 1         onboot, openstack 10.0.23.214              -
+infra1_nova_api_os_compute_container-6044e135 RUNNING 1         onboot, openstack 10.0.23.140              -
+infra1_nova_api_os_compute_container-e6e10f05 RUNNING 1         onboot, openstack 10.0.23.125              -
+infra1_nova_api_placement_container-391ef512  RUNNING 1         onboot, openstack 10.0.23.120              -
+infra1_nova_api_placement_container-ee1c0c61  RUNNING 1         onboot, openstack 10.0.23.179              -
+infra1_nova_conductor_container-47c17fba      RUNNING 1         onboot, openstack 10.0.23.208              -
+infra1_nova_conductor_container-8e646346      RUNNING 1         onboot, openstack 10.0.23.160              -
+infra1_nova_console_container-3eda238b        RUNNING 1         onboot, openstack 10.0.23.236              -
+infra1_nova_console_container-9de0a086        RUNNING 1         onboot, openstack 10.0.23.193              -
+infra1_nova_scheduler_container-7bdb6937      RUNNING 1         onboot, openstack 10.0.23.182              -
+infra1_nova_scheduler_container-8813e35b      RUNNING 1         onboot, openstack 10.0.23.235              -
+infra1_rabbit_mq_container-4209608b           RUNNING 1         onboot, openstack 10.0.23.177              -
+infra1_rabbit_mq_container-53a9e0f7           RUNNING 1         onboot, openstack 10.0.23.189              -
+infra1_repo_container-27e53691                RUNNING 1         onboot, openstack -                        -
+infra1_repo_container-6c0f6f08                RUNNING 1         onboot, openstack -                        -
+infra1_utility_container-82ad36e1             RUNNING 1         onboot, openstack 10.0.23.158              -
+infra1_utility_container-c5911885             RUNNING 1         onboot, openstack 10.0.23.145              -
+
+root@imoniot06:~# lxc-ls -f
+NAME                                          STATE   AUTOSTART GROUPS            IPV4                     IPV6
+infra2_aodh_container-d7db7969                RUNNING 1         onboot, openstack 10.0.23.112              -
+infra2_aodh_container-dadcae5b                RUNNING 1         onboot, openstack 10.0.23.151              -
+infra2_ceilometer_api_container-9cdfa9d6      RUNNING 1         onboot, openstack 10.0.23.130              -
+infra2_ceilometer_api_container-e52415da      RUNNING 1         onboot, openstack 10.0.23.233              -
+infra2_cinder_api_container-03555688          RUNNING 1         onboot, openstack 10.0.23.169, 10.0.27.162 -
+infra2_cinder_api_container-a87c607e          RUNNING 1         onboot, openstack 10.0.23.234, 10.0.27.192 -
+infra2_cinder_scheduler_container-6821ea69    RUNNING 1         onboot, openstack 10.0.23.133              -
+infra2_cinder_scheduler_container-7c8e6ac8    RUNNING 1         onboot, openstack 10.0.23.118              -
+infra2_galera_container-a348fa6a              RUNNING 1         onboot, openstack 10.0.23.188              -
+infra2_galera_container-d85b61b9              RUNNING 1         onboot, openstack 10.0.23.114              -
+infra2_glance_container-37c569ea              RUNNING 1         onboot, openstack 10.0.23.140, 10.0.27.153 -
+infra2_glance_container-c820383e              RUNNING 1         onboot, openstack 10.0.23.148, 10.0.27.128 -
+infra2_gnocchi_container-f2a4a6a7             RUNNING 1         onboot, openstack 10.0.23.111              -
+infra2_gnocchi_container-f945cf76             RUNNING 1         onboot, openstack 10.0.23.164              -
+infra2_heat_apis_container-58a24475           RUNNING 1         onboot, openstack 10.0.23.199              -
+infra2_heat_apis_container-7ffcd326           RUNNING 1         onboot, openstack 10.0.23.249              -
+infra2_heat_engine_container-75c6d4b7         RUNNING 1         onboot, openstack 10.0.23.185              -
+infra2_heat_engine_container-cf14531d         RUNNING 1         onboot, openstack 10.0.23.242              -
+infra2_horizon_container-e78122ab             RUNNING 1         onboot, openstack 10.0.23.191              -
+infra2_horizon_container-eb053658             RUNNING 1         onboot, openstack 10.0.23.135              -
+infra2_keystone_container-6d45de3b            RUNNING 1         onboot, openstack 10.0.23.121              -
+infra2_keystone_container-bd2b05e2            RUNNING 1         onboot, openstack 10.0.23.147              -
+infra2_magnum_container-601ec1d7              RUNNING 1         onboot, openstack 10.0.23.119              -
+infra2_magnum_container-ff545dfa              RUNNING 1         onboot, openstack 10.0.23.237              -
+infra2_memcached_container-ab00950b           RUNNING 1         onboot, openstack 10.0.23.135              -
+infra2_memcached_container-e1337194           RUNNING 1         onboot, openstack 10.0.23.178              -
+infra2_neutron_agents_container-9fb5e774      RUNNING 1         onboot, openstack 10.0.23.128, 10.0.26.219 -
+infra2_neutron_agents_container-aa14a25e      RUNNING 1         onboot, openstack 10.0.23.130, 10.0.26.130 -
+infra2_neutron_server_container-7d62a594      RUNNING 1         onboot, openstack 10.0.23.173              -
+infra2_neutron_server_container-a206ec44      RUNNING 1         onboot, openstack 10.0.23.115              -
+infra2_nova_api_metadata_container-c268c90b   RUNNING 1         onboot, openstack 10.0.23.192              -
+infra2_nova_api_metadata_container-e5e177d2   RUNNING 1         onboot, openstack 10.0.23.125              -
+infra2_nova_api_os_compute_container-4ce6271f RUNNING 1         onboot, openstack 10.0.23.187              -
+infra2_nova_api_os_compute_container-a2fa59ab RUNNING 1         onboot, openstack 10.0.23.191              -
+infra2_nova_api_placement_container-7a8f93ba  RUNNING 1         onboot, openstack 10.0.23.152              -
+infra2_nova_api_placement_container-efa774e4  RUNNING 1         onboot, openstack 10.0.23.128              -
+infra2_nova_conductor_container-611150bc      RUNNING 1         onboot, openstack 10.0.23.189              -
+infra2_nova_conductor_container-84fa8f00      RUNNING 1         onboot, openstack 10.0.23.250              -
+infra2_nova_console_container-df58f15f        RUNNING 1         onboot, openstack 10.0.23.186              -
+infra2_nova_console_container-f793e647        RUNNING 1         onboot, openstack 10.0.23.156              -
+infra2_nova_scheduler_container-5ed1ee01      RUNNING 1         onboot, openstack 10.0.23.146              -
+infra2_nova_scheduler_container-8c57cf31      RUNNING 1         onboot, openstack 10.0.23.195              -
+infra2_rabbit_mq_container-4e4cf2b1           RUNNING 1         onboot, openstack 10.0.23.183              -
+infra2_rabbit_mq_container-93c835f6           RUNNING 1         onboot, openstack 10.0.23.165              -
+infra2_repo_container-112b6d3c                RUNNING 1         onboot, openstack -                        -
+infra2_repo_container-b50985d7                RUNNING 1         onboot, openstack -                        -
+infra2_utility_container-1ab9a793             RUNNING 1         onboot, openstack 10.0.23.174              -
+infra2_utility_container-ae947dd4             RUNNING 1         onboot, openstack 10.0.23.247              -
+
+Usage: lxc-destroy --name=NAME [-f] [-P lxcpath]
+
+lxc-destroy destroys a container with the identifier NAME
+
+Options :
+  -n, --name=NAME   NAME of the container
+  -s, --snapshots   destroy including all snapshots
+  -f, --force       wait for the container to shut down
+  --rcfile=FILE     Load configuration file FILE
+
+Common options :
+  -o, --logfile=FILE               Output log to FILE instead of stderr
+  -l, --logpriority=LEVEL          Set log priority to LEVEL
+  -q, --quiet                      Don't produce any output
+  -P, --lxcpath=PATH               Use specified container path
+  -?, --help                       Give this help list
+      --usage                      Give a short usage message
+      --version                    Print the version number
+
+Mandatory or optional arguments to long options are also mandatory or optional
+for any corresponding short options.
+
+See the lxc-destroy man page for further information.
+
+lxc-destroy -f -n infra3_repo_container-39d7eaee
+Destroyed container infra3_repo_container-39d7eaee
+root@imoniot08:~# lxc-ls -f
+NAME                                          STATE   AUTOSTART GROUPS            IPV4                     IPV6
+infra3_aodh_container-196d1311                RUNNING 1         onboot, openstack 10.0.23.216              -
+infra3_aodh_container-3e62205a                RUNNING 1         onboot, openstack 10.0.23.131              -
+infra3_ceilometer_api_container-09df8414      RUNNING 1         onboot, openstack 10.0.23.137              -
+infra3_ceilometer_api_container-8ce5503c      RUNNING 1         onboot, openstack 10.0.23.159              -
+infra3_cinder_api_container-9896a9db          RUNNING 1         onboot, openstack 10.0.23.139, 10.0.27.119 -
+infra3_cinder_api_container-b2a947f4          RUNNING 1         onboot, openstack 10.0.23.134, 10.0.27.184 -
+infra3_cinder_scheduler_container-4b98a950    RUNNING 1         onboot, openstack 10.0.23.157              -
+infra3_cinder_scheduler_container-7f7de0e8    RUNNING 1         onboot, openstack 10.0.23.184              -
+infra3_galera_container-bcf3f524              RUNNING 1         onboot, openstack 10.0.23.240              -
+infra3_galera_container-da407ecf              RUNNING 1         onboot, openstack 10.0.23.171              -
+infra3_glance_container-29c085ab              RUNNING 1         onboot, openstack 10.0.23.137, 10.0.27.138 -
+infra3_glance_container-6d52d3a8              RUNNING 1         onboot, openstack 10.0.23.174, 10.0.27.200 -
+infra3_gnocchi_container-13bd8bb2             RUNNING 1         onboot, openstack 10.0.23.165              -
+infra3_gnocchi_container-b6ca55b5             RUNNING 1         onboot, openstack 10.0.23.167              -
+infra3_heat_apis_container-428971d0           RUNNING 1         onboot, openstack 10.0.23.117              -
+infra3_heat_apis_container-585c98aa           RUNNING 1         onboot, openstack 10.0.23.226              -
+infra3_heat_engine_container-9a8525bc         RUNNING 1         onboot, openstack 10.0.23.141              -
+infra3_heat_engine_container-bb718651         RUNNING 1         onboot, openstack 10.0.23.144              -
+infra3_horizon_container-94d16aab             RUNNING 1         onboot, openstack 10.0.23.179              -
+infra3_horizon_container-b132a13a             RUNNING 1         onboot, openstack 10.0.23.184              -
+infra3_keystone_container-290cfee4            RUNNING 1         onboot, openstack 10.0.23.198              -
+infra3_keystone_container-7f1d5cf9            RUNNING 1         onboot, openstack 10.0.23.215              -
+infra3_magnum_container-087feb5d              RUNNING 1         onboot, openstack 10.0.23.144              -
+infra3_magnum_container-e8c9cb6c              RUNNING 1         onboot, openstack 10.0.23.138              -
+infra3_memcached_container-ab2f3192           RUNNING 1         onboot, openstack 10.0.23.112              -
+infra3_memcached_container-adb0c6fe           RUNNING 1         onboot, openstack 10.0.23.131              -
+infra3_neutron_agents_container-267abec6      RUNNING 1         onboot, openstack 10.0.23.248, 10.0.26.121 -
+infra3_neutron_agents_container-2ed86dc5      RUNNING 1         onboot, openstack 10.0.23.183, 10.0.26.196 -
+infra3_neutron_server_container-4bed6198      RUNNING 1         onboot, openstack 10.0.23.158              -
+infra3_neutron_server_container-76b0b65c      RUNNING 1         onboot, openstack 10.0.23.160              -
+infra3_nova_api_metadata_container-28510d81   RUNNING 1         onboot, openstack 10.0.23.132              -
+infra3_nova_api_metadata_container-6f901edf   RUNNING 1         onboot, openstack 10.0.23.241              -
+infra3_nova_api_os_compute_container-3b1fd1f9 RUNNING 1         onboot, openstack 10.0.23.139              -
+infra3_nova_api_os_compute_container-485296d8 RUNNING 1         onboot, openstack 10.0.23.143              -
+infra3_nova_api_placement_container-c369679b  RUNNING 1         onboot, openstack 10.0.23.136              -
+infra3_nova_api_placement_container-eec0b2bc  RUNNING 1         onboot, openstack 10.0.23.129              -
+infra3_nova_conductor_container-506b0f3b      RUNNING 1         onboot, openstack 10.0.23.148              -
+infra3_nova_conductor_container-817c7687      RUNNING 1         onboot, openstack 10.0.23.187              -
+infra3_nova_console_container-2412c197        RUNNING 1         onboot, openstack 10.0.23.172              -
+infra3_nova_console_container-9529a365        RUNNING 1         onboot, openstack 10.0.23.202              -
+infra3_nova_scheduler_container-b5979ea6      RUNNING 1         onboot, openstack 10.0.23.222              -
+infra3_nova_scheduler_container-de588d33      RUNNING 1         onboot, openstack 10.0.23.196              -
+infra3_rabbit_mq_container-14d54f73           RUNNING 1         onboot, openstack 10.0.23.116              -
+infra3_rabbit_mq_container-7935d51a           RUNNING 1         onboot, openstack 10.0.23.211              -
+infra3_repo_container-dd3be7b2                RUNNING 1         onboot, openstack -                        -
+infra3_utility_container-535f1782             RUNNING 1         onboot, openstack 10.0.23.254              -
+infra3_utility_container-cb17478b             RUNNING 1         onboot, openstack 10.0.23.161              -
