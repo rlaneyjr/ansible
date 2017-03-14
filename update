@@ -1,4 +1,25 @@
 #!/bin/sh
 
-cp repo-osa/doc/source/index.rst osa/doc/source/index.rst
+cp repo-osa/etc/openstack_deploy/conf.d/octavia.yml.aio                     osa/etc/openstack_deploy/conf.d/octavia.yml.aio
+cp repo-osa/playbooks/inventory/env.d/octavia.yml                           osa/playbooks/inventory/env.d/octavia.yml
+cp repo-osa/playbooks/inventory/group_vars/octavia_all.yml                  osa/playbooks/inventory/group_vars/octavia_all.yml
+cp repo-osa/playbooks/os-octavia-install.yml                                osa/playbooks/os-octavia-install.yml
+cp repo-osa/releasenotes/notes/add-octavia-to-repo-f9d0fd8cee969181.yaml    osa/releasenotes/notes/add-octavia-to-repo-f9d0fd8cee969181.yaml
+cp repo-osa/ansible-role-requirements.yml osa/ansible-role-requirements.yml
+cp repo-osa/deploy-guide/source/app-security.rst osa/deploy-guide/source/app-security.rst
+cp repo-osa/doc/source/draft-operations-guide/troubleshooting.rst osa/doc/source/draft-operations-guide/troubleshooting.rst
+cp repo-osa/etc/network/interfaces.d/openstack_interface.cfg.prod.example osa/etc/network/interfaces.d/openstack_interface.cfg.prod.example
+cp repo-osa/etc/network/interfaces.d/openstack_interface.cfg.test.example osa/etc/network/interfaces.d/openstack_interface.cfg.test.example
+cp repo-osa/etc/openstack_deploy/user_secrets.yml osa/etc/openstack_deploy/user_secrets.yml
+cp repo-osa/playbooks/defaults/repo_packages/gnocchi.yml osa/playbooks/defaults/repo_packages/gnocchi.yml
+cp repo-osa/playbooks/defaults/repo_packages/nova_consoles.yml osa/playbooks/defaults/repo_packages/nova_consoles.yml
 cp repo-osa/playbooks/defaults/repo_packages/openstack_services.yml osa/playbooks/defaults/repo_packages/openstack_services.yml
+cp repo-osa/playbooks/defaults/repo_packages/openstack_testing.yml osa/playbooks/defaults/repo_packages/openstack_testing.yml
+cp repo-osa/playbooks/defaults/repo_packages/readme.rst osa/playbooks/defaults/repo_packages/readme.rst
+cp repo-osa/playbooks/inventory/group_vars/all.yml osa/playbooks/inventory/group_vars/all.yml
+cp repo-osa/playbooks/inventory/group_vars/neutron_all.yml osa/playbooks/inventory/group_vars/neutron_all.yml
+cp repo-osa/playbooks/vars/configs/haproxy_config.yml osa/playbooks/vars/configs/haproxy_config.yml
+cp repo-osa/scripts/openstack-ansible.rc osa/scripts/openstack-ansible.rc
+cp repo-osa/tests/roles/bootstrap-host/tasks/prepare_aio_config.yml osa/tests/roles/bootstrap-host/tasks/prepare_aio_config.yml
+cp repo-osa/tests/roles/bootstrap-host/templates/user_variables.aio.yml.j2 osa/tests/roles/bootstrap-host/templates/user_variables.aio.yml.j2
+cp repo-osa/tests/test_inventory.py osa/tests/test_inventory.py
