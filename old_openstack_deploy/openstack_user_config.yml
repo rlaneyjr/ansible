@@ -5,13 +5,13 @@ cidr_networks:
   storage: 10.0.27.0/24
 
 used_ips:
-  - "10.0.23.100,10.0.23.255"
-  - "10.0.26.100,10.0.26.255"
-  - "10.0.27.100,10.0.27.255"
-  - "10.0.28.100,10.0.28.255"
+  - "10.0.23.1,10.0.23.110"
+  - "10.0.26.1,10.0.26.110"
+  - "10.0.27.1,10.0.27.110"
+  - "10.0.28.1,10.0.28.110"
 
 global_overrides:
-  internal_lb_vip_address: 10.0.23.11
+  internal_lb_vip_address: 10.0.23.111
   external_lb_vip_address: osa.icloudmon.local
   tunnel_bridge: "br-vxlan"
   management_bridge: "br-mgmt"
@@ -108,8 +108,8 @@ haproxy_hosts:
 
 # rsyslog server
 log_hosts:
-  log1:
-    ip: 10.0.23.110
+  storage2:
+    ip: 10.0.23.109
 
 ###
 ### OpenStack

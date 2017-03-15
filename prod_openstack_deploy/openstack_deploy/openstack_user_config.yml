@@ -11,8 +11,8 @@ used_ips:
   - "10.0.28.1,10.0.28.110"
 
 global_overrides:
-  internal_lb_vip_address: 10.0.23.111
-  external_lb_vip_address: osa.icloudmon.local
+  internal_lb_vip_address: 10.0.23.11
+  external_lb_vip_address: 10.0.23.11
   tunnel_bridge: "br-vxlan"
   management_bridge: "br-mgmt"
   provider_networks:
@@ -20,7 +20,6 @@ global_overrides:
         container_bridge: "br-mgmt"
         container_type: "veth"
         container_interface: "eth1"
-        container_mtu: "9000"
         ip_from_q: "container"
         type: "raw"
         group_binds:
@@ -32,7 +31,6 @@ global_overrides:
         container_bridge: "br-vxlan"
         container_type: "veth"
         container_interface: "eth10"
-        container_mtu: "9000"
         ip_from_q: "tunnel"
         type: "vxlan"
         range: "1000:2000"
@@ -44,7 +42,6 @@ global_overrides:
         container_type: "veth"
         container_interface: "eth12"
         host_bind_override: "eth12"
-        container_mtu: "9000"
         type: "flat"
         net_name: "flat"
         group_binds:
@@ -54,7 +51,6 @@ global_overrides:
         container_type: "veth"
         container_interface: "eth11"
         host_bind_override: "eth11"
-        container_mtu: "9000"
         type: "vlan"
         range: "10:110,200:300"
         net_name: "vlan"
@@ -64,7 +60,6 @@ global_overrides:
         container_bridge: "br-storage"
         container_type: "veth"
         container_interface: "eth2"
-        container_mtu: "9000"
         ip_from_q: "storage"
         type: "raw"
         group_binds:
@@ -235,6 +230,15 @@ metrics_hosts:
 
 # The infra nodes that will be running the magnum services
 magnum-infra_hosts:
+  infra1:
+    ip: 10.0.23.105
+  infra2:
+    ip: 10.0.23.106
+  infra3:
+    ip: 10.0.23.108
+
+# The infra nodes that will be running the trove services
+trove-infra_hosts:
   infra1:
     ip: 10.0.23.105
   infra2:

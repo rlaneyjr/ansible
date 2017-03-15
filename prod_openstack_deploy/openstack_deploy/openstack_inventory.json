@@ -2721,8 +2721,8 @@
     "all": {
         "vars": {
             "container_cidr": "10.0.23.0/24",
-            "external_lb_vip_address": "osa.icloudmon.local",
-            "internal_lb_vip_address": "10.0.23.111",
+            "external_lb_vip_address": "10.0.23.11",
+            "internal_lb_vip_address": "10.0.23.11",
             "management_bridge": "br-mgmt",
             "provider_networks": [
                 {
@@ -2841,7 +2841,8 @@
             "database_containers",
             "network_containers",
             "metrics_containers",
-            "repo-infra_containers"
+            "repo-infra_containers",
+            "octavia-infra_containers"
         ],
         "hosts": []
     },
@@ -3421,7 +3422,8 @@
             "metrics_hosts",
             "storage-infra_hosts",
             "operator_hosts",
-            "repo-infra_hosts"
+            "repo-infra_hosts",
+            "octavia_hosts"
         ],
         "hosts": []
     },
@@ -4126,6 +4128,42 @@
             "infra2_nova_scheduler_container-5ed1ee01",
             "infra3_nova_scheduler_container-b5979ea6"
         ]
+    },
+    "octavia-api": {
+        "children": [],
+        "hosts": []
+    },
+    "octavia-health-manager": {
+        "children": [],
+        "hosts": []
+    },
+    "octavia-housekeeping": {
+        "children": [],
+        "hosts": []
+    },
+    "octavia-infra_containers": {
+        "children": [],
+        "hosts": []
+    },
+    "octavia-worker": {
+        "children": [],
+        "hosts": []
+    },
+    "octavia_all": {
+        "children": [
+            "octavia-health-manager",
+            "octavia-worker",
+            "octavia-api",
+            "octavia-housekeeping"
+        ],
+        "hosts": []
+    },
+    "octavia_hosts": {
+        "children": [],
+        "hosts": []
+    },
+    "octavia_server_container": {
+        "hosts": []
     },
     "operator_containers": {
         "children": [],

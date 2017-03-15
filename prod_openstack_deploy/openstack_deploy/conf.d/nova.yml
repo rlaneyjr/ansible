@@ -1,0 +1,18 @@
+---
+# nova api, conductor, etc services
+compute-infra_hosts:
+  infra1:
+    ip: 10.0.23.105
+  infra2:
+    ip: 10.0.23.106
+  infra3:
+    ip: 10.0.23.108
+
+# nova hypervisors
+compute_hosts:
+  compute1:
+    ip: 10.0.23.101
+  compute2:
+    ip: 10.0.23.102
+  compute3:
+    ip: 10.0.23.103

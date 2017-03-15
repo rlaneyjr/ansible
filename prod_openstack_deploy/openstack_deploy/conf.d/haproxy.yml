@@ -1,0 +1,8 @@
+# The nodes where haproxy will run
+haproxy_hosts:
+  infra1:
+    ip: 10.0.23.105
+  infra2:
+    ip: 10.0.23.106
+  infra3:
+    ip: 10.0.23.108
