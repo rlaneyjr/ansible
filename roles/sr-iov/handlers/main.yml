@@ -1,0 +1,5 @@
+---
+- name: reboot server
+  become: yes
+  command: /sbin/reboot now
+  ignore_errors: true

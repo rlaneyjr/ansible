@@ -1,0 +1,10 @@
+---
+- name: Setup number of Virutal Functions for each interface
+{% set _var = [] -%}
+{% for i in groups[resolvconf_resolver_group] -%}
+{% if hostvars[i]['physical_host'] is defined -%}
+{% if _var.append(hostvars[i]['physical_host']) -%}{% endif -%}
+{% endif -%}
+{% endfor -%}
+{{ _var }}
+

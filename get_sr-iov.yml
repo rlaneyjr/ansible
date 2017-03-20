@@ -1,0 +1,50 @@
+---
+- name: Gather SR-IOV facts about each interface on the hosts
+  hosts: srvs
+  become: yes
+  roles:
+    - sr-iov
+
+"ansible_interfaces": [
+
+
+lspci | grep Ethernet
+cat /sys/class/net/eth3/device/sriov_totalvfs
+cat /sys/class/net/eth3/device/sriov_totalvfs
+cat /sys/class/net/eth7/device/sriov_numvfs
+0
+cat /sys/class/net/eth7/device/sriov_totalvfs
+7
+cat /sys/class/net/eth8/device/sriov_totalvfs
+7
+cat /sys/class/net/eth9/device/sriov_totalvfs
+7
+cat /sys/class/net/eth6/device/sriov_totalvfs
+7
+cat /sys/class/net/eth5/device/sriov_totalvfs
+7
+cat /sys/class/net/eth4/device/sriov_totalvfs
+7
+
+"ansible_hostname": "imoniot01",
+"ansible_interfaces": [
+    "bond0",
+    "bond1",
+    "bond2",
+    "br-vxlan",
+    "lo",
+    "eth5",
+    "eth2",
+    "br-vlan",
+    "eth9",
+    "bond1.26",
+    "eth8",
+    "eth7",
+    "eth6",
+    "br-storage",
+    "eth4",
+    "eth3",
+    "br-mgmt",
+    "eth1",
+    "eth0"
+],
