@@ -1,0 +1,103 @@
+---
+# Copyright 2014, Rackspace US, Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+## APT Cache options
+cache_timeout: 600
+
+libvirt_group: libvirt
+libvirt_service_name: libvirt-bin
+
+# Common apt packages
+nova_distro_packages:
+  - genisoimage
+  - git
+  - libpq-dev
+  - iptables
+
+# Spice console apt packages
+nova_spice_distro_packages:
+  - spice-html5
+
+nova_novnc_distro_packages:
+  - libjs-jquery
+  - libjs-sphinxdoc
+  - libjs-underscore
+  - libjs-swfobject
+  - librabbitmq4
+  - libyaml-0-2
+
+nova_compute_kvm_distro_packages:
+  - bridge-utils
+  - "{% if nova_barbican_enabled | bool %}cryptsetup{% endif %}"
+  - genisoimage
+  - kpartx
+  - libvirt-bin
+  - open-iscsi
+  - python-libguestfs
+  - python-libvirt
+  - qemu
+  - qemu-utils
+  - sysfsutils
+  - vlan
+  - nfs-common
+  - dosfstools
+  - dosfstools-dbg
+  - multipath-tools
+
+nova_compute_lxd_distro_packages:
+  - bridge-utils
+  - "{% if nova_barbican_enabled | bool %}cryptsetup{% endif %}"
+  - dosfstools
+  - dosfstools-dbg
+  - genisoimage
+  - kpartx
+  - lxd
+  - multipath-tools
+  - nfs-common
+  - open-iscsi
+  - python-libguestfs
+  - sysfsutils
+  - vlan
+
+nova_nginx_distro_packages:
+  - nginx-full
+
+# nova powervm virt driver
+nova_compute_powervm_distro_packages:
+  - bridge-utils
+  - "{% if nova_barbican_enabled | bool %}cryptsetup{% endif %}"
+  - genisoimage
+  - kpartx
+  - open-iscsi
+  - python-libguestfs
+  - sysfsutils
+  - vlan
+  - nfs-common
+  - dosfstools
+  - dosfstools-dbg
+  - multipath-tools
+  - pvm-novalink
+
+novalink_repo:
+  repo: "deb [arch=ppc64el] http://public.dhe.ibm.com/systems/virtualization/Novalink/debian/ novalink_1.0.0 non-free"
+  state: "present"
+  filename: "public_dhe_ibm_com_systems_virtualization_Novalink_debian"
+
+novalink_gpg_keys:
+  - url: "http://public.dhe.ibm.com/systems/virtualization/Novalink/debian/novalink-gpg-pub.key"
+    state: "present"
+
+nova_nginx_conf_path: "sites-available"
+nova_nginx_user_name: "www-data"

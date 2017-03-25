@@ -1,0 +1,433 @@
+{
+    "ansible_all_ipv4_addresses": [
+        "10.0.23.250"
+    ], 
+    "ansible_all_ipv6_addresses": [
+        "fe80::216:3eff:fef8:ba25", 
+        "fe80::216:3eff:fe03:f67"
+    ], 
+    "ansible_architecture": "x86_64", 
+    "ansible_bios_date": "NA", 
+    "ansible_bios_version": "NA", 
+    "ansible_cmdline": {
+        "BOOT_IMAGE": "/boot/vmlinuz-4.4.0-66-generic", 
+        "biosdevname": "0", 
+        "intel_iommu": "on", 
+        "net.ifnames": "0", 
+        "ro": true, 
+        "root": "UUID=0d1f744c-6a2d-406d-9960-425e883d3228"
+    }, 
+    "ansible_date_time": {
+        "date": "2017-03-22", 
+        "day": "22", 
+        "epoch": "1490227999", 
+        "hour": "20", 
+        "iso8601": "2017-03-23T00:13:19Z", 
+        "iso8601_basic": "20170322T201319240987", 
+        "iso8601_basic_short": "20170322T201319", 
+        "iso8601_micro": "2017-03-23T00:13:19.241147Z", 
+        "minute": "13", 
+        "month": "03", 
+        "second": "19", 
+        "time": "20:13:19", 
+        "tz": "EDT", 
+        "tz_offset": "-0400", 
+        "weekday": "Wednesday", 
+        "weekday_number": "3", 
+        "weeknumber": "12", 
+        "year": "2017"
+    }, 
+    "ansible_default_ipv4": {}, 
+    "ansible_default_ipv6": {}, 
+    "ansible_devices": {
+        "sda": {
+            "holders": [], 
+            "host": "", 
+            "model": "PERC 6/i", 
+            "partitions": {
+                "sda1": {
+                    "holders": [], 
+                    "sectors": "997376", 
+                    "sectorsize": 512, 
+                    "size": "487.00 MB", 
+                    "start": "2048", 
+                    "uuid": null
+                }, 
+                "sda2": {
+                    "holders": [], 
+                    "sectors": "2", 
+                    "sectorsize": 512, 
+                    "size": "1.00 KB", 
+                    "start": "1001470", 
+                    "uuid": null
+                }, 
+                "sda5": {
+                    "holders": [], 
+                    "sectors": "15622144", 
+                    "sectorsize": 512, 
+                    "size": "7.45 GB", 
+                    "start": "294754304", 
+                    "uuid": null
+                }, 
+                "sda6": {
+                    "holders": [], 
+                    "sectors": "293752832", 
+                    "sectorsize": 512, 
+                    "size": "140.07 GB", 
+                    "start": "1001472", 
+                    "uuid": null
+                }
+            }, 
+            "removable": "0", 
+            "rotational": "1", 
+            "sas_address": null, 
+            "sas_device_handle": null, 
+            "scheduler_mode": "deadline", 
+            "sectors": "310378496", 
+            "sectorsize": "512", 
+            "size": "148.00 GB", 
+            "support_discard": "0", 
+            "vendor": "DELL"
+        }, 
+        "sdb": {
+            "holders": [], 
+            "host": "", 
+            "model": "PERC 6/i", 
+            "partitions": {
+                "sdb1": {
+                    "holders": [], 
+                    "sectors": "2", 
+                    "sectorsize": 512, 
+                    "size": "1.00 KB", 
+                    "start": "2046", 
+                    "uuid": null
+                }, 
+                "sdb5": {
+                    "holders": [], 
+                    "sectors": "2339368960", 
+                    "sectorsize": 512, 
+                    "size": "1.09 TB", 
+                    "start": "2048", 
+                    "uuid": null
+                }
+            }, 
+            "removable": "0", 
+            "rotational": "1", 
+            "sas_address": null, 
+            "sas_device_handle": null, 
+            "scheduler_mode": "deadline", 
+            "sectors": "2339373056", 
+            "sectorsize": "512", 
+            "size": "1.09 TB", 
+            "support_discard": "0", 
+            "vendor": "DELL"
+        }, 
+        "sr0": {
+            "holders": [], 
+            "host": "", 
+            "model": "DVD-ROM DV-28SW", 
+            "partitions": {}, 
+            "removable": "1", 
+            "rotational": "1", 
+            "sas_address": null, 
+            "sas_device_handle": null, 
+            "scheduler_mode": "deadline", 
+            "sectors": "2097151", 
+            "sectorsize": "512", 
+            "size": "1024.00 MB", 
+            "support_discard": "0", 
+            "vendor": "TEAC"
+        }
+    }, 
+    "ansible_distribution": "Ubuntu", 
+    "ansible_distribution_major_version": "16", 
+    "ansible_distribution_release": "xenial", 
+    "ansible_distribution_version": "16.04", 
+    "ansible_dns": {}, 
+    "ansible_domain": "openstack.local", 
+    "ansible_env": {
+        "HOME": "/root", 
+        "LANG": "en_US.UTF-8", 
+        "LANGUAGE": "en_US:en", 
+        "LC_ALL": "en_US.UTF-8", 
+        "LOGNAME": "root", 
+        "MAIL": "/var/mail/root", 
+        "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games", 
+        "PWD": "/root", 
+        "SHELL": "/bin/bash", 
+        "SHLVL": "1", 
+        "SSH_AUTH_SOCK": "/tmp/ssh-0csZn5fFyp/agent.22597", 
+        "SSH_CLIENT": "10.0.23.110 37882 22", 
+        "SSH_CONNECTION": "10.0.23.110 37882 10.0.23.108 22", 
+        "USER": "root", 
+        "XDG_RUNTIME_DIR": "/run/user/0", 
+        "XDG_SESSION_ID": "141", 
+        "_": "/usr/bin/lxc-attach", 
+        "container": "lxc"
+    }, 
+    "ansible_eth0": {
+        "active": true, 
+        "device": "eth0", 
+        "features": {}, 
+        "ipv6": [
+            {
+                "address": "fe80::216:3eff:fef8:ba25", 
+                "prefix": "64", 
+                "scope": "link"
+            }
+        ], 
+        "macaddress": "00:16:3e:f8:ba:25", 
+        "mtu": 1500, 
+        "promisc": false, 
+        "speed": 10000, 
+        "type": "ether"
+    }, 
+    "ansible_eth1": {
+        "active": true, 
+        "device": "eth1", 
+        "features": {}, 
+        "ipv4": {
+            "address": "10.0.23.250", 
+            "broadcast": "10.0.23.255", 
+            "netmask": "255.255.255.0", 
+            "network": "10.0.23.0"
+        }, 
+        "ipv6": [
+            {
+                "address": "fe80::216:3eff:fe03:f67", 
+                "prefix": "64", 
+                "scope": "link"
+            }
+        ], 
+        "macaddress": "00:16:3e:03:0f:67", 
+        "mtu": 9000, 
+        "promisc": false, 
+        "speed": 10000, 
+        "type": "ether"
+    }, 
+    "ansible_fips": false, 
+    "ansible_form_factor": "Rack Mount Chassis", 
+    "ansible_fqdn": "infra3-repo-container-a6f3d5bb.openstack.local", 
+    "ansible_gather_subset": [
+        "hardware", 
+        "network", 
+        "virtual"
+    ], 
+    "ansible_hostname": "infra3-repo-container-a6f3d5bb", 
+    "ansible_interfaces": [
+        "lo", 
+        "eth1", 
+        "eth0"
+    ], 
+    "ansible_kernel": "4.4.0-66-generic", 
+    "ansible_lo": {
+        "active": true, 
+        "device": "lo", 
+        "features": {}, 
+        "ipv4": {
+            "address": "127.0.0.1", 
+            "broadcast": "host", 
+            "netmask": "255.0.0.0", 
+            "network": "127.0.0.0"
+        }, 
+        "ipv6": [
+            {
+                "address": "::1", 
+                "prefix": "128", 
+                "scope": "host"
+            }
+        ], 
+        "mtu": 65536, 
+        "promisc": false, 
+        "type": "loopback"
+    }, 
+    "ansible_lsb": {
+        "codename": "xenial", 
+        "description": "Ubuntu 16.04.2 LTS", 
+        "id": "Ubuntu", 
+        "major_release": "16", 
+        "release": "16.04"
+    }, 
+    "ansible_machine": "x86_64", 
+    "ansible_machine_id": "5eb2278ca4af449780c27895b9bd6225", 
+    "ansible_memfree_mb": 48145, 
+    "ansible_memory_mb": {
+        "nocache": {
+            "free": 48334, 
+            "used": 17
+        }, 
+        "real": {
+            "free": 48145, 
+            "total": 48351, 
+            "used": 206
+        }, 
+        "swap": {
+            "cached": 0, 
+            "free": 7627, 
+            "total": 7627, 
+            "used": 0
+        }
+    }, 
+    "ansible_memtotal_mb": 48351, 
+    "ansible_mounts": [
+        {
+            "device": "/dev/sda6", 
+            "fstype": "ext4", 
+            "mount": "/", 
+            "options": "rw,relatime,errors=remount-ro,data=ordered,bind", 
+            "size_available": 120022982656, 
+            "size_total": 147906527232, 
+            "uuid": "N/A"
+        }, 
+        {
+            "device": "/dev/sda6", 
+            "fstype": "ext4", 
+            "mount": "/var/backup", 
+            "options": "rw,relatime,errors=remount-ro,data=ordered,bind", 
+            "size_available": 120022982656, 
+            "size_total": 147906527232, 
+            "uuid": "N/A"
+        }, 
+        {
+            "device": "/dev/sda6", 
+            "fstype": "ext4", 
+            "mount": "/var/log", 
+            "options": "rw,relatime,errors=remount-ro,data=ordered,bind", 
+            "size_available": 120022982656, 
+            "size_total": 147906527232, 
+            "uuid": "N/A"
+        }, 
+        {
+            "device": "/dev/sda6", 
+            "fstype": "ext4", 
+            "mount": "/var/www", 
+            "options": "rw,relatime,errors=remount-ro,data=ordered,bind", 
+            "size_available": 120022982656, 
+            "size_total": 147906527232, 
+            "uuid": "N/A"
+        }
+    ], 
+    "ansible_nodename": "infra3-repo-container-a6f3d5bb", 
+    "ansible_os_family": "Debian", 
+    "ansible_pkg_mgr": "apt", 
+    "ansible_processor": [
+        "GenuineIntel", 
+        "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+        "GenuineIntel", 
+        "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+        "GenuineIntel", 
+        "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+        "GenuineIntel", 
+        "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+        "GenuineIntel", 
+        "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+        "GenuineIntel", 
+        "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+        "GenuineIntel", 
+        "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+        "GenuineIntel", 
+        "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+        "GenuineIntel", 
+        "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+        "GenuineIntel", 
+        "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+        "GenuineIntel", 
+        "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+        "GenuineIntel", 
+        "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+        "GenuineIntel", 
+        "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+        "GenuineIntel", 
+        "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+        "GenuineIntel", 
+        "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz", 
+        "GenuineIntel", 
+        "Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz"
+    ], 
+    "ansible_processor_cores": 4, 
+    "ansible_processor_count": 2, 
+    "ansible_processor_threads_per_core": 2, 
+    "ansible_processor_vcpus": 16, 
+    "ansible_product_name": "NA", 
+    "ansible_product_serial": "NA", 
+    "ansible_product_uuid": "4C4C4544-0047-4310-8043-B6C04F585131", 
+    "ansible_product_version": "NA", 
+    "ansible_python": {
+        "executable": "/usr/bin/python", 
+        "has_sslcontext": true, 
+        "type": "CPython", 
+        "version": {
+            "major": 2, 
+            "micro": 12, 
+            "minor": 7, 
+            "releaselevel": "final", 
+            "serial": 0
+        }, 
+        "version_info": [
+            2, 
+            7, 
+            12, 
+            "final", 
+            0
+        ]
+    }, 
+    "ansible_python_version": "2.7.12", 
+    "ansible_selinux": false, 
+    "ansible_service_mgr": "systemd", 
+    "ansible_ssh_host_key_dsa_public": "AAAAB3NzaC1kc3MAAACBAO80zaGBN9pK58KvuOIXKvWcmmuxd4X++R16H+IxFyMKAh4ZW/DzopfAl+ECkf2ASO+xsi0ufMAjxaMnkjnQQ0Qh0H846LaBsnQknN1ZI26IloffAWjsi8/uwIbDCOq4mHp25JAyByGoTc8qsjJZG+gPC47xyB66Ss3BIFwoBN11AAAAFQCRoh1/H2af4x5ooUoXAglPkrbeAwAAAIB8N2FbUrxqfi0F3kPMSj/1vpBzjrN9DWcNtA80R2cwKhfy9MDejRyEFqh6Hez+aUNNXfZou12QcZjunKlnmL8N681WCsqlH0AQTBPUJ2bAzNFaQxoPlQr0sQMsv9NFc4YTLj4gujroD8du+R6qwTBfsl7TB8i9tahAx0j52ZtepwAAAIBqxHzueJFAPE9kHIHrLYE0GFHnk4Q5ajmMkUPa47hGPz50Re8eOI1AN4kTT7MGdUUdsQK6G7J/ouJMRWY7s13AqIUS+FaqxQB9dOo/1WW7/Hxg0CwnKL2shZejSycWfFSi+TI4IZuNeeJj057RyduTYHMEnLur+W01GOW8HlgnCQ==", 
+    "ansible_ssh_host_key_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIIdoKfOFjf9s54C1v/iIQYlLDuRIm9B52tnm5jlU3R/rba7qj+WwgY0K3Ua6FI6sayqnEPx2AaOUi6iSKbXwCs=", 
+    "ansible_ssh_host_key_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAIIYzKUENJav6yH93ZuSn9TVMlib8oEX36HjCm2eharWs", 
+    "ansible_ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDwJz7DLvMVgq0xRO/eytUGaUEVibLCjyFj4P00qgB9KU9udRGskzqCFxbp3fcW7yeqpnUdgXC0dOm1RGB8mlpkGmUYxPxhs9XKugKhl7bm7fNNUDfdbPTd9xSCjIJGrzShNjwGpuPf8kYVGNoe/461FFVPHgDVGT8bHeDjHdHitb6Z+XhBKKHBiT3ZH9rgkPbLIzR2E4E2nrpIOKCEa5hu8pi0RyDd6S57XvMRbP/rIoaWVmpm3abWzAjgIbh5Ib0YJ/zkJtBzqpkGckyc+ax+X00bKaVqZIgRiZtDhBaBasS5FN5D9C9+LAy+0rnVaNlPcmvh/CG8rSwt3oiGUPFX", 
+    "ansible_swapfree_mb": 7627, 
+    "ansible_swaptotal_mb": 7627, 
+    "ansible_system": "Linux", 
+    "ansible_system_capabilities": [
+        "cap_chown", 
+        "cap_dac_override", 
+        "cap_dac_read_search", 
+        "cap_fowner", 
+        "cap_fsetid", 
+        "cap_kill", 
+        "cap_setgid", 
+        "cap_setuid", 
+        "cap_setpcap", 
+        "cap_linux_immutable", 
+        "cap_net_bind_service", 
+        "cap_net_broadcast", 
+        "cap_net_admin", 
+        "cap_net_raw", 
+        "cap_ipc_lock", 
+        "cap_ipc_owner", 
+        "cap_sys_chroot", 
+        "cap_sys_ptrace", 
+        "cap_sys_pacct", 
+        "cap_sys_admin", 
+        "cap_sys_boot", 
+        "cap_sys_nice", 
+        "cap_sys_resource", 
+        "cap_sys_tty_config", 
+        "cap_mknod", 
+        "cap_lease", 
+        "cap_audit_write", 
+        "cap_audit_control", 
+        "cap_setfcap", 
+        "cap_syslog", 
+        "cap_wake_alarm", 
+        "cap_block_suspend", 
+        "37+ep"
+    ], 
+    "ansible_system_capabilities_enforced": "True", 
+    "ansible_system_vendor": "NA", 
+    "ansible_uptime_seconds": 6465, 
+    "ansible_user_dir": "/root", 
+    "ansible_user_gecos": "root", 
+    "ansible_user_gid": 0, 
+    "ansible_user_id": "root", 
+    "ansible_user_shell": "/bin/bash", 
+    "ansible_user_uid": 0, 
+    "ansible_userspace_architecture": "x86_64", 
+    "ansible_userspace_bits": "64", 
+    "ansible_virtualization_role": "guest", 
+    "ansible_virtualization_type": "lxc", 
+    "module_setup": true
+}

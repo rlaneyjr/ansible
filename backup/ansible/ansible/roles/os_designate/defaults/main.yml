@@ -1,0 +1,182 @@
+---
+# Copyright 2016, Tata Consultancy Services
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+## Verbosity Options
+debug: False
+
+# Set the package install state for distribution packages
+# Options are 'present' and 'latest'
+designate_package_state: "latest"
+designate_pip_package_state: "latest"
+
+## The git source/branch
+designate_git_repo: https://git.openstack.org/openstack/designate
+designate_git_install_branch: stable/ocata
+
+# Developer mode is used for role functional testing and allows the role
+# to build an environment directly from a git source without the presence
+# of an OpenStack-Ansible repo_server.
+designate_developer_mode: False
+
+## The packages to build from source (used in developer mode)
+designate_developer_constraints:
+  - "git+{{ designate_git_repo }}@{{ designate_git_install_branch }}#egg=designate"
+
+# Name of the virtual env to deploy into
+designate_venv_tag: untagged
+designate_bin: "/openstack/venvs/designate-{{ designate_venv_tag }}/bin"
+
+# Set the etc dir path where designate is installed.
+#  This is used for role access to the db migrations.
+#  Example:
+#  designate_etc_dir: "/usr/local/etc/designate"
+designate_etc_dir: "{{ designate_bin | dirname }}/etc/designate"
+
+# venv_download, even when true, will use the fallback method of building the
+# venv from scratch if the venv download fails.
+designate_venv_download: "{{ not designate_developer_mode | bool }}"
+# URL of the pre-built virtualenv
+designate_venv_download_url: http://127.0.0.1/venvs/untagged/ubuntu/designate.tgz
+
+## System info
+designate_system_user_name: designate
+designate_system_group_name: designate
+designate_system_shell: /bin/false
+designate_system_comment: designate system user
+designate_system_user_home: "/var/lib/{{ designate_system_user_name }}"
+
+## DB info
+designate_galera_address: 127.0.0.1
+designate_galera_user: designate
+designate_galera_database: designate
+
+## RabbitMQ info
+designate_rabbitmq_userid: designate
+designate_rabbitmq_vhost: /designate
+designate_rabbitmq_servers: 127.0.0.1
+designate_rabbitmq_use_ssl: False
+designate_rabbitmq_port: 5672
+
+## Pool Configuration Defaults
+designate_pool_uuid: 794ccc2c-d751-44fe-b57f-8894c9f5c842
+
+# Enable/Disable Ceilometer
+designate_ceilometer_enabled: False
+
+# Designate services info
+designate_role_name: admin
+
+## DNS Backend Configuration
+#  Configuration for the DNS backend that Designate will talk to, Designate
+#  supports lots of backends, bind9, powerdns, nsd, djb, dyn, akamai, etc.
+#  DNS Backends are configured via a YAML file that Designate reads. The DNS
+#  server need not be in the actual Designate container, but for development,
+#  or for some internal addressing use cases, it may make sense.
+
+# YAML to use for the Designate pools.yaml file. If this variable is defined,
+# a pools.yaml file will be written to /etc/designate/pools.yaml with the
+# provided YAML data.
+#
+# This is some example pools.yaml information that will work with a
+# simple bind9 installation in the same container as Designate.
+# designate_pools_yaml:
+#   - name: "default"
+#     description: Default BIND9 Pool
+#     attributes: {}
+#     ns_records:
+#       - hostname: ns1.example.org.
+#         priority: 1
+#     nameservers:
+#       - host: 127.0.0.1
+#         port: 53
+#     targets:
+#       - type: bind9
+#         description: BIND9 Server
+#         masters:
+#           - host: 127.0.0.1
+#             port: 5354
+#         options:
+#           host: 127.0.0.1
+#           port: 53
+#           rndc_host: 127.0.0.1
+#           rndc_port: 953
+
+## Service Type and Data
+designate_service_region: RegionOne
+designate_service_endpoint_type: internalURL
+designate_service_name: designate
+designate_service_port: 9001
+designate_service_proto: http
+designate_service_type: dns
+designate_service_description: "Designate DNS as a Service"
+designate_service_project_domain_id: default
+designate_service_user_domain_id: default
+designate_service_user_name: designate
+designate_keystone_auth_type: password
+designate_service_project_name: service
+designate_service_publicuri: "{{ designate_service_proto }}://{{ external_lb_vip_address }}:{{ designate_service_port }}"
+designate_service_internaluri: "{{ designate_service_proto }}://{{ internal_lb_vip_address }}:{{ designate_service_port }}"
+designate_service_adminuri: "{{ designate_service_proto }}://{{ internal_lb_vip_address }}:{{ designate_service_port }}"
+
+designate_service_in_ldap: False
+
+# designate packages that must be installed before anything else
+designate_requires_pip_packages:
+  - virtualenv
+  - virtualenv-tools
+  - python-keystoneclient # Keystoneclient needed by OSA keystone lib
+  - httplib2
+
+# Common pip packages
+designate_pip_packages:
+  - designate
+  - python-designateclient
+  - PyMySQL
+  - python-memcached
+  - pycrypto
+  - warlock
+
+## Service Name-Group Mapping
+designate_services:
+  designate-central:
+    group: designate_central
+    service_name: designate-central
+  designate-worker:
+    group: designate_worker
+    service_name: designate-worker
+  designate-producer:
+    group: designate_producer
+    service_name: designate-producer
+  designate-mdns:
+    group: designate_mdns
+    service_name: designate-mdns
+  designate-sink:
+    group: designate_sink
+    service_name: designate-sink
+  designate-api:
+    group: designate_api
+    service_name: designate-api
+
+# This variable is used by the repo_build process to determine
+# which host group to check for members of before building the
+# pip packages required by this role. The value is picked up
+# by the py_pkgs lookup.
+designate_role_project_group: designate_all
+
+## Tunable overrides
+designate_policy_overrides: {}
+designate_designate_conf_overrides: {}
+designate_api_paste_ini_overrides: {}
+designate_rootwrap_conf_overrides: {}

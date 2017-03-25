@@ -1,0 +1,10 @@
+---
+- name: install calamari server
+  package:
+    name: calamari-server
+    state: present
+  tags:
+    - package-install
+
+- name: initialize the calamari server api
+  command: calamari-ctl initialize

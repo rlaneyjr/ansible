@@ -1,0 +1,99 @@
+---
+# Copyright 2014, Rackspace US, Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+- name: Gather variables for each operating system
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "{{ ansible_distribution | lower }}-{{ ansible_distribution_version | lower }}.yml"
+    - "{{ ansible_distribution | lower }}-{{ ansible_distribution_major_version | lower }}.yml"
+    - "{{ ansible_os_family | lower }}-{{ ansible_distribution_major_version | lower }}.yml"
+    - "{{ ansible_distribution | lower }}.yml"
+    - "{{ ansible_os_family | lower }}.yml"
+  tags:
+    - always
+
+- name: Gather variables that apply to all operating systems
+  include_vars: common.yml
+  tags:
+    - always
+
+- name: Fail when virt type is unsupported
+  fail: msg="Unsupported Virt Type Provided {{ nova_supported_virt_types }}"
+  when:
+    - nova_virt_type is defined
+    - nova_virt_type not in nova_supported_virt_types
+  tags:
+    - always
+
+- include: nova_virt_detect.yml
+  static: no
+  when: nova_virt_type is not defined
+  tags:
+    - always
+    - nova-virt-detect
+
+- include: nova_pre_install.yml
+  tags:
+    - nova-install
+
+- include: nova_install.yml
+  tags:
+    - nova-install
+
+- include: nova_post_install.yml
+  tags:
+    - nova-config
+
+- include: nova_db_setup.yml
+  when: inventory_hostname == groups['nova_api_os_compute'][0]
+  tags:
+    - nova-config
+
+- include: nova_init_common.yml
+  tags:
+    - nova-config
+
+- include: nova_service_setup.yml
+  when: inventory_hostname == groups['nova_api_os_compute'][0]
+  tags:
+    - nova-config
+
+- include: nova_placement.yml
+  when:
+    - nova_placement_service_enabled | bool
+    - inventory_hostname in groups['nova_api_placement']
+  tags:
+    - nova-placement
+
+- include: nova_compute.yml
+  when: inventory_hostname in groups['nova_compute']
+  tags:
+    - nova-compute
+
+- name: Flush handlers
+  meta: flush_handlers
+
+- include: nova_compute_wait.yml
+  when:
+    - "{{ 'nova_compute' in group_names }}"
+    - "{{ nova_compute_restart | default(dict(changed=False)) | changed }}"
+    - "{{ nova_discover_hosts_in_cells_interval | int < 1 }}"
+  tags:
+    - nova-config
+
+- include: nova_db_post_setup.yml
+  when: inventory_hostname == groups['nova_api_os_compute'][0]
+  tags:
+    - nova-config

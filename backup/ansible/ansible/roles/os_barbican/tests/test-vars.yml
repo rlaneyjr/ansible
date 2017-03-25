@@ -1,0 +1,16 @@
+barbican_galera_password: SuperSecrete
+barbican_developer_mode: true
+barbican_galera_address: "{{ hostvars[groups['galera_all'][0]]['ansible_host'] }}"
+barbican_galera_database: barbican
+barbican_git_install_branch: master
+barbican_keystone_auth: yes
+barbican_rabbitmq_password: secrete
+barbican_rabbitmq_userid: barbican
+barbican_rabbitmq_vhost: /barbican
+barbican_requirements_git_install_branch: master
+barbican_service_password: secrete
+barbican_venv_tag: testing
+
+barbican_service_publicurl: "http://{{ hostvars[groups['barbican_all'][0]]['ansible_host'] }}:9311"
+barbican_service_internalurl: "{{ barbican_service_publicurl }}"
+barbican_service_adminurl: "{{ barbican_service_publicurl }}"

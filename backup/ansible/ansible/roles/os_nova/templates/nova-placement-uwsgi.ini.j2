@@ -1,0 +1,20 @@
+# {{ ansible_managed }}
+[uwsgi]
+uid = {{ nova_system_user_name }}
+gid = {{ nova_system_group_name }}
+
+virtualenv = /openstack/venvs/nova-{{ nova_venv_tag }}
+wsgi-file = {{ nova_bin }}/nova-placement-api
+socket = 127.0.0.1:{{ nova_placement_uwsgi_socket_port }}
+
+master = true
+enable-threads = true
+processes = {{ nova_wsgi_processes }}
+threads = {{ nova_wsgi_threads }}
+exit-on-reload = true
+die-on-term = true
+lazy-apps = true
+add-header = Connection: close
+buffer-size = {{ nova_wsgi_buffer_size }}
+thunder-lock = true
+logfile-chmod = 644
