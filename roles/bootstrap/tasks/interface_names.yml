@@ -8,4 +8,6 @@
     group: root
     line: 'GRUB_CMDLINE_LINUX="intel_iommu=on net.ifnames=0 biosdevname=0"'
     backup: yes
-  notify: run grub-mkconfig
+  notify: 
+    - run grub-mkconfig
+    - restart machine

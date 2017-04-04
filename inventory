@@ -6,26 +6,25 @@ ns1
 ns2
 
 [osa]
-imon1  ansible_host=imoniot01
-imon2  ansible_host=imoniot02
-imon3  ansible_host=imoniot03
-imon5  ansible_host=imoniot05
-imon6  ansible_host=imoniot06
-imon7  ansible_host=imoniot07
-imon8  ansible_host=imoniot08
-imon9  ansible_host=imoniot09
+imon2
+imon3
+imon5
+imon6
+imon7
+imon8
+imon9
+imon10
      
 [srvs]
-imon1  ansible_host=imoniot01
-imon2  ansible_host=imoniot02
-imon3  ansible_host=imoniot03
+imon1
+imon2
+imon3
 virl
-imon5  ansible_host=imoniot05
-imon6  ansible_host=imoniot06
-imon7  ansible_host=imoniot07
-imon8  ansible_host=imoniot08
-imon9  ansible_host=imoniot09
-imon10  ansible_host=imoniot10
+imon5
+imon6
+imon7
+imon8
+imon9
 
 [virl]
 virl
