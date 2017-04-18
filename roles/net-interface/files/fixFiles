@@ -1,0 +1,10 @@
+#!/bin/sh
+
+cp imoniot02.interfaces.cfg imon2.interfaces.cfg
+cp imoniot03.interfaces.cfg imon3.interfaces.cfg
+cp imoniot05.interfaces.cfg imon5.interfaces.cfg
+cp imoniot06.interfaces.cfg imon6.interfaces.cfg
+cp imoniot07.interfaces.cfg imon7.interfaces.cfg
+cp imoniot08.interfaces.cfg imon8.interfaces.cfg
+cp imoniot09.interfaces.cfg imon9.interfaces.cfg
+

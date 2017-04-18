@@ -23,7 +23,7 @@ import warnings
 import yaml
 
 INV_DIR = 'playbooks/inventory'
-LIB_DIR = 'lib'
+LIB_DIR = 'osa_toolkit'
 
 sys.path.append(path.join(os.getcwd(), LIB_DIR))
 sys.path.append(path.join(os.getcwd(), INV_DIR))
@@ -144,12 +144,11 @@ class TestAnsibleInventoryFormatConstraints(unittest.TestCase):
         'barbican_all',
         'barbican_api',
         'barbican_container',
+        'ceilometer_all',
         'ceilometer_agent_central',
         'ceilometer_agent_compute',
         'ceilometer_agent_notification',
-        'ceilometer_all',
-        'ceilometer_api',
-        'ceilometer_api_container',
+        'ceilometer_central_container',
         'ceph_all',
         'ceph-mon_all',
         'ceph-mon_containers',
@@ -294,6 +293,12 @@ class TestAnsibleInventoryFormatConstraints(unittest.TestCase):
         'metrics_all',
         'metrics_containers',
         'metrics_hosts',
+        'molteniron',
+        'molteniron-server_all',
+        'molteniron-server_containers',
+        'molteniron-server_container',
+        'molteniron-server_hosts',
+        'molteniron_all',
         'mq_containers',
         'mq_hosts',
         'network_all',

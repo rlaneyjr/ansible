@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-haproxy_bind_on_non_local: "{% if groups.haproxy[1] is defined and internal_lb_vip_address != external_lb_vip_address %}True{% else %}False{% endif %}"
+haproxy_bind_on_non_local: "{% if groups.haproxy|length > 1 %}True{% else %}False{% endif %}"
 haproxy_use_keepalived: "{% if groups.haproxy|length > 1 %}True{% else %}False{% endif %}"
 
 # Ensure that the package state matches the global setting
@@ -31,3 +31,4 @@ haproxy_nova_metadata_whitelist_networks: "{{ haproxy_whitelist_networks }}"
 haproxy_rabbitmq_management_whitelist_networks: "{{ haproxy_whitelist_networks }}"
 haproxy_repo_git_whitelist_networks: "{{ haproxy_whitelist_networks }}"
 haproxy_repo_cache_whitelist_networks: "{{ haproxy_whitelist_networks }}"
+haproxy_octavia_whitelist_networks: "{{ haproxy_whitelist_networks }}"

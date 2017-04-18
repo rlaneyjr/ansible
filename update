@@ -1,7 +1,2 @@
 #!/bin/sh
 
-cp repo-osa/requirements.txt osa/requirements.txt
-Only in repo-osa: .git
-Only in repo-osa: .gitignore
-Only in repo-osa: .gitreview
-Only in repo-osa: Vagrantfile
