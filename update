@@ -1,2 +1,15 @@
 #!/bin/sh
 
+cp repo-osa/README.rst osa/README.rst
+cp repo-osa/doc/source/conf.py osa/doc/source/conf.py
+cp repo-osa/doc/source/developer-docs/quickstart-aio.rst osa/doc/source/developer-docs/quickstart-aio.rst
+cp repo-osa/etc/network/interfaces.d/openstack_interface.cfg.test.example osa/etc/network/interfaces.d/openstack_interface.cfg.test.example
+cp repo-osa/etc/openstack_deploy/openstack_user_config.yml.test.example osa/etc/openstack_deploy/openstack_user_config.yml.test.example
+cp repo-osa/playbooks/inventory/env.d/cinder.yml osa/playbooks/inventory/env.d/cinder.yml
+cp repo-osa/playbooks/inventory/env.d/ironic.yml osa/playbooks/inventory/env.d/ironic.yml
+cp repo-osa/playbooks/inventory/env.d/trove.yml osa/playbooks/inventory/env.d/trove.yml
+cp repo-osa/playbooks/inventory/group_vars/all.yml osa/playbooks/inventory/group_vars/all.yml
+cp repo-osa/playbooks/vars/configs/haproxy_config.yml osa/playbooks/vars/configs/haproxy_config.yml
+cp repo-osa/scripts/bootstrap-ansible.sh osa/scripts/bootstrap-ansible.sh
+cp repo-osa/tests/test_inventory.py osa/tests/test_inventory.py
+cp repo-osa/tox.ini osa/tox.ini
