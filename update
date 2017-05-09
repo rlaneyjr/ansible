@@ -1,6 +1,20 @@
 #!/bin/sh
 
-cp repo-osa/releasenotes/notes/add-template-file-var-cac35a99a3faf563.yaml osa/releasenotes/notes/add-template-file-var-cac35a99a3faf563.yaml
+cp repo-osa/doc/source/draft-operations-guide/openstack-operations/live-migration.rst  osa/doc/source/draft-operations-guide/openstack-operations/live-migration.rst
+cp -rf repo-osa/doc/source/operations-guide                                                osa/doc/source/operations-guide
+cp repo-osa/doc/source/developer-docs/additional-roles.rst osa/doc/source/developer-docs/additional-roles.rst
+cp repo-osa/doc/source/developer-docs/contribute.rst osa/doc/source/developer-docs/contribute.rst
+cp repo-osa/doc/source/index.rst osa/doc/source/index.rst
+cp repo-osa/playbooks/common-tasks/os-lxc-container-setup.yml osa/playbooks/common-tasks/os-lxc-container-setup.yml
+cp repo-osa/playbooks/defaults/repo_packages/gnocchi.yml osa/playbooks/defaults/repo_packages/gnocchi.yml
+cp repo-osa/playbooks/defaults/repo_packages/nova_consoles.yml osa/playbooks/defaults/repo_packages/nova_consoles.yml
+cp repo-osa/playbooks/defaults/repo_packages/openstack_services.yml osa/playbooks/defaults/repo_packages/openstack_services.yml
+cp repo-osa/playbooks/defaults/repo_packages/openstack_testing.yml osa/playbooks/defaults/repo_packages/openstack_testing.yml
+cp repo-osa/playbooks/inventory/group_vars/all_containers.yml osa/playbooks/inventory/group_vars/all_containers.yml
+cp repo-osa/playbooks/inventory/group_vars/designate_all.yml osa/playbooks/inventory/group_vars/designate_all.yml
+cp repo-osa/playbooks/lxc-containers-create.yml osa/playbooks/lxc-containers-create.yml
+cp repo-osa/playbooks/utility-install.yml osa/playbooks/utility-install.yml
 cp repo-osa/scripts/gate-check-commit.sh osa/scripts/gate-check-commit.sh
-cp repo-osa/tests/roles/bootstrap-host/defaults/main.yml osa/tests/roles/bootstrap-host/defaults/main.yml
-cp repo-osa/tests/roles/bootstrap-host/tasks/prepare_aio_config.yml osa/tests/roles/bootstrap-host/tasks/prepare_aio_config.yml
+cp repo-osa/scripts/upgrade-utilities/playbooks/deploy-config-changes.yml osa/scripts/upgrade-utilities/playbooks/deploy-config-changes.yml
+cp repo-osa/tests/bootstrap-aio.yml osa/tests/bootstrap-aio.yml
+cp repo-osa/tests/get-ansible-role-requirements.yml osa/tests/get-ansible-role-requirements.yml
