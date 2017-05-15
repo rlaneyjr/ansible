@@ -1,20 +1,56 @@
 #!/bin/sh
 
-cp repo-osa/doc/source/draft-operations-guide/openstack-operations/live-migration.rst  osa/doc/source/draft-operations-guide/openstack-operations/live-migration.rst
-cp -rf repo-osa/doc/source/operations-guide                                                osa/doc/source/operations-guide
-cp repo-osa/doc/source/developer-docs/additional-roles.rst osa/doc/source/developer-docs/additional-roles.rst
-cp repo-osa/doc/source/developer-docs/contribute.rst osa/doc/source/developer-docs/contribute.rst
-cp repo-osa/doc/source/index.rst osa/doc/source/index.rst
-cp repo-osa/playbooks/common-tasks/os-lxc-container-setup.yml osa/playbooks/common-tasks/os-lxc-container-setup.yml
-cp repo-osa/playbooks/defaults/repo_packages/gnocchi.yml osa/playbooks/defaults/repo_packages/gnocchi.yml
-cp repo-osa/playbooks/defaults/repo_packages/nova_consoles.yml osa/playbooks/defaults/repo_packages/nova_consoles.yml
-cp repo-osa/playbooks/defaults/repo_packages/openstack_services.yml osa/playbooks/defaults/repo_packages/openstack_services.yml
-cp repo-osa/playbooks/defaults/repo_packages/openstack_testing.yml osa/playbooks/defaults/repo_packages/openstack_testing.yml
-cp repo-osa/playbooks/inventory/group_vars/all_containers.yml osa/playbooks/inventory/group_vars/all_containers.yml
-cp repo-osa/playbooks/inventory/group_vars/designate_all.yml osa/playbooks/inventory/group_vars/designate_all.yml
-cp repo-osa/playbooks/lxc-containers-create.yml osa/playbooks/lxc-containers-create.yml
-cp repo-osa/playbooks/utility-install.yml osa/playbooks/utility-install.yml
-cp repo-osa/scripts/gate-check-commit.sh osa/scripts/gate-check-commit.sh
-cp repo-osa/scripts/upgrade-utilities/playbooks/deploy-config-changes.yml osa/scripts/upgrade-utilities/playbooks/deploy-config-changes.yml
-cp repo-osa/tests/bootstrap-aio.yml osa/tests/bootstrap-aio.yml
-cp repo-osa/tests/get-ansible-role-requirements.yml osa/tests/get-ansible-role-requirements.yml
+cp -rf osa/doc/source/developer-docs: playbooks.rst
+cp -rf osa/doc/source/draft-operations-guide: advanced-config.rst
+cp -rf osa/doc/source/draft-operations-guide: index.rst
+cp -rf osa/doc/source/draft-operations-guide: maintenance-tasks
+cp -rf osa/doc/source/draft-operations-guide: maintenance-tasks.rst
+cp -rf osa/doc/source/draft-operations-guide: monitor-environment
+cp -rf osa/doc/source/draft-operations-guide: monitor-environment.rst
+cp -rf osa/doc/source/draft-operations-guide/openstack-operations: cli-operations.rst
+cp -rf osa/doc/source/draft-operations-guide/openstack-operations: managing-images.rst
+cp -rf osa/doc/source/draft-operations-guide/openstack-operations: managing-instances.rst
+cp -rf osa/doc/source/draft-operations-guide/openstack-operations: network-service.rst
+cp -rf osa/doc/source/draft-operations-guide/openstack-operations: verify-deploy.rst
+cp -rf osa/doc/source/draft-operations-guide: openstack-operations.rst
+cp -rf osa/doc/source/draft-operations-guide: ref-info
+cp -rf osa/doc/source/draft-operations-guide: ref-info.rst
+cp -rf osa/doc/source/draft-operations-guide: troubleshooting.rst
+cp -rf osa/playbooks/inventory/group_vars: rally_all.yml
+cp -rf repo-osa/deploy-guide/source/app-custom-layouts.rst osa/deploy-guide/source/app-custom-layouts.rst
+cp -rf repo-osa/doc/source/developer-docs/index.rst osa/doc/source/developer-docs/index.rst
+cp -rf repo-osa/doc/source/operations-guide/index.rst osa/doc/source/operations-guide/index.rst
+cp -rf repo-osa/osa_toolkit/generate.py osa/osa_toolkit/generate.py
+cp -rf repo-osa/playbooks/inventory/env.d/aodh.yml osa/playbooks/inventory/env.d/aodh.yml
+cp -rf repo-osa/playbooks/inventory/env.d/barbican.yml osa/playbooks/inventory/env.d/barbican.yml
+cp -rf repo-osa/playbooks/inventory/env.d/ceilometer.yml osa/playbooks/inventory/env.d/ceilometer.yml
+cp -rf repo-osa/playbooks/inventory/env.d/ceph.yml osa/playbooks/inventory/env.d/ceph.yml
+cp -rf repo-osa/playbooks/inventory/env.d/cinder.yml osa/playbooks/inventory/env.d/cinder.yml
+cp -rf repo-osa/playbooks/inventory/env.d/designate.yml osa/playbooks/inventory/env.d/designate.yml
+cp -rf repo-osa/playbooks/inventory/env.d/galera.yml osa/playbooks/inventory/env.d/galera.yml
+cp -rf repo-osa/playbooks/inventory/env.d/glance.yml osa/playbooks/inventory/env.d/glance.yml
+cp -rf repo-osa/playbooks/inventory/env.d/gnocchi.yml osa/playbooks/inventory/env.d/gnocchi.yml
+cp -rf repo-osa/playbooks/inventory/env.d/haproxy.yml osa/playbooks/inventory/env.d/haproxy.yml
+cp -rf repo-osa/playbooks/inventory/env.d/heat.yml osa/playbooks/inventory/env.d/heat.yml
+cp -rf repo-osa/playbooks/inventory/env.d/horizon.yml osa/playbooks/inventory/env.d/horizon.yml
+cp -rf repo-osa/playbooks/inventory/env.d/ironic.yml osa/playbooks/inventory/env.d/ironic.yml
+cp -rf repo-osa/playbooks/inventory/env.d/keystone.yml osa/playbooks/inventory/env.d/keystone.yml
+cp -rf repo-osa/playbooks/inventory/env.d/magnum.yml osa/playbooks/inventory/env.d/magnum.yml
+cp -rf repo-osa/playbooks/inventory/env.d/memcache.yml osa/playbooks/inventory/env.d/memcache.yml
+cp -rf repo-osa/playbooks/inventory/env.d/molteniron.yml osa/playbooks/inventory/env.d/molteniron.yml
+cp -rf repo-osa/playbooks/inventory/env.d/neutron.yml osa/playbooks/inventory/env.d/neutron.yml
+cp -rf repo-osa/playbooks/inventory/env.d/nova.yml osa/playbooks/inventory/env.d/nova.yml
+cp -rf repo-osa/playbooks/inventory/env.d/octavia.yml osa/playbooks/inventory/env.d/octavia.yml
+cp -rf repo-osa/playbooks/inventory/env.d/pkg_repo.yml osa/playbooks/inventory/env.d/pkg_repo.yml
+cp -rf repo-osa/playbooks/inventory/env.d/rabbitmq.yml osa/playbooks/inventory/env.d/rabbitmq.yml
+cp -rf repo-osa/playbooks/inventory/env.d/rsyslog.yml osa/playbooks/inventory/env.d/rsyslog.yml
+cp -rf repo-osa/playbooks/inventory/env.d/sahara.yml osa/playbooks/inventory/env.d/sahara.yml
+cp -rf repo-osa/playbooks/inventory/env.d/swift-remote.yml osa/playbooks/inventory/env.d/swift-remote.yml
+cp -rf repo-osa/playbooks/inventory/env.d/swift.yml osa/playbooks/inventory/env.d/swift.yml
+cp -rf repo-osa/playbooks/inventory/env.d/trove.yml osa/playbooks/inventory/env.d/trove.yml
+cp -rf repo-osa/playbooks/inventory/env.d/unbound.yml osa/playbooks/inventory/env.d/unbound.yml
+cp -rf repo-osa/playbooks/inventory/env.d/utility.yml osa/playbooks/inventory/env.d/utility.yml
+cp -rf repo-osa/scripts/gate-check-commit.sh osa/scripts/gate-check-commit.sh
+cp -rf repo-osa/scripts/inventory-manage.py osa/scripts/inventory-manage.py
+cp -rf repo-osa/scripts/upgrade-utilities/playbooks/galera-cluster-rolling-restart.yml osa/scripts/upgrade-utilities/playbooks/galera-cluster-rolling-restart.yml
+cp -rf repo-osa/tests/get-ansible-role-requirements.yml osa/tests/get-ansible-role-requirements.yml
