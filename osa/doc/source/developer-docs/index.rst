@@ -1,5 +1,5 @@
 =======================
-Developer documentation
+Developer Documentation
 =======================
 
 In this section, you will find documentation relevant to developing
@@ -14,8 +14,8 @@ Contents:
    :maxdepth: 2
 
    quickstart-aio
+   inventory-and-vars
    scripts
-   playbooks
    contribute
    bug-triage
    core-reviewers
