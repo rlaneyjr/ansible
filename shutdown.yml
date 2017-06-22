@@ -1,5 +1,7 @@
 ---
 - name: Shutdown Servers
-  hosts: all
-  become: yes
-  command: shutdown -h now
+  hosts: osa
+  tasks:
+  - name: Shutdown Servers
+    become: yes
+    command: /sbin/shutdown -h now
