@@ -6,21 +6,25 @@ ns1
 ns2
 
 [osa]
+imon1
 imon2
 imon3
+imon4
 imon5
 imon6
+imon7
+imon8
      
 [srvs]
 imon1
 imon2
 imon3
-virl
+imon4
 imon5
 imon6
 imon7
 imon8
-imon9
+virl
 
 [virl]
 virl

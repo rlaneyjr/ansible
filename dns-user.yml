@@ -1,6 +1,6 @@
 ---
 - name: Add or update the existing user on Ubuntu servers
-  hosts: ns1
+  hosts: osa
   roles:
     - user
  
