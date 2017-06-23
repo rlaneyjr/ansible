@@ -1,6 +1,6 @@
 ---
 - name: Get network configs from OSA servers
-  hosts: osa
+  hosts: srvs
   tasks:
     - fetch:
         src: /etc/network/interfaces.d/{{ ansible_hostname }}.interfaces.cfg

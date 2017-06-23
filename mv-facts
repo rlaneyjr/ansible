@@ -2,7 +2,7 @@
 
 set -e
 
-hosts="imoniot01 imoniot02 imoniot03 imoniot05 imoniot06 imoniot07 imoniot08 imoniot09"
+hosts="imon1 imon2 imon3 imon5 imon6 imon7 imon8 imon9 imon10"
 
 for h in $hosts; do
     cp facts_cache/$h info/$h.yml

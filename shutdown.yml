@@ -1,6 +1,6 @@
 ---
 - name: Shutdown Servers
-  hosts: osa
+  hosts: srvs
   tasks:
   - name: Shutdown Servers
     become: yes

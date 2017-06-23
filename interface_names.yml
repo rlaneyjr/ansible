@@ -1,6 +1,6 @@
 ---
 - name: Modify GRUB to keep old style interface names (ie. eth0 eth1..etc)
-  hosts: imon1 imon2 imon3 imon4 imon7
+  hosts: imon1 imon2 imon3 imon4 imon7 imon10
   tasks:
     - lineinfile:
         state: present

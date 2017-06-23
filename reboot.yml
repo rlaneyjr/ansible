@@ -1,6 +1,6 @@
 ---
 - name: Reboot server
-  hosts: osa
+  hosts: srvs
   roles:
     - reboot 
   vars:

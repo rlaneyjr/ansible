@@ -1,0 +1,362 @@
+bond0 - eth0-1
+access vlan 23
+
+bond1 - eth2-3+
+trunk native vlan 28
+trunk allowed vlan 26
+
+bond2 - eth4-5+
+access vlan 27
+
+
+Port      Name               Status       Vlan       Duplex  Speed Type
+Gi1/0/1   imoniot01 bond0    connected    23         a-full a-1000 10/100/1000BaseTX
+Gi1/0/2   imoniot01 bond0    connected    23         a-full a-1000 10/100/1000BaseTX
+Gi1/0/3   imoniot02 bond0    connected    23         a-full a-1000 10/100/1000BaseTX
+Gi1/0/4   imoniot02 bond0    connected    23         a-full a-1000 10/100/1000BaseTX
+Gi1/0/5   imoniot03 bond0    connected    23         a-full a-1000 10/100/1000BaseTX
+Gi1/0/6   imoniot03 bond0    connected    23         a-full a-1000 10/100/1000BaseTX
+Gi1/0/7   imoniot04 bond0    connected    23         a-full a-1000 10/100/1000BaseTX
+Gi1/0/8   imoniot04 bond0    connected    23         a-full a-1000 10/100/1000BaseTX
+Gi1/0/9   imoniot05 bond0    connected    23         a-full a-1000 10/100/1000BaseTX
+Gi1/0/10  imoniot05 bond0    connected    23         a-full a-1000 10/100/1000BaseTX
+Gi1/0/11  imoniot06 bond0    connected    23         a-full a-1000 10/100/1000BaseTX
+Gi1/0/12  imoniot06 bond0    connected    23         a-full a-1000 10/100/1000BaseTX
+Gi1/0/13  imoniot07 bond0    connected    23         a-full a-1000 10/100/1000BaseTX
+Gi1/0/14  imoniot07 bond0    connected    23         a-full a-1000 10/100/1000BaseTX
+Gi1/0/15  FreeNAS eth1-2 lag connected    trunk      a-full a-1000 10/100/1000BaseTX
+Gi1/0/16  FreeNAS eth1-2 lag connected    trunk      a-full a-1000 10/100/1000BaseTX
+Gi1/0/17  imoniot09 bond0    connected    23         a-full  a-100 10/100/1000BaseTX
+Gi1/0/18  imoniot09 bond0    connected    23         a-full  a-100 10/100/1000BaseTX
+Gi1/0/19  imoniot10 bond0    connected    23         a-full a-1000 10/100/1000BaseTX
+Gi1/0/20  imoniot10 bond0    connected    23         a-full a-1000 10/100/1000BaseTX
+Gi1/0/21  imoniot08 bond0    connected    23         a-full a-1000 10/100/1000BaseTX
+Gi1/0/22  imoniot08 bond0    connected    23         a-full a-1000 10/100/1000BaseTX
+Gi1/0/23  imoniot08 bond1    connected    trunk      a-full a-1000 10/100/1000BaseTX
+Gi1/0/24  imoniot08 bond1    suspended    trunk      a-full a-1000 10/100/1000BaseTX
+Gi1/0/25                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/26                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/27                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/28                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/29                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/30                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/31                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/32                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/33  Uplink to Switch3  connected    trunk      a-full a-1000 10/100/1000BaseTX
+Gi1/0/34  Uplink to Switch3  connected    trunk      a-full a-1000 10/100/1000BaseTX
+Gi1/0/35                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/36                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/37                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/38                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/39                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/40                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/41                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/42                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/43                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/44                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/45                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/46                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/47                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/48                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/49  Uplink Switch1     connected    trunk      a-full a-1000 unsupported
+Gi1/0/50  Uplink Switch1     connected    trunk      a-full a-1000 unsupported
+Gi1/0/51  downlink FI-A.1    notconnect   1            auto   auto 1000BaseSX SFP
+Gi1/0/52  downlink FI-A.1    notconnect   1            auto   auto 1000BaseSX SFP
+Gi2/0/1   imoniot01 bond2    disabled     trunk        auto   auto 10/100/1000BaseTX
+Gi2/0/2   imoniot01 bond2    disabled     trunk        auto   auto 10/100/1000BaseTX
+Gi2/0/3   imoniot02 bond2    disabled     trunk        auto   auto 10/100/1000BaseTX
+Gi2/0/4   imoniot02 bond2    disabled     trunk        auto   auto 10/100/1000BaseTX
+Gi2/0/5   imoniot03 bond2    disabled     trunk        auto   auto 10/100/1000BaseTX
+Gi2/0/6   imoniot03 bond2    disabled     trunk        auto   auto 10/100/1000BaseTX
+Gi2/0/7   imoniot04 bond2    notconnect   trunk      a-full a-1000 10/100/1000BaseTX
+Gi2/0/8   imoniot04 bond2    suspended    trunk      a-full  a-100 10/100/1000BaseTX
+Gi2/0/9   imoniot05 bond2    disabled     trunk        auto   auto 10/100/1000BaseTX
+Gi2/0/10  imoniot05 bond2    disabled     trunk        auto   auto 10/100/1000BaseTX
+Gi2/0/11  imoniot06 bond2    disabled     trunk        auto   auto 10/100/1000BaseTX
+Gi2/0/12  imoniot06 bond2    notconnect   trunk        auto   auto 10/100/1000BaseTX
+Gi2/0/13  imoniot07 bond2    disabled     trunk        auto   auto 10/100/1000BaseTX
+Gi2/0/14  imoniot07 bond2    disabled     trunk        auto   auto 10/100/1000BaseTX
+Gi2/0/15  imoniot08 bond2    disabled     trunk        auto   auto 10/100/1000BaseTX
+Gi2/0/16  imoniot08 bond2    disabled     trunk        auto   auto 10/100/1000BaseTX
+Gi2/0/17  imoniot09 bond2    disabled     trunk        auto   auto 10/100/1000BaseTX
+Gi2/0/18  imoniot09 bond2    disabled     trunk        auto   auto 10/100/1000BaseTX
+Gi2/0/19                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi2/0/20                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi2/0/21  imoniot08 bond1    notconnect   trunk      a-full a-1000 10/100/1000BaseTX
+Gi2/0/22  imoniot08 bond2    notconnect   trunk      a-full a-1000 10/100/1000BaseTX
+Gi2/0/23                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi2/0/24                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi2/0/25                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi2/0/26                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi2/0/27                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi2/0/28                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi2/0/29                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi2/0/30                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi2/0/31                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi2/0/32                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi2/0/33                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi2/0/34                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi2/0/35  imoniot06 bond1    connected    trunk      a-full a-1000 10/100/1000BaseTX
+Gi2/0/36  imoniot06 bond1    connected    trunk      a-full a-1000 10/100/1000BaseTX
+Gi2/0/37  imoniot06 bond2    connected    trunk      a-full a-1000 10/100/1000BaseTX
+Gi2/0/38  imoniot06 bond2    connected    trunk      a-full a-1000 10/100/1000BaseTX
+Gi2/0/39  imoniot04 bond1    notconnect   trunk      a-full a-1000 10/100/1000BaseTX
+Gi2/0/40  imoniot04 bond1    notconnect   trunk      a-full a-1000 10/100/1000BaseTX
+Gi2/0/41  imoniot04 bond2    connected    trunk      a-full a-1000 10/100/1000BaseTX
+Gi2/0/42  imoniot04 bond2    notconnect   trunk      a-full a-1000 10/100/1000BaseTX
+Gi2/0/43                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi2/0/44                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi2/0/45                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi2/0/46                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi2/0/47  imoniot01 bond1    disabled     trunk        auto   auto 10/100/1000BaseTX
+Gi2/0/48  imoniot01 bond2    disabled     trunk        auto   auto 10/100/1000BaseTX
+Gi2/0/49  downlink FI-A.2    disabled     1            auto   auto Not Present
+Gi2/0/50  downlink FI-A.2    disabled     1            auto   auto Not Present
+Gi2/0/51  downlink FI-A.2    disabled     1            auto   auto Not Present
+Gi2/0/52  downlink FI-A.2    disabled     1            auto   auto Not Present
+Gi3/0/1   imoniot01 bond1    disabled     trunk        auto   auto 10/100/1000BaseTX
+Gi3/0/2   imoniot01 bond1    disabled     trunk        auto   auto 10/100/1000BaseTX
+Gi3/0/3   imoniot02 bond1    disabled     trunk        auto   auto 10/100/1000BaseTX
+Gi3/0/4   imoniot02 bond1    disabled     trunk        auto   auto 10/100/1000BaseTX
+Gi3/0/5   imoniot03 bond1    disabled     trunk        auto   auto 10/100/1000BaseTX
+Gi3/0/6   imoniot03 bond1    disabled     trunk        auto   auto 10/100/1000BaseTX
+Gi3/0/7   imoniot04 bond1    notconnect   trunk      a-full a-1000 10/100/1000BaseTX
+Gi3/0/8   imoniot04 bond1    notconnect   trunk      a-full a-1000 10/100/1000BaseTX
+Gi3/0/9   imoniot05 bond1    disabled     trunk        auto   auto 10/100/1000BaseTX
+Gi3/0/10  imoniot05 bond1    disabled     trunk        auto   auto 10/100/1000BaseTX
+Gi3/0/11  imoniot06 bond1    disabled     1            auto   auto 10/100/1000BaseTX
+Gi3/0/12  imoniot06 bond1    disabled     1            auto   auto 10/100/1000BaseTX
+Gi3/0/13  imoniot07 bond1    disabled     trunk        auto   auto 10/100/1000BaseTX
+Gi3/0/14  imoniot07 bond1    disabled     trunk        auto   auto 10/100/1000BaseTX
+Gi3/0/15  FreeNAS eth3-4 lag connected    trunk      a-full a-1000 10/100/1000BaseTX
+Gi3/0/16  FreeNAS eth3-4 lag connected    trunk      a-full a-1000 10/100/1000BaseTX
+Gi3/0/17  R710 DOWN          connected    1          a-full  a-100 10/100/1000BaseTX
+Gi3/0/18  R710 DOWN          connected    1          a-full  a-100 10/100/1000BaseTX
+Gi3/0/19                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi3/0/20                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi3/0/21                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi3/0/22                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi3/0/23                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi3/0/24                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi3/0/25                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi3/0/26                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi3/0/27                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi3/0/28                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi3/0/29                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi3/0/30                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi3/0/31                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi3/0/32                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi3/0/33                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi3/0/34                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi3/0/35                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi3/0/36                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi3/0/37                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi3/0/38                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi3/0/39  imoniot04 bond1    notconnect   trunk      a-full a-1000 10/100/1000BaseTX
+Gi3/0/40  imoniot04 bond1    suspended    trunk      a-full  a-100 10/100/1000BaseTX
+Gi3/0/41  imoniot04 bond2    connected    trunk      a-full a-1000 10/100/1000BaseTX
+Gi3/0/42  imoniot04 bond2    connected    trunk      a-full a-1000 10/100/1000BaseTX
+Gi3/0/43                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi3/0/44                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi3/0/45                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi3/0/46                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi3/0/47                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi3/0/48                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi3/0/49  downlink FI-A.3    disabled     1            auto   auto 1000BaseSX SFP
+Gi3/0/50  downlink FI-A.3    disabled     1            auto   auto 1000BaseSX SFP
+Gi3/0/51  downlink FI-A.3    disabled     1            auto   auto Not Present
+Gi3/0/52  downlink FI-A.3    disabled     1            auto   auto Not Present
+
+Po1       Uplink switch1     connected    trunk      a-full a-1000
+Po2       downlink FI-A.1    notconnect   unassigned   auto   auto
+Po5       FreeNAS eth1-2 lag connected    trunk      a-full a-1000
+Po6       FreeNAS eth3-4 lag connected    trunk      a-full a-1000
+Po11      imoniot01 bond0    connected    23         a-full a-1000
+Po12      imoniot02 bond0    connected    23         a-full a-1000
+Po13      imoniot03 bond0    connected    23         a-full a-1000
+Po14      imoniot04 bond0    connected    23         a-full a-1000
+Po15      imoniot05 bond0    connected    23         a-full a-1000
+Po16      imoniot06 bond0    connected    23         a-full a-1000
+Po17      imoniot07 bond0    connected    23         a-full a-1000
+Po18      imoniot08 bond0    connected    23         a-full a-1000
+Po19      imoniot09 bond0    notconnect   23           auto   auto
+Po20      imoniot10 bond0    connected    23         a-full a-1000
+Po21      imoniot01 bond1    notconnect   trunk        auto   auto
+Po22      imoniot02 bond1    notconnect   trunk        auto   auto
+Po23      imoniot03 bond1    notconnect   trunk        auto   auto
+Po24      imoniot04 bond1    notconnect   trunk        auto   auto
+Po25      imoniot05 bond1    notconnect   trunk        auto   auto
+Po26      imoniot06 bond1    notconnect   trunk        auto   auto
+Po27      imoniot07 bond1    notconnect   trunk        auto   auto
+Po28      imoniot08 bond1    connected    trunk      a-full a-1000
+Po29      imoniot09 bond1    notconnect   trunk        auto   auto
+Po31      imoniot01 bond2    notconnect   trunk        auto   auto
+Po32      imoniot02 bond2    notconnect   trunk        auto   auto
+Po33      imoniot03 bond2    notconnect   trunk        auto   auto
+Po34      imoniot04 bond2    connected    trunk      a-full a-1000
+Po35      imoniot05 bond2    notconnect   trunk        auto   auto
+Po36      imoniot06 bond2    notconnect   trunk        auto   auto
+Po37      imoniot07 bond2    notconnect   trunk        auto   auto
+Po38      imoniot08 bond2    notconnect   trunk        auto   auto
+Po39      imoniot09 bond2    notconnect   trunk        auto   auto
+
+
+Vlan    Mac Address       Type        Ports
+----    -----------       --------    -----
+   1    8890.8d1b.1795    DYNAMIC     Po1
+   1    8890.8d1b.1796    DYNAMIC     Po1
+   1    8890.8d1b.1799    DYNAMIC     Po1
+   1    8890.8d1b.179a    DYNAMIC     Po1
+  10    8890.8d1b.1796    DYNAMIC     Po1
+  20    8890.8d1b.1796    DYNAMIC     Po1
+  20    8890.8d1b.17d6    DYNAMIC     Po1
+  21    8890.8d1b.1796    DYNAMIC     Po1
+  21    8890.8d1b.17e8    DYNAMIC     Po1
+  22    0050.b60f.6ca9    DYNAMIC     Po1
+  22    0862.662a.dc8f    DYNAMIC     Po1
+  22    8890.8d1b.1796    DYNAMIC     Po1
+  23    0026.552a.2b08    DYNAMIC     Po15
+  23    0026.552a.2b0a    DYNAMIC     Po15
+  23    1803.73ed.c435    DYNAMIC     Po13
+  23    1803.73ed.c437    DYNAMIC     Po13
+  23    1803.73ed.c837    DYNAMIC     Po12
+  23    1803.73ed.c839    DYNAMIC     Po12
+  23    1803.73ed.c918    DYNAMIC     Po14
+  23    1803.73ed.c91a    DYNAMIC     Po14
+  23    1803.73f2.8b09    DYNAMIC     Po5
+  23    1803.73f2.8b0b    DYNAMIC     Po5
+  23    1803.73f2.a960    DYNAMIC     Po17
+  23    1803.73f2.a962    DYNAMIC     Po17
+  23    78e7.d17c.6ec2    DYNAMIC     Po18
+  23    78e7.d17c.6ec4    DYNAMIC     Po18
+  23    78e7.d18f.87b4    DYNAMIC     Po16
+  23    78e7.d18f.87b6    DYNAMIC     Po16
+  23    842b.2b6f.e53b    DYNAMIC     Po20
+  23    842b.2b6f.e53c    DYNAMIC     Po20
+  23    8890.8d1b.1796    DYNAMIC     Po1
+  23    8890.8d1b.17c4    DYNAMIC     Po1
+  23    d4be.d925.b768    DYNAMIC     Po1
+  24    8890.8d1b.1796    DYNAMIC     Po1
+  24    8890.8d1b.17c1    DYNAMIC     Po1
+  25    8890.8d1b.1796    DYNAMIC     Po1
+  25    8890.8d1b.17f1    DYNAMIC     Po1
+  26    8890.8d1b.17e5    DYNAMIC     Po1
+  27    1803.73f2.8b09    DYNAMIC     Po5
+  27    8890.8d1b.17d5    DYNAMIC     Po1
+  28    0015.1720.ae2b    DYNAMIC     Po28
+  28    1803.73f2.8b0d    DYNAMIC     Po6
+  28    1803.73f2.8b0f    DYNAMIC     Po6
+  28    8890.8d1b.17d9    DYNAMIC     Po1
+  29    1803.73f2.8b09    DYNAMIC     Po5
+  29    8890.8d1b.17e8    DYNAMIC     Po1
+  30    8890.8d1b.17e5    DYNAMIC     Po1
+ 100    001c.7f70.7f17    DYNAMIC     Po1
+ 100    8890.8d1b.1796    DYNAMIC     Po1
+ 100    8890.8d1b.17d1    DYNAMIC     Po1
+ 101    8890.8d1b.1796    DYNAMIC     Po1
+ 102    8890.8d1b.1796    DYNAMIC     Po1
+ 103    8890.8d1b.1796    DYNAMIC     Po1
+ 104    8890.8d1b.1796    DYNAMIC     Po1
+ 105    8890.8d1b.1796    DYNAMIC     Po1
+ 110    8890.8d1b.1796    DYNAMIC     Po1
+ 125    1803.73f2.8b0d    DYNAMIC     Po6
+ 126    8890.8d1b.1796    DYNAMIC     Po1
+ 200    8890.8d1b.1796    DYNAMIC     Po1
+ 999    8890.8d1b.1795    DYNAMIC     Po1
+ 999    8890.8d1b.1796    DYNAMIC     Po1
+ 999    8890.8d1b.1799    DYNAMIC     Po1
+ 999    8890.8d1b.179a    DYNAMIC     Po1
+
+Probable reason: speed of Gi2/0/8 is 100M, Gi2/0/41 is 1000M
+Probable reason: speed of Gi3/0/40 is 100M, Gi3/0/7 is 1000M
+
+Gi2/0/7
+1803.73ed.c91c
+Gi2/0/21
+78e7.d17c.6ec8
+Gi2/0/22
+78e7.d17c.6ec8
+Gi2/0/39
+001b.2194.835c
+Gi2/0/40
+0026.552a.2b0e
+Gi2/0/41
+001b.2177.2855
+Gi2/0/42
+1803.73ed.c91c
+Gi3/0/7
+1803.73ed.c91c
+Gi3/0/8
+1803.73ed.c91c
+Gi3/0/39
+1803.73ed.c91c
+Gi3/0/41
+001b.2177.2855
+Gi3/0/42
+001b.2177.2855
+
+Protocol  Address          Age (min)  Hardware Addr   Type   Interface
+Internet  10.0.0.1                -   8890.8d1b.17d1  ARPA   Vlan100
+Internet  10.0.0.2                3   bc16.655c.52c1  ARPA   Vlan100
+Internet  10.0.0.3               20   0012.01d1.90c1  ARPA   Vlan100
+Internet  10.0.0.5                3   001c.7f70.7f17  ARPA   Vlan100
+Internet  10.0.0.6               43   001c.7f70.7f21  ARPA   Vlan100
+Internet  10.0.20.1               -   8890.8d1b.17d6  ARPA   Vlan20
+Internet  10.0.20.10             90   8434.97a2.6eee  ARPA   Vlan20
+Internet  10.0.20.102           229   1803.73ed.c83f  ARPA   Vlan20
+Internet  10.0.20.103           134   1803.73ed.c43d  ARPA   Vlan20
+Internet  10.0.20.106           207   78e7.d18f.87bc  ARPA   Vlan20
+Internet  10.0.20.108            85   1803.73f2.8b11  ARPA   Vlan20
+Internet  10.0.20.109           114   842b.2b5f.e33c  ARPA   Vlan20
+Internet  10.0.20.112             0   843d.c698.58d6  ARPA   Vlan20
+Internet  10.0.21.1               -   8890.8d1b.17e8  ARPA   Vlan21
+Internet  10.0.23.1               -   8890.8d1b.17c4  ARPA   Vlan23
+Internet  10.0.23.5               0   d4be.d925.b768  ARPA   Vlan23
+Internet  10.0.23.8              21   1803.73f2.8b09  ARPA   Vlan23
+Internet  10.0.23.101             5   a4ba.db44.15bb  ARPA   Vlan23
+Internet  10.0.23.102             1   1803.73ed.c837  ARPA   Vlan23
+Internet  10.0.23.103             3   1803.73ed.c435  ARPA   Vlan23
+Internet  10.0.23.104             0   1803.73ed.c918  ARPA   Vlan23
+Internet  10.0.23.105             5   0026.552a.2b0a  ARPA   Vlan23
+Internet  10.0.23.106             1   78e7.d18f.87b4  ARPA   Vlan23
+Internet  10.0.23.107             0   1803.73f2.a962  ARPA   Vlan23
+Internet  10.0.23.108           198   78e7.d17c.6ec2  ARPA   Vlan23
+Internet  10.0.23.109             0   Incomplete      ARPA
+Internet  10.0.23.110             2   842b.2b6f.e53b  ARPA   Vlan23
+Internet  10.0.24.1               -   8890.8d1b.17c1  ARPA   Vlan24
+Internet  10.0.25.1               -   8890.8d1b.17f1  ARPA   Vlan25
+Internet  10.0.26.1               -   8890.8d1b.17e5  ARPA   Vlan26
+Internet  10.0.27.1               -   8890.8d1b.17d5  ARPA   Vlan27
+Internet  10.0.27.8             143   1803.73f2.8b09  ARPA   Vlan27
+Internet  10.0.27.101             0   Incomplete      ARPA
+Internet  10.0.27.102             0   Incomplete      ARPA
+Internet  10.0.27.103             0   Incomplete      ARPA
+Internet  10.0.27.104             6   001b.2177.2855  ARPA   Vlan27
+Internet  10.0.27.105             0   Incomplete      ARPA
+Internet  10.0.27.106             0   Incomplete      ARPA
+Internet  10.0.27.107             0   Incomplete      ARPA
+Internet  10.0.27.108             0   Incomplete      ARPA
+Internet  10.0.27.109             0   Incomplete      ARPA
+Internet  10.0.27.110             0   Incomplete      ARPA
+Internet  10.0.28.1               -   8890.8d1b.17d9  ARPA   Vlan28
+Internet  10.0.28.8             120   1803.73f2.8b0d  ARPA   Vlan28
+Internet  10.0.28.101             0   Incomplete      ARPA
+Internet  10.0.28.102             0   Incomplete      ARPA
+Internet  10.0.28.103             0   Incomplete      ARPA
+Internet  10.0.28.104             0   Incomplete      ARPA
+Internet  10.0.28.105             0   Incomplete      ARPA
+Internet  10.0.28.106             0   Incomplete      ARPA
+Internet  10.0.28.107             0   Incomplete      ARPA
+Internet  10.0.28.108             0   Incomplete      ARPA
+Internet  10.0.28.109             0   Incomplete      ARPA
+Internet  10.0.28.110             0   Incomplete      ARPA
+Internet  10.0.29.1               -   8890.8d1b.17e8  ARPA   Vlan29
+Internet  10.0.29.8             161   1803.73f2.8b09  ARPA   Vlan29
+Internet  10.0.30.1               -   8890.8d1b.17e5  ARPA   Vlan30
+Internet  10.10.0.1               -   8890.8d1b.17e9  ARPA   Vlan104
+Internet  10.20.0.1               -   8890.8d1b.17f9  ARPA   Vlan105
+Internet  172.16.1.1              -   8890.8d1b.17c1  ARPA   Vlan101
+Internet  172.16.2.1              -   8890.8d1b.17cd  ARPA   Vlan102
+Internet  172.16.3.1              -   8890.8d1b.17dd  ARPA   Vlan103
+Internet  172.16.10.1             -   8890.8d1b.17cd  ARPA   Vlan110
+s

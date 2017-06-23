@@ -1,0 +1,932 @@
+bond0 - eth0-1
+access vlan 23
+
+bond1 - eth2-3+
+trunk native vlan 28
+trunk allowed vlan 26
+
+bond2 - eth4-5+
+access vlan 27
+
+
+!
+interface Port-channel11
+ description imoniot01 bond0
+ switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ no switchport trunk native vlan 23
+ switchport mode access
+ switchport nonegotiate
+ no spanning-tree portfast
+!
+interface Port-channel12
+ description imoniot02 bond0
+ switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ no switchport trunk native vlan 23
+ switchport mode access
+ switchport nonegotiate
+ no spanning-tree portfast
+!
+interface Port-channel13
+ description imoniot03 bond0
+ switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ no switchport trunk native vlan 23
+ switchport mode access
+ switchport nonegotiate
+ no spanning-tree portfast
+!
+interface Port-channel14
+ description imoniot04 bond0
+ switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ no switchport trunk native vlan 23
+ switchport mode access
+ switchport nonegotiate
+ no spanning-tree portfast
+!
+interface Port-channel15
+ description imoniot05 bond0
+ switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ no switchport trunk native vlan 23
+ switchport mode access
+ switchport nonegotiate
+ no spanning-tree portfast
+!
+interface Port-channel16
+ description imoniot06 bond0
+ switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ no switchport trunk native vlan 23
+ switchport mode access
+ switchport nonegotiate
+ no spanning-tree portfast
+!
+interface Port-channel17
+ description imoniot07 bond0
+ switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ no switchport trunk native vlan 23
+ switchport mode access
+ switchport nonegotiate
+ no spanning-tree portfast
+!
+interface Port-channel18
+ description imoniot08 bond0
+ switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ no switchport trunk native vlan 23
+ switchport mode access
+ switchport nonegotiate
+ no spanning-tree portfast
+!
+interface Port-channel19
+ description imoniot09 bond0
+ switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ no switchport trunk native vlan 23
+ switchport mode access
+ switchport nonegotiate
+ no spanning-tree portfast
+!
+interface Port-channel20
+ description imoniot10 bond0
+ switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ no switchport trunk native vlan 23
+ switchport mode access
+ switchport nonegotiate
+!
+interface Port-channel21
+ description imoniot01 bond1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 28
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface Port-channel22
+ description imoniot02 bond1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 28
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface Port-channel23
+ description imoniot03 bond1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 28
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface Port-channel24
+ description imoniot04 bond1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 28
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface Port-channel25
+ description imoniot05 bond1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 28
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface Port-channel26
+ description imoniot06 bond1
+ no switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 28
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface Port-channel27
+ description imoniot07 bond1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 28
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface Port-channel28
+ description imoniot08 bond1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 28
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface Port-channel29
+ description imoniot09 bond1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 28
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface Port-channel31
+ description imoniot01 bond2
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport access vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface Port-channel32
+ description imoniot02 bond2
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport access vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface Port-channel33
+ description imoniot03 bond2
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport access vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface Port-channel34
+ description imoniot04 bond2
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport access vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface Port-channel35
+ description imoniot05 bond2
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport access vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface Port-channel36
+ description imoniot06 bond2
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport access vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface Port-channel37
+ description imoniot07 bond2
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport access vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface Port-channel38
+ description imoniot08 bond2
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport access vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface Port-channel39
+ description imoniot09 bond2
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport access vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+
+########################################
+
+interface GigabitEthernet1/0/1
+
+ description imoniot01 bond0
+ switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 23
+ switchport mode access
+ switchport nonegotiate
+ no spanning-tree portfast
+ channel-protocol lacp
+ channel-group 11 mode passive
+!
+interface GigabitEthernet1/0/2
+ description imoniot01 bond0
+ switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 23
+ switchport mode access
+ switchport nonegotiate
+ no spanning-tree portfast
+ channel-protocol lacp
+ channel-group 11 mode passive
+!
+interface GigabitEthernet1/0/3
+ description imoniot02 bond0
+ switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 23
+ switchport mode access
+ switchport nonegotiate
+ no spanning-tree portfast
+ channel-protocol lacp
+ channel-group 12 mode passive
+!
+interface GigabitEthernet1/0/4
+ description imoniot02 bond0
+ switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 23
+ switchport mode access
+ switchport nonegotiate
+ no spanning-tree portfast
+ channel-protocol lacp
+ channel-group 12 mode passive
+!
+interface GigabitEthernet1/0/5
+ description imoniot03 bond0
+ switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 23
+ switchport mode access
+ switchport nonegotiate
+ no spanning-tree portfast
+ channel-protocol lacp
+ channel-group 13 mode passive
+!
+interface GigabitEthernet1/0/6
+ description imoniot03 bond0
+ switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 23
+ switchport mode access
+ switchport nonegotiate
+ no spanning-tree portfast
+ channel-protocol lacp
+ channel-group 13 mode passive
+!
+interface GigabitEthernet1/0/7
+ description imoniot04 bond0
+ switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 23
+ switchport mode access
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 14 mode passive
+!
+interface GigabitEthernet1/0/8
+ description imoniot04 bond0
+ switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 23
+ switchport mode access
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 14 mode passive
+!
+interface GigabitEthernet1/0/9
+ description imoniot05 bond0
+ switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 23
+ switchport mode access
+ switchport nonegotiate
+ no spanning-tree portfast
+ channel-protocol lacp
+ channel-group 15 mode passive
+!
+interface GigabitEthernet1/0/10
+ description imoniot05 bond0
+ switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 23
+ switchport mode access
+ switchport nonegotiate
+ no spanning-tree portfast
+ channel-protocol lacp
+ channel-group 15 mode passive
+!
+interface GigabitEthernet1/0/11
+ description imoniot06 bond0
+ switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 23
+ switchport mode access
+ switchport nonegotiate
+ no spanning-tree portfast
+ channel-protocol lacp
+ channel-group 16 mode passive
+!
+interface GigabitEthernet1/0/12
+ description imoniot06 bond0
+ switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 23
+ switchport mode access
+ switchport nonegotiate
+ no spanning-tree portfast
+ channel-protocol lacp
+ channel-group 16 mode passive
+!
+interface GigabitEthernet1/0/13
+ description imoniot07 bond0
+ switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 23
+ switchport mode access
+ switchport nonegotiate
+ no spanning-tree portfast
+ channel-protocol lacp
+ channel-group 17 mode passive
+!
+interface GigabitEthernet1/0/14
+ description imoniot07 bond0
+ switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 23
+ switchport mode access
+ switchport nonegotiate
+ no spanning-tree portfast
+ channel-protocol lacp
+ channel-group 17 mode passive
+!
+interface GigabitEthernet1/0/17
+ description imoniot09 bond0
+ switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 23
+ switchport mode access
+ switchport nonegotiate
+ no spanning-tree portfast
+ channel-protocol lacp
+ channel-group 19 mode passive
+!
+interface GigabitEthernet1/0/18
+ description imoniot09 bond0
+ switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 23
+ switchport mode access
+ switchport nonegotiate
+ no spanning-tree portfast
+ channel-protocol lacp
+ channel-group 19 mode passive
+!
+interface GigabitEthernet1/0/19
+ description imoniot10 bond0
+ switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 23
+ switchport mode access
+ switchport nonegotiate
+ no spanning-tree portfast
+ channel-protocol lacp
+ channel-group 20 mode passive
+!
+interface GigabitEthernet1/0/20
+ description imoniot10 bond0
+ switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 23
+ switchport mode access
+ switchport nonegotiate
+ no spanning-tree portfast
+ channel-protocol lacp
+ channel-group 20 mode passive
+!
+interface GigabitEthernet1/0/21
+ description imoniot08 bond0
+ switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 23
+ switchport mode access
+ switchport nonegotiate
+ no spanning-tree portfast
+ channel-protocol lacp
+ channel-group 18 mode passive
+!
+interface GigabitEthernet1/0/22
+ description imoniot08 bond0
+ switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 23
+ switchport mode access
+ switchport nonegotiate
+ no spanning-tree portfast
+ channel-protocol lacp
+ channel-group 18 mode passive
+!
+interface GigabitEthernet1/0/23
+ description imoniot08 bond1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 28
+ switchport mode trunk
+ channel-protocol lacp
+ channel-group 28 mode passive
+!
+interface GigabitEthernet1/0/24
+ description imoniot08 bond1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 28
+ switchport mode trunk
+ channel-protocol lacp
+ channel-group 28 mode passive
+
+########################################
+
+interface GigabitEthernet2/0/1
+ description imoniot01 bond2
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 31 mode passive
+!
+interface GigabitEthernet2/0/2
+ description imoniot01 bond2
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 31 mode passive
+!
+interface GigabitEthernet2/0/3
+ description imoniot02 bond2
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 32 mode passive
+!
+interface GigabitEthernet2/0/4
+ description imoniot02 bond2
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 32 mode passive
+!
+interface GigabitEthernet2/0/5
+ description imoniot03 bond2
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 33 mode passive
+!
+interface GigabitEthernet2/0/6
+ description imoniot03 bond2
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 33 mode passive
+!
+interface GigabitEthernet2/0/7
+ description imoniot04 bond2
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 34 mode passive
+!
+interface GigabitEthernet2/0/8
+ description imoniot04 bond2
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 34 mode passive
+!
+interface GigabitEthernet2/0/9
+ description imoniot05 bond2
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 35 mode passive
+!
+interface GigabitEthernet2/0/10
+ description imoniot05 bond2
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 35 mode passive
+!
+interface GigabitEthernet2/0/11
+ description imoniot06 bond2
+ no switchport access vlan 125
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 36 mode passive
+!
+interface GigabitEthernet2/0/12
+ description imoniot06 bond2
+ no switchport access vlan 125
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 36 mode passive
+!
+interface GigabitEthernet2/0/13
+ description imoniot07 bond2
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 37 mode passive
+!
+interface GigabitEthernet2/0/14
+ description imoniot07 bond2
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 37 mode passive
+!
+interface GigabitEthernet2/0/15
+ description imoniot08 bond2
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 38 mode passive
+!
+interface GigabitEthernet2/0/16
+ description imoniot08 bond2
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 38 mode passive
+!
+interface GigabitEthernet2/0/17
+ description imoniot09 bond2
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 39 mode passive
+!
+interface GigabitEthernet2/0/18
+ description imoniot09 bond2
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 39 mode passive
+!
+interface GigabitEthernet2/0/21
+ description imoniot08 bond1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 28
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 28 mode passive
+!
+interface GigabitEthernet2/0/22
+ description imoniot08 bond2
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 38 mode passive
+!
+interface GigabitEthernet2/0/35
+ description imoniot06 bond1
+ no switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 28
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 26 mode passive
+ no shutdown
+!
+interface GigabitEthernet2/0/36
+ description imoniot06 bond1
+ no switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 28
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 26 mode passive
+ no shutdown
+!
+interface GigabitEthernet2/0/37
+ description imoniot06 bond2
+ no switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 36 mode passive
+ no shutdown
+!
+interface GigabitEthernet2/0/38
+ description imoniot06 bond2
+ no switchport access vlan 23
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 36 mode passive
+ no shutdown
+!
+interface GigabitEthernet2/0/39
+ description imoniot04 bond1
+ no switchport access vlan 104
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 28
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 24 mode passive
+!
+interface GigabitEthernet2/0/40
+ description imoniot04 bond1
+ no switchport access vlan 104
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 28
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 24 mode passive
+!
+interface GigabitEthernet2/0/41
+ description imoniot04 bond2
+ no switchport access vlan 105
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 34 mode passive
+!
+interface GigabitEthernet2/0/42
+ description imoniot04 bond2
+ no switchport access vlan 105
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 34 mode passive
+!
+interface GigabitEthernet2/0/47
+ description imoniot01 bond1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 28
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 21 mode passive
+!
+interface GigabitEthernet2/0/48
+ description imoniot01 bond2
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 31 mode passive
+!
+interface GigabitEthernet3/0/1
+ description imoniot01 bond1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 21 mode active
+!
+interface GigabitEthernet3/0/2
+ description imoniot01 bond1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 21 mode active
+!
+interface GigabitEthernet3/0/3
+ description imoniot02 bond1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 28
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 22 mode passive
+!
+interface GigabitEthernet3/0/4
+ description imoniot02 bond1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 28
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 22 mode passive
+!
+interface GigabitEthernet3/0/5
+ description imoniot03 bond1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 28
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 23 mode passive
+!
+interface GigabitEthernet3/0/6
+ description imoniot03 bond1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 28
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 23 mode passive
+!
+interface GigabitEthernet3/0/7
+ description imoniot04 bond1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 28
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 24 mode passive
+!
+interface GigabitEthernet3/0/8
+ description imoniot04 bond1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 28
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 24 mode passive
+!
+interface GigabitEthernet3/0/9
+ description imoniot05 bond1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 28
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 25 mode passive
+!
+interface GigabitEthernet3/0/10
+ description imoniot05 bond1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 28
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 25 mode passive
+!
+interface GigabitEthernet3/0/11
+ description imoniot06 bond1
+ no switchport access vlan 124
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 28
+ switchport mode access
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 26 mode passive
+!
+interface GigabitEthernet3/0/12
+ description imoniot06 bond1
+ no switchport access vlan 124
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 28
+ switchport mode access
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 26 mode passive
+!
+interface GigabitEthernet3/0/13
+ description imoniot07 bond1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 28
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 27 mode passive
+!
+interface GigabitEthernet3/0/14
+ description imoniot07 bond1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 28
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 27 mode passive
+!
+interface GigabitEthernet3/0/17
+ description R710 DOWN
+!
+interface GigabitEthernet3/0/18
+ description R710 DOWN
+!
+interface GigabitEthernet3/0/39
+ description imoniot04 bond1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 28
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 24 mode passive
+!
+interface GigabitEthernet3/0/40
+ description imoniot04 bond1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 28
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 24 mode passive
+!
+interface GigabitEthernet3/0/41
+ description imoniot04 bond2
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 34 mode passive
+!
+interface GigabitEthernet3/0/42
+ description imoniot04 bond2
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 27
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 34 mode passive
+
+########################################
+
