@@ -1,2 +1,9 @@
 #!/bin/sh
 
+cp repo-osa/deploy-guide/source/app-ceph.rst osa/deploy-guide/source/app-ceph.rst
+cp repo-osa/group_vars/keystone_all.yml osa/group_vars/keystone_all.yml
+cp repo-osa/playbooks/os-keystone-install.yml osa/playbooks/os-keystone-install.yml
+cp repo-osa/scripts/scripts-library.sh osa/scripts/scripts-library.sh
+cp repo-osa/scripts/sources-branch-updater-lib.sh osa/scripts/sources-branch-updater-lib.sh
+cp repo-osa/scripts/sources-branch-updater.sh osa/scripts/sources-branch-updater.sh
+cp repo-osa/tests/roles/bootstrap-host/tasks/prepare_aio_config.yml osa/tests/roles/bootstrap-host/tasks/prepare_aio_config.yml
