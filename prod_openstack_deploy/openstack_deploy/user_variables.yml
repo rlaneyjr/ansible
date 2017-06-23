@@ -95,7 +95,7 @@ rabbitmq_use_ssl: false
 # removed for security reasons and a new userid 'monitoring' has been created
 # with the 'monitoring' user tag. In order to modify the userid, uncomment the
 # following and change 'monitoring' to your userid of choice.
-rabbitmq_monitoring_userid: admin
+#rabbitmq_monitoring_userid: admin
 
 
 ## Additional pinning generator that will allow for more packages to be pinned as you see fit.
@@ -132,7 +132,7 @@ rabbitmq_monitoring_userid: admin
 ## SSH connection wait time
 # If an increased delay for the ssh connection check is desired,
 # uncomment this variable and set it appropriately.
-ssh_delay: 25
+#ssh_delay: 25
 
 
 ## HAProxy
@@ -142,10 +142,10 @@ ssh_delay: 25
 # HAProxy Keepalived configuration (cf. documentation)
 # Make sure that this is set correctly according to the CIDR used for your
 # internal and external addresses.
-haproxy_keepalived_external_vip_cidr: "10.0.23.11/24"
-haproxy_keepalived_internal_vip_cidr: "10.0.23.11/24"
-haproxy_keepalived_external_interface: bond3
-haproxy_keepalived_internal_interface: br-vip
+haproxy_keepalived_external_vip_cidr: "10.0.23.6/24"
+haproxy_keepalived_internal_vip_cidr: "10.0.23.6/24"
+haproxy_keepalived_external_interface: bond0
+haproxy_keepalived_internal_interface: br-mgmt
 
 # Defines the default VRRP id used for keepalived with haproxy.
 # Overwrite it to your value to make sure you don't overlap
