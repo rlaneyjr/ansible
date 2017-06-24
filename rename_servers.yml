@@ -1,0 +1,24 @@
+---
+- name: Run command to change the hostname
+  hosts: osa
+  tasks:
+    - name: run hostnamectl
+      command: hostnamectl set-hostname {{ inventory_hostname }}
+    - hostname: 
+        name: "{{ inventory_hostname }}"
+    
+    - name: Modify hosts file
+      replace:
+        path: /etc/hosts
+        regexp: '(^.*?)imon[1-8](.*)?$'
+        replace: '\1{{ inventory_hostname }}\2'
+        owner: root
+        group: root
+        backup: yes
+    
+    - name: restart machine
+      become: yes
+      command: /sbin/reboot now "Ansible updates triggered"
+      async: 0
+      poll: 0
+      ignore_errors: true

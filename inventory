@@ -6,30 +6,30 @@ ns1
 ns2
 
 [osa]
-imon1
-imon2
-imon3
-imon4
-imon5
-imon6
-imon7
-imon8
+compute1
+compute2
+compute3
+compute4
+infra1
+infra2
+storage1
+storage2
      
 [srvs]
-imon1
-imon2
-imon3
-imon4
-imon5
-imon6
-imon7
-imon8
+compute1
+compute2
+compute3
+compute4
+infra1
+infra2
+storage1
+storage2
 imon10
 
-[virl]
+[vrl]
 virl
 
-[virl:vars]
+[vrl:vars]
 ansible_user=virl
 ansible_ssh_pass=VIRL
 

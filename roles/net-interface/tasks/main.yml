@@ -10,7 +10,7 @@
 
 - name: Transfer interface configuration files to each host
   copy:
-    src: "~/Projects/ansible/roles/net-interface/files/{{ ansible_hostname }}.interfaces.cfg"
+    src: "~/Projects/ansible/roles/net-interface/files/{{ inventory_hostname }}.interfaces.cfg"
     dest: /etc/network/interfaces.d/
     backup: yes
     owner: root

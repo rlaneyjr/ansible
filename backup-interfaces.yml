@@ -1,8 +1,8 @@
 ---
 - name: Get network configs from OSA servers
-  hosts: srvs
+  hosts: osa
   tasks:
     - fetch:
-        src: /etc/network/interfaces.d/{{ ansible_hostname }}.interfaces.cfg
-        dest: backup/
+        src: /etc/network/interfaces.d/{{ inventory_hostname }}.interfaces.cfg
+        dest: backup/test/
         flat: yes
