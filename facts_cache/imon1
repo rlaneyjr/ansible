@@ -9,6 +9,8 @@
         "fe80::a6ba:dbff:fe44:15bd", 
         "fe80::a6ba:dbff:fe44:15bd", 
         "fe80::a6ba:dbff:fe44:15bb", 
+        "fe80::602b:20ff:fe18:f3d3", 
+        "fe80::1", 
         "fe80::a6ba:dbff:fe44:15bd", 
         "fe80::a6ba:dbff:fe44:15bd", 
         "fe80::a6ba:dbff:fe44:15bb", 
@@ -150,8 +152,8 @@
         "promisc": true, 
         "slaves": [
             "eth2", 
-            "eth6", 
-            "eth3"
+            "eth3", 
+            "eth6"
         ], 
         "speed": 3000, 
         "type": "bonding"
@@ -282,8 +284,8 @@
         "promisc": true, 
         "slaves": [
             "eth4", 
-            "eth5", 
-            "eth7"
+            "eth7", 
+            "eth5"
         ], 
         "speed": 3000, 
         "type": "bonding"
@@ -581,16 +583,16 @@
     "ansible_date_time": {
         "date": "2017-06-23", 
         "day": "23", 
-        "epoch": "1498245461", 
-        "hour": "15", 
-        "iso8601": "2017-06-23T19:17:41Z", 
-        "iso8601_basic": "20170623T151741741350", 
-        "iso8601_basic_short": "20170623T151741", 
-        "iso8601_micro": "2017-06-23T19:17:41.741417Z", 
-        "minute": "17", 
+        "epoch": "1498273218", 
+        "hour": "23", 
+        "iso8601": "2017-06-24T03:00:18Z", 
+        "iso8601_basic": "20170623T230018874121", 
+        "iso8601_basic_short": "20170623T230018", 
+        "iso8601_micro": "2017-06-24T03:00:18.874197Z", 
+        "minute": "00", 
         "month": "06", 
-        "second": "41", 
-        "time": "15:17:41", 
+        "second": "18", 
+        "time": "23:00:18", 
         "tz": "EDT", 
         "tz_offset": "-0400", 
         "weekday": "Friday", 
@@ -758,7 +760,7 @@
             "icloudmon.local"
         ]
     }, 
-    "ansible_domain": "icloudmon.local", 
+    "ansible_domain": "openstack.local", 
     "ansible_eno1": {
         "active": true, 
         "device": "eno1", 
@@ -1343,7 +1345,7 @@
         "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin", 
         "PWD": "/home/rlaney", 
         "SHELL": "/bin/bash", 
-        "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-knsggzhojhhefjxxclseqdnhwkzlbwwy; /usr/bin/python /home/rlaney/.ansible/tmp/ansible-tmp-1498245454.07-213233827215025/setup.py; rm -rf \"/home/rlaney/.ansible/tmp/ansible-tmp-1498245454.07-213233827215025/\" > /dev/null 2>&1", 
+        "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-sctnyumbwdmfocgzzqykfmmxezsjhtqr; /usr/bin/python /home/rlaney/.ansible/tmp/ansible-tmp-1498273210.38-98163200449547/setup.py; rm -rf \"/home/rlaney/.ansible/tmp/ansible-tmp-1498273210.38-98163200449547/\" > /dev/null 2>&1", 
         "SUDO_GID": "1000", 
         "SUDO_UID": "1000", 
         "SUDO_USER": "rlaney", 
@@ -1921,7 +1923,7 @@
     }, 
     "ansible_fips": false, 
     "ansible_form_factor": "Rack Mount Chassis", 
-    "ansible_fqdn": "imon1.icloudmon.local", 
+    "ansible_fqdn": "compute1.openstack.local", 
     "ansible_gather_subset": [
         "hardware", 
         "network", 
@@ -1938,6 +1940,7 @@
         "br-mgmt", 
         "br-vlan", 
         "br-storage", 
+        "lxdbr0", 
         "eth9", 
         "eth8", 
         "eth7", 
@@ -2027,18 +2030,87 @@
         "lvs": {}, 
         "vgs": {}
     }, 
+    "ansible_lxdbr0": {
+        "active": true, 
+        "device": "lxdbr0", 
+        "features": {
+            "busy_poll": "off [fixed]", 
+            "fcoe_mtu": "off [fixed]", 
+            "generic_receive_offload": "on", 
+            "generic_segmentation_offload": "on", 
+            "highdma": "on", 
+            "hw_tc_offload": "off [fixed]", 
+            "l2_fwd_offload": "off [fixed]", 
+            "large_receive_offload": "off [fixed]", 
+            "loopback": "off [fixed]", 
+            "netns_local": "on [fixed]", 
+            "ntuple_filters": "off [fixed]", 
+            "receive_hashing": "off [fixed]", 
+            "rx_all": "off [fixed]", 
+            "rx_checksumming": "off [fixed]", 
+            "rx_fcs": "off [fixed]", 
+            "rx_vlan_filter": "off [fixed]", 
+            "rx_vlan_offload": "off [fixed]", 
+            "rx_vlan_stag_filter": "off [fixed]", 
+            "rx_vlan_stag_hw_parse": "off [fixed]", 
+            "scatter_gather": "on", 
+            "tcp_segmentation_offload": "on", 
+            "tx_checksum_fcoe_crc": "off [fixed]", 
+            "tx_checksum_ip_generic": "on", 
+            "tx_checksum_ipv4": "off [fixed]", 
+            "tx_checksum_ipv6": "off [fixed]", 
+            "tx_checksum_sctp": "off [fixed]", 
+            "tx_checksumming": "on", 
+            "tx_fcoe_segmentation": "on", 
+            "tx_gre_segmentation": "on", 
+            "tx_gso_robust": "on", 
+            "tx_ipip_segmentation": "on", 
+            "tx_lockless": "on [fixed]", 
+            "tx_nocache_copy": "off", 
+            "tx_scatter_gather": "on", 
+            "tx_scatter_gather_fraglist": "on", 
+            "tx_sit_segmentation": "on", 
+            "tx_tcp6_segmentation": "on", 
+            "tx_tcp_ecn_segmentation": "on", 
+            "tx_tcp_segmentation": "on", 
+            "tx_udp_tnl_segmentation": "on", 
+            "tx_vlan_offload": "on", 
+            "tx_vlan_stag_hw_insert": "on", 
+            "udp_fragmentation_offload": "on", 
+            "vlan_challenged": "off [fixed]"
+        }, 
+        "id": "8000.000000000000", 
+        "interfaces": [], 
+        "ipv6": [
+            {
+                "address": "fe80::602b:20ff:fe18:f3d3", 
+                "prefix": "64", 
+                "scope": "link"
+            }, 
+            {
+                "address": "fe80::1", 
+                "prefix": "64", 
+                "scope": "link"
+            }
+        ], 
+        "macaddress": "62:2b:20:18:f3:d3", 
+        "mtu": 1500, 
+        "promisc": false, 
+        "stp": false, 
+        "type": "bridge"
+    }, 
     "ansible_machine": "x86_64", 
     "ansible_machine_id": "b8a2132ad52bcb75810716f259471d9b", 
-    "ansible_memfree_mb": 128194, 
+    "ansible_memfree_mb": 128327, 
     "ansible_memory_mb": {
         "nocache": {
-            "free": 128564, 
-            "used": 427
+            "free": 128531, 
+            "used": 460
         }, 
         "real": {
-            "free": 128194, 
+            "free": 128327, 
             "total": 128991, 
-            "used": 797
+            "used": 664
         }, 
         "swap": {
             "cached": 0, 
@@ -2054,7 +2126,7 @@
             "fstype": "ext4", 
             "mount": "/", 
             "options": "rw,relatime,errors=remount-ro,data=ordered", 
-            "size_available": 91157766144, 
+            "size_available": 90890166272, 
             "size_total": 98293264384, 
             "uuid": "4816d116-89cc-4e75-84c8-8b84e1e302f8"
         }
@@ -2175,7 +2247,7 @@
     ], 
     "ansible_system_capabilities_enforced": "True", 
     "ansible_system_vendor": "Dell Inc.", 
-    "ansible_uptime_seconds": 23795, 
+    "ansible_uptime_seconds": 4753, 
     "ansible_user_dir": "/root", 
     "ansible_user_gecos": "root", 
     "ansible_user_gid": 0, 
