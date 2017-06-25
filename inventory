@@ -12,8 +12,8 @@ compute3
 compute4
 infra1
 infra2
-storage1
-storage2
+infra3
+infra4
      
 [srvs]
 compute1
@@ -22,8 +22,8 @@ compute3
 compute4
 infra1
 infra2
-storage1
-storage2
+infra3
+infra4
 imon10
 
 [vrl]
