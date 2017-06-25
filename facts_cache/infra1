@@ -1600,12 +1600,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fc5a:c8ff:fea0:3b3a", 
+                "address": "fe80::fc6d:20ff:fe8b:1024", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:5a:c8:a0:3b:3a", 
+        "macaddress": "fe:6d:20:8b:10:24", 
         "mtu": 1500, 
         "promisc": true, 
         "speed": 10000, 
@@ -1662,12 +1662,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fcf7:69ff:fec2:ea9b", 
+                "address": "fe80::fc28:75ff:fef6:53ca", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:f7:69:c2:ea:9b", 
+        "macaddress": "fe:28:75:f6:53:ca", 
         "mtu": 9000, 
         "promisc": true, 
         "speed": 10000, 
@@ -2378,8 +2378,8 @@
         "fe80::226:55ff:fe2a:2b0e", 
         "fe80::226:55ff:fe2a:2b0e", 
         "fe80::226:55ff:fe2a:2b0a", 
-        "fe80::fcf7:69ff:fec2:ea9b", 
-        "fe80::fc5a:c8ff:fea0:3b3a", 
+        "fe80::fc28:75ff:fef6:53ca", 
+        "fe80::fc6d:20ff:fe8b:1024", 
         "fe80::fcaf:93ff:fe43:3f84", 
         "fe80::fc4d:59ff:fe0c:4eeb", 
         "fe80::fc30:5aff:fea1:d630", 
@@ -3521,16 +3521,16 @@
     "ansible_date_time": {
         "date": "2017-06-24", 
         "day": "24", 
-        "epoch": "1498332622", 
-        "hour": "15", 
-        "iso8601": "2017-06-24T19:30:22Z", 
-        "iso8601_basic": "20170624T153022569561", 
-        "iso8601_basic_short": "20170624T153022", 
-        "iso8601_micro": "2017-06-24T19:30:22.569680Z", 
-        "minute": "30", 
+        "epoch": "1498358373", 
+        "hour": "22", 
+        "iso8601": "2017-06-25T02:39:33Z", 
+        "iso8601_basic": "20170624T223933973464", 
+        "iso8601_basic_short": "20170624T223933", 
+        "iso8601_micro": "2017-06-25T02:39:33.973586Z", 
+        "minute": "39", 
         "month": "06", 
-        "second": "22", 
-        "time": "15:30:22", 
+        "second": "33", 
+        "time": "22:39:33", 
         "tz": "EDT", 
         "tz_offset": "-0400", 
         "weekday": "Saturday", 
@@ -3873,7 +3873,7 @@
         "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin", 
         "PWD": "/home/rlaney", 
         "SHELL": "/bin/bash", 
-        "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-dvrtetaikdoklcgtrgdmeltbdfjzkkxe; /usr/bin/python /home/rlaney/.ansible/tmp/ansible-tmp-1498332619.26-57920564062987/setup.py; rm -rf \"/home/rlaney/.ansible/tmp/ansible-tmp-1498332619.26-57920564062987/\" > /dev/null 2>&1", 
+        "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-xslxgbgzkjdqzwqfuxhpqbpijjfffyib; /usr/bin/python /home/rlaney/.ansible/tmp/ansible-tmp-1498358371.7-141648350751394/setup.py; rm -rf \"/home/rlaney/.ansible/tmp/ansible-tmp-1498358371.7-141648350751394/\" > /dev/null 2>&1", 
         "SUDO_GID": "1000", 
         "SUDO_UID": "1000", 
         "SUDO_USER": "rlaney", 
@@ -4588,16 +4588,16 @@
     }, 
     "ansible_machine": "x86_64", 
     "ansible_machine_id": "5075160524a6b2014a6fc0f9594858ac", 
-    "ansible_memfree_mb": 44688, 
+    "ansible_memfree_mb": 39197, 
     "ansible_memory_mb": {
         "nocache": {
-            "free": 47564, 
-            "used": 727
+            "free": 46700, 
+            "used": 1591
         }, 
         "real": {
-            "free": 44688, 
+            "free": 39197, 
             "total": 48291, 
-            "used": 3603
+            "used": 9094
         }, 
         "swap": {
             "cached": 0, 
@@ -4613,7 +4613,7 @@
             "fstype": "ext4", 
             "mount": "/", 
             "options": "rw,relatime,errors=remount-ro,data=ordered", 
-            "size_available": 2767606730752, 
+            "size_available": 2767352954880, 
             "size_total": 2945353187328, 
             "uuid": "5a5bedf2-0eba-4bef-be40-6ae0227d43d5"
         }, 
@@ -4745,7 +4745,7 @@
     ], 
     "ansible_system_capabilities_enforced": "True", 
     "ansible_system_vendor": "HP", 
-    "ansible_uptime_seconds": 11123, 
+    "ansible_uptime_seconds": 36875, 
     "ansible_user_dir": "/root", 
     "ansible_user_gecos": "root", 
     "ansible_user_gid": 0, 

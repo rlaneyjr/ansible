@@ -1671,9 +1671,7 @@
         "fe80::fc94:eaff:fedb:a004", 
         "fe80::fc3e:88ff:fe3c:a1c2", 
         "fe80::fcbd:61ff:fe61:2c4c", 
-        "fe80::fce2:37ff:fe21:bbb1", 
-        "fe80::fcc3:4aff:feb9:3ecb", 
-        "fe80::fcfd:25ff:fee7:4d6c"
+        "fe80::fce2:37ff:fe21:bbb1"
     ], 
     "ansible_apparmor": {
         "status": "enabled"
@@ -2256,7 +2254,6 @@
             "f6e3c9df_eth1", 
             "2ae02f5f_eth1", 
             "7d3566e3_eth1", 
-            "251fa544_eth1", 
             "4cf0a6f9_eth1", 
             "d4344360_eth1", 
             "bond0", 
@@ -2881,16 +2878,16 @@
     "ansible_date_time": {
         "date": "2017-06-24", 
         "day": "24", 
-        "epoch": "1498332625", 
-        "hour": "15", 
-        "iso8601": "2017-06-24T19:30:25Z", 
-        "iso8601_basic": "20170624T153025606422", 
-        "iso8601_basic_short": "20170624T153025", 
-        "iso8601_micro": "2017-06-24T19:30:25.606541Z", 
-        "minute": "30", 
+        "epoch": "1498358376", 
+        "hour": "22", 
+        "iso8601": "2017-06-25T02:39:36Z", 
+        "iso8601_basic": "20170624T223936646977", 
+        "iso8601_basic_short": "20170624T223936", 
+        "iso8601_micro": "2017-06-25T02:39:36.647106Z", 
+        "minute": "39", 
         "month": "06", 
-        "second": "25", 
-        "time": "15:30:25", 
+        "second": "36", 
+        "time": "22:39:36", 
         "tz": "EDT", 
         "tz_offset": "-0400", 
         "weekday": "Saturday", 
@@ -3419,7 +3416,7 @@
         "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin", 
         "PWD": "/home/rlaney", 
         "SHELL": "/bin/bash", 
-        "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-vhawtediakrwjyfeutsfogjgofvartib; /usr/bin/python /home/rlaney/.ansible/tmp/ansible-tmp-1498332622.61-109428289890987/setup.py; rm -rf \"/home/rlaney/.ansible/tmp/ansible-tmp-1498332622.61-109428289890987/\" > /dev/null 2>&1", 
+        "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-aaepjfrpayiizexjcboljakronwbwjzp; /usr/bin/python /home/rlaney/.ansible/tmp/ansible-tmp-1498358374.03-277532570693206/setup.py; rm -rf \"/home/rlaney/.ansible/tmp/ansible-tmp-1498358374.03-277532570693206/\" > /dev/null 2>&1", 
         "SUDO_GID": "1000", 
         "SUDO_UID": "1000", 
         "SUDO_USER": "rlaney", 
@@ -4445,7 +4442,6 @@
         "bond1", 
         "bond2", 
         "br-vxlan", 
-        "251fa544_eth1", 
         "eth7", 
         "4cf0a6f9_eth0", 
         "4cf0a6f9_eth1", 
@@ -4470,7 +4466,6 @@
         "24f7f8c2_eth1", 
         "24f7f8c2_eth0", 
         "eth6", 
-        "251fa544_eth0", 
         "f9758f0a_eth1", 
         "f9758f0a_eth0", 
         "25da98b1_eth1", 
@@ -4643,7 +4638,6 @@
             "f6e3c9df_eth0", 
             "2ae02f5f_eth0", 
             "7d3566e3_eth0", 
-            "251fa544_eth0", 
             "4cf0a6f9_eth0", 
             "d4344360_eth0", 
             "f9758f0a_eth0", 
@@ -4684,16 +4678,16 @@
     }, 
     "ansible_machine": "x86_64", 
     "ansible_machine_id": "7fc74b1108d17c9e60de1fc959486bd9", 
-    "ansible_memfree_mb": 45091, 
+    "ansible_memfree_mb": 43567, 
     "ansible_memory_mb": {
         "nocache": {
-            "free": 47337, 
-            "used": 952
+            "free": 47321, 
+            "used": 968
         }, 
         "real": {
-            "free": 45091, 
+            "free": 43567, 
             "total": 48289, 
-            "used": 3198
+            "used": 4722
         }, 
         "swap": {
             "cached": 0, 
@@ -4709,7 +4703,7 @@
             "fstype": "ext4", 
             "mount": "/", 
             "options": "rw,relatime,errors=remount-ro,data=ordered", 
-            "size_available": 2770412199936, 
+            "size_available": 2774491742208, 
             "size_total": 2945353187328, 
             "uuid": "7a6df244-d12d-4ea9-aa7a-5c7860f9c50c"
         }, 
@@ -4841,7 +4835,7 @@
     ], 
     "ansible_system_capabilities_enforced": "True", 
     "ansible_system_vendor": "HP", 
-    "ansible_uptime_seconds": 11118, 
+    "ansible_uptime_seconds": 36869, 
     "ansible_user_dir": "/root", 
     "ansible_user_gecos": "root", 
     "ansible_user_gid": 0, 

@@ -1,0 +1,37 @@
+ansible infra1_galera_container-8d2a37e4 -m shell -a "mysql -h localhost -e 'show status like \"%wsrep_cluster_%\";'"
+ansible infra2_galera_container-251fa544 -m shell -a "mysql -h localhost -e 'show status like \"%wsrep_cluster_%\";'"
+infra1_galera_container-8d2a37e4
+infra2_galera_container-251fa544
+
+ansible galera_container -m shell -a "mysql -h localhost -e 'show status like \"%wsrep_cluster_%\";'"
+mysql -e "SET GLOBAL wsrep_provider_options='pc.bootstrap=yes';"
+ansible galera_container -m shell -a "cat /var/lib/mysql/grastate.dat"
+
+lxc-stop -n infra1_galera_container-8d2a37e4
+lxc-destroy -n infra1_galera_container-8d2a37e4
+rm -rf /openstack/infra1_galera_container-8d2a37e4/*
+
+openstack-ansible setup-hosts.yml -l infra1 -l infra1_galera_container-8d2a37e4
+openstack-ansible setup-infrastructure.yml -l infra1_galera_container-8d2a37e4
+
+lxc-stop -n infra2_galera_container-251fa544
+lxc-destroy -n infra2_galera_container-251fa544
+rm -rf /openstack/infra2_galera_container-251fa544/*
+
+openstack-ansible setup-hosts.yml -l infra2 -l infra2_galera_container-251fa544
+openstack-ansible setup-infrastructure.yml -l infra2_galera_container-251fa544
+
+fatal: [infra1_galera_container-8d2a37e4]: FAILED! => {"attempts": 3, "changed": false, "failed": true, "msg": "Unable to start service mysql: Job for mariadb.service failed because the control process exited with error code. See \"systemctl status mariadb.service\" and \"journalctl -xe\" for details.\n"}
+...ignoring
+
+fatal: [infra1_galera_container-8d2a37e4]: FAILED! => {"attempts": 6, "changed": true, "cmd": ["mysql", "--silent", "--skip-column-names", "-e", "SHOW STATUS LIKE \"wsrep_evs_state\""], "delta": "0:00:00.004455", "end": "2017-06-24 18:27:13.297944", "failed": true, "failed_when_result": true, "rc": 1, "start": "2017-06-24 18:27:13.293489", "stderr": "ERROR 2003 (HY000): Can't connect to MySQL server on '127.0.0.1' (111 \"Connection refused\")", "stderr_lines": ["ERROR 2003 (HY000): Can't connect to MySQL server on '127.0.0.1' (111 \"Connection refused\")"], "stdout": "", "stdout_lines": []}
+
+ansible galera_container -m shell -a "mysql -h localhost -e 'show status like \"%wsrep_cluster_%\";'"
+Variable files: "-e @/etc/openstack_deploy/user_secrets.yml -e @/etc/openstack_deploy/user_variables.yml "
+infra2_galera_container-251fa544 | FAILED | rc=127 >>
+/bin/sh: 1: mysql: not found
+
+infra1_galera_container-8d2a37e4 | FAILED | rc=1 >>
+ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111 "Connection refused")
+
+r

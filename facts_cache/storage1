@@ -711,16 +711,16 @@
     "ansible_date_time": {
         "date": "2017-06-24", 
         "day": "24", 
-        "epoch": "1498332625", 
-        "hour": "15", 
-        "iso8601": "2017-06-24T19:30:25Z", 
-        "iso8601_basic": "20170624T153025593058", 
-        "iso8601_basic_short": "20170624T153025", 
-        "iso8601_micro": "2017-06-24T19:30:25.593157Z", 
-        "minute": "30", 
+        "epoch": "1498358376", 
+        "hour": "22", 
+        "iso8601": "2017-06-25T02:39:36Z", 
+        "iso8601_basic": "20170624T223936747019", 
+        "iso8601_basic_short": "20170624T223936", 
+        "iso8601_micro": "2017-06-25T02:39:36.747117Z", 
+        "minute": "39", 
         "month": "06", 
-        "second": "25", 
-        "time": "15:30:25", 
+        "second": "36", 
+        "time": "22:39:36", 
         "tz": "EDT", 
         "tz_offset": "-0400", 
         "weekday": "Saturday", 
@@ -836,7 +836,7 @@
         "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin", 
         "PWD": "/home/rlaney", 
         "SHELL": "/bin/bash", 
-        "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-wbkcrufwwdonzshspdccphguxaqhwtpn; /usr/bin/python /home/rlaney/.ansible/tmp/ansible-tmp-1498332622.63-44388686083839/setup.py; rm -rf \"/home/rlaney/.ansible/tmp/ansible-tmp-1498332622.63-44388686083839/\" > /dev/null 2>&1", 
+        "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-mvnzgowduvsfviggcruhpqfwidjaervf; /usr/bin/python /home/rlaney/.ansible/tmp/ansible-tmp-1498358374.06-183832477803046/setup.py; rm -rf \"/home/rlaney/.ansible/tmp/ansible-tmp-1498358374.06-183832477803046/\" > /dev/null 2>&1", 
         "SUDO_GID": "1000", 
         "SUDO_UID": "1000", 
         "SUDO_USER": "rlaney", 
@@ -1374,16 +1374,16 @@
     }, 
     "ansible_machine": "x86_64", 
     "ansible_machine_id": "cb62848d7d18b969d507f6795949a020", 
-    "ansible_memfree_mb": 47570, 
+    "ansible_memfree_mb": 47486, 
     "ansible_memory_mb": {
         "nocache": {
-            "free": 48018, 
-            "used": 333
+            "free": 47981, 
+            "used": 370
         }, 
         "real": {
-            "free": 47570, 
+            "free": 47486, 
             "total": 48351, 
-            "used": 781
+            "used": 865
         }, 
         "swap": {
             "cached": 0, 
@@ -1399,7 +1399,7 @@
             "fstype": "ext4", 
             "mount": "/", 
             "options": "rw,relatime,errors=remount-ro,data=ordered", 
-            "size_available": 86856114176, 
+            "size_available": 86851227648, 
             "size_total": 98294312960, 
             "uuid": "da2826cf-8a40-4fe3-a823-3623df306880"
         }, 
@@ -1531,7 +1531,7 @@
     ], 
     "ansible_system_capabilities_enforced": "True", 
     "ansible_system_vendor": "Dell Inc.", 
-    "ansible_uptime_seconds": 11146, 
+    "ansible_uptime_seconds": 36897, 
     "ansible_user_dir": "/root", 
     "ansible_user_gecos": "root", 
     "ansible_user_gid": 0, 
