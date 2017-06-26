@@ -1,6 +1,6 @@
 ---
 - name: Install nfs-common
-  hosts: imon5 imon6 imon8
+  hosts: infra1 infra2 infra3
   tasks:
     - apt: 
         name: nfs-common

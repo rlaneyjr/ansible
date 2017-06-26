@@ -1,0 +1,22 @@
+---
+- name: Modify GRUB to keep old style interface names (ie. eth0 eth1..etc)
+  hosts: infra1 infra2
+  tasks:
+    - lineinfile:
+        state: present
+        dest: /etc/default/grub
+        regexp: "GRUB_CMDLINE_LINUX="
+        owner: root
+        group: root
+        line: 'GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"'
+        backup: yes
+
+    - name: run grub-mkconfig
+      command: grub-mkconfig -o /boot/grub/grub.cfg
+    
+    - name: restart machine
+      become: yes
+      command: /sbin/reboot now "Ansible updates triggered"
+      async: 0
+      poll: 0
+      ignore_errors: true

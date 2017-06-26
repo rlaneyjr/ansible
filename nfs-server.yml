@@ -1,6 +1,6 @@
 ---
 - name: Install nfs-kernel-server
-  hosts: imon9
+  hosts: infra4
   tasks:
     - apt: 
         name: nfs-kernel-server

@@ -1,5 +1,5 @@
 ---
 - name: Modify network configs Ubuntu OSA servers
-  hosts: srvs
+  hosts: infra1 infra2
   roles:
     - net-interface
