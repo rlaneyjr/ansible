@@ -1,9 +1,16 @@
 #!/bin/sh
 
-cp repo-osa/deploy-guide/source/app-ceph.rst osa/deploy-guide/source/app-ceph.rst
-cp repo-osa/group_vars/keystone_all.yml osa/group_vars/keystone_all.yml
+cp repo-osa/etc/openstack_deploy/user_secrets.yml                               osa/etc/openstack_deploy/user_secrets.yml
+cp repo-osa/playbooks/common-playbooks/neutron.yml                              osa/playbooks/common-playbooks/neutron.yml
+cp repo-osa/releasenotes/notes/neutron-rolling-upgrades-5269b62ea216df5e.yaml   osa/releasenotes/notes/neutron-rolling-upgrades-5269b62ea216df5e.yaml
+cp repo-osa/deploy-guide/source/configure.rst osa/deploy-guide/source/configure2.rst
+cp repo-osa/deploy-guide/source/deploymenthost.rst osa/deploy-guide/source/deploymenthost2.rst
+cp repo-osa/deploy-guide/source/targethosts-prepare.rst osa/deploy-guide/source/targethosts-prepare2.rst
+cp repo-osa/group_vars/all/keepalived.yml osa/group_vars/all/keepalived.yml
 cp repo-osa/playbooks/os-keystone-install.yml osa/playbooks/os-keystone-install.yml
-cp repo-osa/scripts/scripts-library.sh osa/scripts/scripts-library.sh
-cp repo-osa/scripts/sources-branch-updater-lib.sh osa/scripts/sources-branch-updater-lib.sh
-cp repo-osa/scripts/sources-branch-updater.sh osa/scripts/sources-branch-updater.sh
-cp repo-osa/tests/roles/bootstrap-host/tasks/prepare_aio_config.yml osa/tests/roles/bootstrap-host/tasks/prepare_aio_config.yml
+cp repo-osa/playbooks/os-neutron-install.yml osa/playbooks/os-neutron-install.yml
+cp repo-osa/playbooks/roles/system_crontab_coordination/templates/crontab.j2 osa/playbooks/roles/system_crontab_coordination/templates/crontab.j2
+cp repo-osa/releasenotes/source/conf.py osa/releasenotes/source/conf.py
+cp repo-osa/scripts/bootstrap-ansible.sh osa/scripts/bootstrap-ansible.sh
+cp repo-osa/scripts/openstack-ansible.rc osa/scripts/openstack-ansible.rc
+cp repo-osa/test-requirements.txt osa/test-requirements.txt

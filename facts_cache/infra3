@@ -50,12 +50,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fcad:b8ff:fe8b:22c1", 
+                "address": "fe80::fca2:e6ff:fe97:768b", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:ad:b8:8b:22:c1", 
+        "macaddress": "fe:a2:e6:97:76:8b", 
         "mtu": 1500, 
         "promisc": true, 
         "speed": 10000, 
@@ -112,12 +112,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fce2:f3ff:fe02:96e8", 
+                "address": "fe80::fc4b:31ff:feef:e8b", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:e2:f3:02:96:e8", 
+        "macaddress": "fe:4b:31:ef:0e:8b", 
         "mtu": 9000, 
         "promisc": true, 
         "speed": 10000, 
@@ -174,12 +174,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fcd3:18ff:fe90:85af", 
+                "address": "fe80::fc6a:abff:fe65:e45d", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:d3:18:90:85:af", 
+        "macaddress": "fe:6a:ab:65:e4:5d", 
         "mtu": 1500, 
         "promisc": true, 
         "speed": 10000, 
@@ -236,12 +236,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fc6a:4eff:fe3c:b26f", 
+                "address": "fe80::fcf2:dbff:fe0a:622", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:6a:4e:3c:b2:6f", 
+        "macaddress": "fe:f2:db:0a:06:22", 
         "mtu": 9000, 
         "promisc": true, 
         "speed": 10000, 
@@ -298,12 +298,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fc60:c3ff:fe08:9d59", 
+                "address": "fe80::fc1c:aeff:fe76:72bc", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:60:c3:08:9d:59", 
+        "macaddress": "fe:1c:ae:76:72:bc", 
         "mtu": 1500, 
         "promisc": true, 
         "speed": 10000, 
@@ -360,12 +360,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fc9b:5fff:fe14:e0f6", 
+                "address": "fe80::fc6c:cff:fe48:bda9", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:9b:5f:14:e0:f6", 
+        "macaddress": "fe:6c:0c:48:bd:a9", 
         "mtu": 9000, 
         "promisc": true, 
         "speed": 10000, 
@@ -422,12 +422,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fc0d:a1ff:fe14:40c2", 
+                "address": "fe80::fcda:38ff:fe5d:9133", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:0d:a1:14:40:c2", 
+        "macaddress": "fe:da:38:5d:91:33", 
         "mtu": 1500, 
         "promisc": true, 
         "speed": 10000, 
@@ -484,12 +484,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fcd7:f3ff:fef7:54d8", 
+                "address": "fe80::fc7e:68ff:fe7f:a1c4", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:d7:f3:f7:54:d8", 
+        "macaddress": "fe:7e:68:7f:a1:c4", 
         "mtu": 9000, 
         "promisc": true, 
         "speed": 10000, 
@@ -546,12 +546,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fc0b:f0ff:fe4a:9da6", 
+                "address": "fe80::fcc4:e2ff:feca:b6f", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:0b:f0:4a:9d:a6", 
+        "macaddress": "fe:c4:e2:ca:0b:6f", 
         "mtu": 1500, 
         "promisc": true, 
         "speed": 10000, 
@@ -608,12 +608,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fc54:feff:fe80:42e7", 
+                "address": "fe80::fc4a:62ff:fe95:119d", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:54:fe:80:42:e7", 
+        "macaddress": "fe:4a:62:95:11:9d", 
         "mtu": 9000, 
         "promisc": true, 
         "speed": 10000, 
@@ -670,12 +670,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fc7f:6ff:fe92:a957", 
+                "address": "fe80::fcc1:95ff:fe36:3e24", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:7f:06:92:a9:57", 
+        "macaddress": "fe:c1:95:36:3e:24", 
         "mtu": 1500, 
         "promisc": true, 
         "speed": 10000, 
@@ -732,12 +732,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fc44:88ff:fef2:8b4b", 
+                "address": "fe80::fc30:7bff:fed0:662", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:44:88:f2:8b:4b", 
+        "macaddress": "fe:30:7b:d0:06:62", 
         "mtu": 9000, 
         "promisc": true, 
         "speed": 10000, 
@@ -794,12 +794,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fc97:63ff:fecf:cf93", 
+                "address": "fe80::fcf8:70ff:fee5:dda0", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:97:63:cf:cf:93", 
+        "macaddress": "fe:f8:70:e5:dd:a0", 
         "mtu": 1500, 
         "promisc": true, 
         "speed": 10000, 
@@ -856,12 +856,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fcee:f8ff:feb2:2ddd", 
+                "address": "fe80::fcaa:88ff:fe6c:2e06", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:ee:f8:b2:2d:dd", 
+        "macaddress": "fe:aa:88:6c:2e:06", 
         "mtu": 9000, 
         "promisc": true, 
         "speed": 10000, 
@@ -918,12 +918,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fcec:32ff:fe5d:f88f", 
+                "address": "fe80::fc05:a5ff:fe44:a661", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:ec:32:5d:f8:8f", 
+        "macaddress": "fe:05:a5:44:a6:61", 
         "mtu": 9000, 
         "promisc": true, 
         "speed": 10000, 
@@ -980,12 +980,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fcef:53ff:fe55:6143", 
+                "address": "fe80::fcfb:ebff:fe2c:1554", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:ef:53:55:61:43", 
+        "macaddress": "fe:fb:eb:2c:15:54", 
         "mtu": 1500, 
         "promisc": true, 
         "speed": 10000, 
@@ -1042,12 +1042,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fc20:17ff:fe3b:50fe", 
+                "address": "fe80::fc0b:dfff:fe5f:d024", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:20:17:3b:50:fe", 
+        "macaddress": "fe:0b:df:5f:d0:24", 
         "mtu": 9000, 
         "promisc": true, 
         "speed": 10000, 
@@ -1104,12 +1104,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fc13:feff:fe3e:95c3", 
+                "address": "fe80::fcad:b1ff:fe63:16c6", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:13:fe:3e:95:c3", 
+        "macaddress": "fe:ad:b1:63:16:c6", 
         "mtu": 1500, 
         "promisc": true, 
         "speed": 10000, 
@@ -1166,12 +1166,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fc56:4bff:fe99:1be9", 
+                "address": "fe80::fcf1:cfff:fe34:628b", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:56:4b:99:1b:e9", 
+        "macaddress": "fe:f1:cf:34:62:8b", 
         "mtu": 9000, 
         "promisc": true, 
         "speed": 10000, 
@@ -1228,12 +1228,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fc3b:70ff:fe78:ba3", 
+                "address": "fe80::fc85:72ff:feff:6572", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:3b:70:78:0b:a3", 
+        "macaddress": "fe:85:72:ff:65:72", 
         "mtu": 1500, 
         "promisc": true, 
         "speed": 10000, 
@@ -1290,12 +1290,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fc4b:a4ff:fe4f:d37c", 
+                "address": "fe80::fcd7:27ff:fe2b:f93a", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:4b:a4:4f:d3:7c", 
+        "macaddress": "fe:d7:27:2b:f9:3a", 
         "mtu": 9000, 
         "promisc": true, 
         "speed": 10000, 
@@ -1352,12 +1352,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fccf:9eff:fe91:7bd6", 
+                "address": "fe80::fc2f:8cff:febf:f4b3", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:cf:9e:91:7b:d6", 
+        "macaddress": "fe:2f:8c:bf:f4:b3", 
         "mtu": 1500, 
         "promisc": true, 
         "speed": 10000, 
@@ -1414,12 +1414,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fcba:3cff:fe3f:c8e2", 
+                "address": "fe80::fcde:afff:fe93:50fb", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:ba:3c:3f:c8:e2", 
+        "macaddress": "fe:de:af:93:50:fb", 
         "mtu": 9000, 
         "promisc": true, 
         "speed": 10000, 
@@ -1476,12 +1476,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fc8c:ccff:fefa:bcaf", 
+                "address": "fe80::fcc9:68ff:fe14:30b4", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:8c:cc:fa:bc:af", 
+        "macaddress": "fe:c9:68:14:30:b4", 
         "mtu": 1500, 
         "promisc": true, 
         "speed": 10000, 
@@ -1538,12 +1538,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fc36:caff:fe7d:9422", 
+                "address": "fe80::fc24:87ff:fed6:d76e", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:36:ca:7d:94:22", 
+        "macaddress": "fe:24:87:d6:d7:6e", 
         "mtu": 9000, 
         "promisc": true, 
         "speed": 10000, 
@@ -1600,12 +1600,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fc97:85ff:fe08:89c8", 
+                "address": "fe80::fc1a:aff:fe62:b98e", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:97:85:08:89:c8", 
+        "macaddress": "fe:1a:0a:62:b9:8e", 
         "mtu": 1500, 
         "promisc": true, 
         "speed": 10000, 
@@ -1662,12 +1662,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fcea:9dff:feaa:9bf2", 
+                "address": "fe80::fcb5:92ff:fecc:5172", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:ea:9d:aa:9b:f2", 
+        "macaddress": "fe:b5:92:cc:51:72", 
         "mtu": 9000, 
         "promisc": true, 
         "speed": 10000, 
@@ -1724,12 +1724,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fc22:f3ff:fe13:5c8b", 
+                "address": "fe80::fc38:13ff:fe19:8cc", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:22:f3:13:5c:8b", 
+        "macaddress": "fe:38:13:19:08:cc", 
         "mtu": 1500, 
         "promisc": true, 
         "speed": 10000, 
@@ -1786,12 +1786,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fc86:b6ff:fef4:7852", 
+                "address": "fe80::fc88:b7ff:febb:c43d", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:86:b6:f4:78:52", 
+        "macaddress": "fe:88:b7:bb:c4:3d", 
         "mtu": 9000, 
         "promisc": true, 
         "speed": 10000, 
@@ -1848,12 +1848,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fc4f:c0ff:fef0:8896", 
+                "address": "fe80::fc59:dfff:fe22:ccbe", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:4f:c0:f0:88:96", 
+        "macaddress": "fe:59:df:22:cc:be", 
         "mtu": 1500, 
         "promisc": true, 
         "speed": 10000, 
@@ -1910,12 +1910,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fc48:93ff:fe9a:f68", 
+                "address": "fe80::fc64:49ff:fe79:3abc", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:48:93:9a:0f:68", 
+        "macaddress": "fe:64:49:79:3a:bc", 
         "mtu": 9000, 
         "promisc": true, 
         "speed": 10000, 
@@ -1972,12 +1972,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fce7:83ff:fe37:7e0c", 
+                "address": "fe80::fc86:ff:feb3:28a4", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:e7:83:37:7e:0c", 
+        "macaddress": "fe:86:00:b3:28:a4", 
         "mtu": 9000, 
         "promisc": true, 
         "speed": 10000, 
@@ -2034,12 +2034,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fc5e:8cff:fe6c:a125", 
+                "address": "fe80::fc81:21ff:fe44:d357", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:5e:8c:6c:a1:25", 
+        "macaddress": "fe:81:21:44:d3:57", 
         "mtu": 1500, 
         "promisc": true, 
         "speed": 10000, 
@@ -2096,80 +2096,79 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fc32:36ff:feb5:e7f8", 
+                "address": "fe80::fc69:d9ff:feec:8441", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:32:36:b5:e7:f8", 
+        "macaddress": "fe:69:d9:ec:84:41", 
         "mtu": 9000, 
         "promisc": true, 
         "speed": 10000, 
         "type": "ether"
     }, 
     "ansible_all_ipv4_addresses": [
-        "10.0.27.107", 
         "10.0.23.107", 
         "10.0.3.1", 
         "10.0.26.107"
     ], 
     "ansible_all_ipv6_addresses": [
-        "fe80::fc9b:5fff:fe14:e0f6", 
-        "fe80::fc60:c3ff:fe08:9d59", 
-        "fe80::fc97:63ff:fecf:cf93", 
-        "fe80::fcec:32ff:fe5d:f88f", 
-        "fe80::fcee:f8ff:feb2:2ddd", 
-        "fe80::fc4b:a4ff:fe4f:d37c", 
-        "fe80::fc3b:70ff:fe78:ba3", 
-        "fe80::fcf4:53ff:fe15:f854", 
-        "fe80::fc26:33ff:fed6:322a", 
-        "fe80::fc32:36ff:feb5:e7f8", 
-        "fe80::fc5e:8cff:fe6c:a125", 
+        "fe80::fc6c:cff:fe48:bda9", 
+        "fe80::fc1c:aeff:fe76:72bc", 
+        "fe80::fcf8:70ff:fee5:dda0", 
+        "fe80::fc05:a5ff:fe44:a661", 
+        "fe80::fcaa:88ff:fe6c:2e06", 
+        "fe80::fcd7:27ff:fe2b:f93a", 
+        "fe80::fc85:72ff:feff:6572", 
+        "fe80::fcf3:74ff:fe57:b166", 
+        "fe80::fc52:45ff:fefc:ee11", 
+        "fe80::fc69:d9ff:feec:8441", 
+        "fe80::fc81:21ff:fe44:d357", 
+        "fe80::4cdd:fff:fe72:ce58", 
+        "fe80::1a03:73ff:fef2:a964", 
+        "fe80::1a03:73ff:fef2:a964", 
+        "fe80::1a03:73ff:fef2:a962", 
+        "fe80::fc86:ff:feb3:28a4", 
+        "fe80::fc64:49ff:fe79:3abc", 
+        "fe80::fc59:dfff:fe22:ccbe", 
+        "fe80::fc24:87ff:fed6:d76e", 
+        "fe80::fcc9:68ff:fe14:30b4", 
+        "fe80::fcc1:95ff:fe36:3e24", 
+        "fe80::fc30:7bff:fed0:662", 
+        "fe80::fcde:afff:fe93:50fb", 
+        "fe80::fc2f:8cff:febf:f4b3", 
+        "fe80::fc6a:abff:fe65:e45d", 
+        "fe80::fcf2:dbff:fe0a:622", 
+        "fe80::8c9c:faff:fe6c:79b3", 
+        "fe80::fcda:38ff:fe5d:9133", 
+        "fe80::fc7e:68ff:fe7f:a1c4", 
+        "fe80::fc4a:62ff:fe95:119d", 
+        "fe80::fcc4:e2ff:feca:b6f", 
+        "fe80::fc1a:aff:fe62:b98e", 
+        "fe80::fcb5:92ff:fecc:5172", 
+        "fe80::1a03:73ff:fef2:a964", 
+        "fe80::fcf1:cfff:fe34:628b", 
+        "fe80::fcad:b1ff:fe63:16c6", 
+        "fe80::fcfa:b1ff:fedc:7fd1", 
+        "fe80::fc24:f4ff:fec7:8c1c", 
+        "fe80::fcd6:5cff:fe3d:b343", 
+        "fe80::fc88:b7ff:febb:c43d", 
+        "fe80::fc38:13ff:fe19:8cc", 
+        "fe80::fcda:e9ff:fe5c:da84", 
+        "fe80::fcc5:79ff:fef1:3658", 
+        "fe80::1a03:73ff:fef2:a964", 
+        "fe80::1a03:73ff:fef2:a962", 
         "fe80::21b:21ff:fe94:8358", 
-        "fe80::1a03:73ff:fef2:a966", 
-        "fe80::1a03:73ff:fef2:a966", 
-        "fe80::1a03:73ff:fef2:a960", 
-        "fe80::fce7:83ff:fe37:7e0c", 
-        "fe80::fc48:93ff:fe9a:f68", 
-        "fe80::fc4f:c0ff:fef0:8896", 
-        "fe80::fc36:caff:fe7d:9422", 
-        "fe80::fc8c:ccff:fefa:bcaf", 
-        "fe80::fc7f:6ff:fe92:a957", 
-        "fe80::fc44:88ff:fef2:8b4b", 
-        "fe80::fcba:3cff:fe3f:c8e2", 
-        "fe80::fccf:9eff:fe91:7bd6", 
-        "fe80::fcd3:18ff:fe90:85af", 
-        "fe80::fc6a:4eff:fe3c:b26f", 
-        "fe80::ac71:beff:fe4d:377b", 
-        "fe80::fc0d:a1ff:fe14:40c2", 
-        "fe80::fcd7:f3ff:fef7:54d8", 
-        "fe80::fc54:feff:fe80:42e7", 
-        "fe80::fc0b:f0ff:fe4a:9da6", 
-        "fe80::fc97:85ff:fe08:89c8", 
-        "fe80::fcea:9dff:feaa:9bf2", 
-        "fe80::1a03:73ff:fef2:a966", 
-        "fe80::fc56:4bff:fe99:1be9", 
-        "fe80::fc13:feff:fe3e:95c3", 
-        "fe80::fc74:ffff:fea7:fbb4", 
-        "fe80::fcea:24ff:fee2:19b", 
-        "fe80::fcb2:87ff:fe06:885d", 
-        "fe80::fc86:b6ff:fef4:7852", 
-        "fe80::fc22:f3ff:fe13:5c8b", 
-        "fe80::fcfd:73ff:fec5:d6a2", 
-        "fe80::fcd3:d2ff:fe9d:fbb9", 
-        "fe80::1a03:73ff:fef2:a966", 
-        "fe80::1a03:73ff:fef2:a960", 
-        "fe80::21b:21ff:fe94:8358", 
-        "fe80::fc3f:6cff:fec0:bc77", 
-        "fe80::fc2c:e3ff:fed9:606", 
-        "fe80::fc23:caff:fe98:31e4", 
-        "fe80::fca8:28ff:fe3a:2821", 
-        "fe80::fc75:15ff:fe75:ffa1", 
-        "fe80::fc9d:63ff:feda:e233", 
-        "fe80::fcef:53ff:fe55:6143", 
-        "fe80::fc20:17ff:fe3b:50fe", 
-        "fe80::fce2:f3ff:fe02:96e8", 
-        "fe80::fcad:b8ff:fe8b:22c1"
+        "fe80::fcc2:bdff:fed3:88ae", 
+        "fe80::fc56:ebff:fe60:5ba9", 
+        "fe80::fcc5:5aff:fec2:a2d", 
+        "fe80::fcf1:59ff:fe21:add", 
+        "fe80::fc7c:d2ff:fe82:6cf7", 
+        "fe80::fcdd:bfff:fe2a:e4d1", 
+        "fe80::fcfb:ebff:fe2c:1554", 
+        "fe80::fc0b:dfff:fe5f:d024", 
+        "fe80::fc4b:31ff:feef:e8b", 
+        "fe80::fca2:e6ff:fe97:768b"
     ], 
     "ansible_apparmor": {
         "status": "enabled"
@@ -2226,12 +2225,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fc26:33ff:fed6:322a", 
+                "address": "fe80::fc52:45ff:fefc:ee11", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:26:33:d6:32:2a", 
+        "macaddress": "fe:52:45:fc:ee:11", 
         "mtu": 1500, 
         "promisc": true, 
         "speed": 10000, 
@@ -2288,12 +2287,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fcf4:53ff:fe15:f854", 
+                "address": "fe80::fcf3:74ff:fe57:b166", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:f4:53:15:f8:54", 
+        "macaddress": "fe:f3:74:57:b1:66", 
         "mtu": 9000, 
         "promisc": true, 
         "speed": 10000, 
@@ -2352,20 +2351,20 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::1a03:73ff:fef2:a960", 
+                "address": "fe80::1a03:73ff:fef2:a962", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
         "lacp_rate": "fast", 
-        "macaddress": "18:03:73:f2:a9:60", 
+        "macaddress": "18:03:73:f2:a9:62", 
         "miimon": "100", 
         "mode": "802.3ad", 
         "mtu": 1500, 
         "promisc": true, 
         "slaves": [
-            "eth0", 
-            "eth1"
+            "eth1", 
+            "eth0"
         ], 
         "speed": 2000, 
         "type": "bonding"
@@ -2421,20 +2420,20 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::1a03:73ff:fef2:a966", 
+                "address": "fe80::1a03:73ff:fef2:a964", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
         "lacp_rate": "fast", 
-        "macaddress": "18:03:73:f2:a9:66", 
+        "macaddress": "18:03:73:f2:a9:64", 
         "miimon": "100", 
         "mode": "802.3ad", 
         "mtu": 1500, 
         "promisc": true, 
         "slaves": [
-            "eth3", 
-            "eth2"
+            "eth2", 
+            "eth3"
         ], 
         "speed": 2000, 
         "type": "bonding"
@@ -2490,12 +2489,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::1a03:73ff:fef2:a966", 
+                "address": "fe80::1a03:73ff:fef2:a964", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "18:03:73:f2:a9:66", 
+        "macaddress": "18:03:73:f2:a9:64", 
         "mtu": 1500, 
         "promisc": true, 
         "speed": 2000, 
@@ -2619,7 +2618,7 @@
             "udp_fragmentation_offload": "on", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "id": "8000.180373f2a960", 
+        "id": "8000.180373f2a962", 
         "interfaces": [
             "d472eb1f_eth1", 
             "6c52b8f6_eth1", 
@@ -2652,12 +2651,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::1a03:73ff:fef2:a960", 
+                "address": "fe80::1a03:73ff:fef2:a962", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "18:03:73:f2:a9:60", 
+        "macaddress": "18:03:73:f2:a9:62", 
         "mtu": 1500, 
         "promisc": false, 
         "stp": false, 
@@ -2718,15 +2717,9 @@
             "a9c48c5d_eth2", 
             "68a6eafd_eth2"
         ], 
-        "ipv4": {
-            "address": "10.0.27.107", 
-            "broadcast": "10.0.27.255", 
-            "netmask": "255.255.255.0", 
-            "network": "10.0.27.0"
-        }, 
         "ipv6": [
             {
-                "address": "fe80::21b:21ff:fe94:8358", 
+                "address": "fe80::4cdd:fff:fe72:ce58", 
                 "prefix": "64", 
                 "scope": "link"
             }
@@ -2786,7 +2779,7 @@
             "udp_fragmentation_offload": "on", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "id": "8000.180373f2a966", 
+        "id": "8000.180373f2a964", 
         "interfaces": [
             "bond1", 
             "d472eb1f_eth11", 
@@ -2794,12 +2787,12 @@
         ], 
         "ipv6": [
             {
-                "address": "fe80::1a03:73ff:fef2:a966", 
+                "address": "fe80::1a03:73ff:fef2:a964", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "18:03:73:f2:a9:66", 
+        "macaddress": "18:03:73:f2:a9:64", 
         "mtu": 1500, 
         "promisc": false, 
         "stp": false, 
@@ -2854,7 +2847,7 @@
             "udp_fragmentation_offload": "on", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "id": "8000.180373f2a966", 
+        "id": "8000.180373f2a964", 
         "interfaces": [
             "d472eb1f_eth10", 
             "bond1.26"
@@ -2867,12 +2860,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::1a03:73ff:fef2:a966", 
+                "address": "fe80::1a03:73ff:fef2:a964", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "18:03:73:f2:a9:66", 
+        "macaddress": "18:03:73:f2:a9:64", 
         "mtu": 1500, 
         "promisc": false, 
         "stp": false, 
@@ -2929,12 +2922,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fc2c:e3ff:fed9:606", 
+                "address": "fe80::fc56:ebff:fe60:5ba9", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:2c:e3:d9:06:06", 
+        "macaddress": "fe:56:eb:60:5b:a9", 
         "mtu": 1500, 
         "promisc": true, 
         "speed": 10000, 
@@ -2991,12 +2984,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fc3f:6cff:fec0:bc77", 
+                "address": "fe80::fcc2:bdff:fed3:88ae", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:3f:6c:c0:bc:77", 
+        "macaddress": "fe:c2:bd:d3:88:ae", 
         "mtu": 9000, 
         "promisc": true, 
         "speed": 10000, 
@@ -3061,12 +3054,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fc75:15ff:fe75:ffa1", 
+                "address": "fe80::fc7c:d2ff:fe82:6cf7", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:75:15:75:ff:a1", 
+        "macaddress": "fe:7c:d2:82:6c:f7", 
         "mtu": 1500, 
         "promisc": true, 
         "speed": 10000, 
@@ -3123,12 +3116,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fc9d:63ff:feda:e233", 
+                "address": "fe80::fcdd:bfff:fe2a:e4d1", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:9d:63:da:e2:33", 
+        "macaddress": "fe:dd:bf:2a:e4:d1", 
         "mtu": 9000, 
         "promisc": true, 
         "speed": 10000, 
@@ -3185,12 +3178,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fcb2:87ff:fe06:885d", 
+                "address": "fe80::fcd6:5cff:fe3d:b343", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:b2:87:06:88:5d", 
+        "macaddress": "fe:d6:5c:3d:b3:43", 
         "mtu": 9000, 
         "promisc": true, 
         "speed": 10000, 
@@ -3247,12 +3240,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fcea:24ff:fee2:19b", 
+                "address": "fe80::fc24:f4ff:fec7:8c1c", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:ea:24:e2:01:9b", 
+        "macaddress": "fe:24:f4:c7:8c:1c", 
         "mtu": 9000, 
         "promisc": true, 
         "speed": 10000, 
@@ -3309,34 +3302,34 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fc74:ffff:fea7:fbb4", 
+                "address": "fe80::fcfa:b1ff:fedc:7fd1", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:74:ff:a7:fb:b4", 
+        "macaddress": "fe:fa:b1:dc:7f:d1", 
         "mtu": 9000, 
         "promisc": true, 
         "speed": 10000, 
         "type": "ether"
     }, 
     "ansible_date_time": {
-        "date": "2017-06-26", 
-        "day": "26", 
-        "epoch": "1498534510", 
-        "hour": "23", 
-        "iso8601": "2017-06-27T03:35:10Z", 
-        "iso8601_basic": "20170626T233510313870", 
-        "iso8601_basic_short": "20170626T233510", 
-        "iso8601_micro": "2017-06-27T03:35:10.314000Z", 
-        "minute": "35", 
+        "date": "2017-06-27", 
+        "day": "27", 
+        "epoch": "1498616607", 
+        "hour": "22", 
+        "iso8601": "2017-06-28T02:23:27Z", 
+        "iso8601_basic": "20170627T222327881557", 
+        "iso8601_basic_short": "20170627T222327", 
+        "iso8601_micro": "2017-06-28T02:23:27.881655Z", 
+        "minute": "23", 
         "month": "06", 
-        "second": "10", 
-        "time": "23:35:10", 
+        "second": "27", 
+        "time": "22:23:27", 
         "tz": "EDT", 
         "tz_offset": "-0400", 
-        "weekday": "Monday", 
-        "weekday_number": "1", 
+        "weekday": "Tuesday", 
+        "weekday_number": "2", 
         "weeknumber": "26", 
         "year": "2017"
     }, 
@@ -3346,7 +3339,7 @@
         "broadcast": "10.0.23.255", 
         "gateway": "10.0.23.1", 
         "interface": "br-mgmt", 
-        "macaddress": "18:03:73:f2:a9:60", 
+        "macaddress": "18:03:73:f2:a9:62", 
         "mtu": 1500, 
         "netmask": "255.255.255.0", 
         "network": "10.0.23.0", 
@@ -3487,12 +3480,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fcd3:d2ff:fe9d:fbb9", 
+                "address": "fe80::fcc5:79ff:fef1:3658", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:d3:d2:9d:fb:b9", 
+        "macaddress": "fe:c5:79:f1:36:58", 
         "mtu": 1500, 
         "promisc": true, 
         "speed": 10000, 
@@ -3549,12 +3542,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fcfd:73ff:fec5:d6a2", 
+                "address": "fe80::fcda:e9ff:fe5c:da84", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:fd:73:c5:d6:a2", 
+        "macaddress": "fe:da:e9:5c:da:84", 
         "mtu": 9000, 
         "promisc": true, 
         "speed": 10000, 
@@ -3572,7 +3565,7 @@
         "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin", 
         "PWD": "/home/rlaney", 
         "SHELL": "/bin/bash", 
-        "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-rbxyghliftmiamgicfllolwaovuqocsy; /usr/bin/python /home/rlaney/.ansible/tmp/ansible-tmp-1498534507.54-151306075713039/setup.py; rm -rf \"/home/rlaney/.ansible/tmp/ansible-tmp-1498534507.54-151306075713039/\" > /dev/null 2>&1", 
+        "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-ntpuoukeuhayvxpxrxxybvdxyswymzqv; /usr/bin/python /home/rlaney/.ansible/tmp/ansible-tmp-1498616605.48-139008027349579/setup.py; rm -rf \"/home/rlaney/.ansible/tmp/ansible-tmp-1498616605.48-139008027349579/\" > /dev/null 2>&1", 
         "SUDO_GID": "1000", 
         "SUDO_UID": "1000", 
         "SUDO_USER": "rlaney", 
@@ -3629,7 +3622,7 @@
             "udp_fragmentation_offload": "off [fixed]", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "macaddress": "18:03:73:f2:a9:60", 
+        "macaddress": "18:03:73:f2:a9:62", 
         "module": "bnx2", 
         "mtu": 1500, 
         "pciid": "0000:01:00.0", 
@@ -3686,7 +3679,7 @@
             "udp_fragmentation_offload": "off [fixed]", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "macaddress": "18:03:73:f2:a9:60", 
+        "macaddress": "18:03:73:f2:a9:62", 
         "module": "bnx2", 
         "mtu": 1500, 
         "pciid": "0000:01:00.1", 
@@ -3743,7 +3736,7 @@
             "udp_fragmentation_offload": "off [fixed]", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "macaddress": "18:03:73:f2:a9:66", 
+        "macaddress": "18:03:73:f2:a9:64", 
         "module": "bnx2", 
         "mtu": 1500, 
         "pciid": "0000:02:00.0", 
@@ -3800,7 +3793,7 @@
             "udp_fragmentation_offload": "off [fixed]", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "macaddress": "18:03:73:f2:a9:66", 
+        "macaddress": "18:03:73:f2:a9:64", 
         "module": "bnx2", 
         "mtu": 1500, 
         "pciid": "0000:02:00.1", 
@@ -3973,12 +3966,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fca8:28ff:fe3a:2821", 
+                "address": "fe80::fcf1:59ff:fe21:add", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:a8:28:3a:28:21", 
+        "macaddress": "fe:f1:59:21:0a:dd", 
         "mtu": 1500, 
         "promisc": true, 
         "speed": 10000, 
@@ -4035,12 +4028,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::fc23:caff:fe98:31e4", 
+                "address": "fe80::fcc5:5aff:fec2:a2d", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:23:ca:98:31:e4", 
+        "macaddress": "fe:c5:5a:c2:0a:2d", 
         "mtu": 9000, 
         "promisc": true, 
         "speed": 10000, 
@@ -4254,7 +4247,7 @@
             "udp_fragmentation_offload": "on", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "id": "8000.fe0bf04a9da6", 
+        "id": "8000.fe1a0a62b98e", 
         "interfaces": [
             "d472eb1f_eth0", 
             "6c52b8f6_eth0", 
@@ -4286,12 +4279,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::ac71:beff:fe4d:377b", 
+                "address": "fe80::8c9c:faff:fe6c:79b3", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "fe:0b:f0:4a:9d:a6", 
+        "macaddress": "fe:1a:0a:62:b9:8e", 
         "mtu": 1500, 
         "promisc": false, 
         "stp": false, 
@@ -4299,16 +4292,16 @@
     }, 
     "ansible_machine": "x86_64", 
     "ansible_machine_id": "cb62848d7d18b969d507f6795949a020", 
-    "ansible_memfree_mb": 31556, 
+    "ansible_memfree_mb": 31571, 
     "ansible_memory_mb": {
         "nocache": {
-            "free": 46227, 
-            "used": 2124
+            "free": 46370, 
+            "used": 1981
         }, 
         "real": {
-            "free": 31556, 
+            "free": 31571, 
             "total": 48351, 
-            "used": 16795
+            "used": 16780
         }, 
         "swap": {
             "cached": 0, 
@@ -4324,7 +4317,7 @@
             "fstype": "ext4", 
             "mount": "/", 
             "options": "rw,relatime,errors=remount-ro,data=ordered", 
-            "size_available": 73218473984, 
+            "size_available": 73211711488, 
             "size_total": 98294312960, 
             "uuid": "da2826cf-8a40-4fe3-a823-3623df306880"
         }, 
@@ -4456,7 +4449,7 @@
     ], 
     "ansible_system_capabilities_enforced": "True", 
     "ansible_system_vendor": "Dell Inc.", 
-    "ansible_uptime_seconds": 18481, 
+    "ansible_uptime_seconds": 5071, 
     "ansible_user_dir": "/root", 
     "ansible_user_gecos": "root", 
     "ansible_user_gid": 0, 
