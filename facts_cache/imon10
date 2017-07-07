@@ -95,23 +95,23 @@
         "root": "UUID=933a80ff-0815-4263-843b-e6d24fef9571"
     }, 
     "ansible_date_time": {
-        "date": "2017-06-29", 
-        "day": "29", 
-        "epoch": "1498789315", 
+        "date": "2017-07-06", 
+        "day": "06", 
+        "epoch": "1499396058", 
         "hour": "22", 
-        "iso8601": "2017-06-30T02:21:55Z", 
-        "iso8601_basic": "20170629T222155802999", 
-        "iso8601_basic_short": "20170629T222155", 
-        "iso8601_micro": "2017-06-30T02:21:55.803091Z", 
-        "minute": "21", 
-        "month": "06", 
-        "second": "55", 
-        "time": "22:21:55", 
+        "iso8601": "2017-07-07T02:54:18Z", 
+        "iso8601_basic": "20170706T225418800172", 
+        "iso8601_basic_short": "20170706T225418", 
+        "iso8601_micro": "2017-07-07T02:54:18.800260Z", 
+        "minute": "54", 
+        "month": "07", 
+        "second": "18", 
+        "time": "22:54:18", 
         "tz": "EDT", 
         "tz_offset": "-0400", 
         "weekday": "Thursday", 
         "weekday_number": "4", 
-        "weeknumber": "26", 
+        "weeknumber": "27", 
         "year": "2017"
     }, 
     "ansible_default_ipv4": {
@@ -155,7 +155,7 @@
                     "sectorsize": 512, 
                     "size": "249.98 MB", 
                     "start": "520224", 
-                    "uuid": "4AA1-0BAB"
+                    "uuid": null
                 }, 
                 "sda7": {
                     "holders": [], 
@@ -171,7 +171,7 @@
                     "sectorsize": 512, 
                     "size": "285.98 MB", 
                     "start": "1257504", 
-                    "uuid": null
+                    "uuid": "4AA1-0BAB"
                 }, 
                 "sda9": {
                     "holders": [], 
@@ -287,7 +287,7 @@
         "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin", 
         "PWD": "/home/rlaney", 
         "SHELL": "/bin/bash", 
-        "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-blxtllfddrcfhsopvvfieptqxhsutpmk; /usr/bin/python /home/rlaney/.ansible/tmp/ansible-tmp-1498789308.25-244037772451820/setup.py; rm -rf \"/home/rlaney/.ansible/tmp/ansible-tmp-1498789308.25-244037772451820/\" > /dev/null 2>&1", 
+        "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-bmvprodxhxaxeocbxobrlrjhjalqrwcn; /usr/bin/python /home/rlaney/.ansible/tmp/ansible-tmp-1499396050.54-229409265263868/setup.py; rm -rf \"/home/rlaney/.ansible/tmp/ansible-tmp-1499396050.54-229409265263868/\" > /dev/null 2>&1", 
         "SUDO_GID": "1000", 
         "SUDO_UID": "1000", 
         "SUDO_USER": "rlaney", 
@@ -504,16 +504,16 @@
     }, 
     "ansible_machine": "x86_64", 
     "ansible_machine_id": "fbc299544b2ed71245648202594c3f31", 
-    "ansible_memfree_mb": 31731, 
+    "ansible_memfree_mb": 31613, 
     "ansible_memory_mb": {
         "nocache": {
-            "free": 31989, 
-            "used": 234
+            "free": 31997, 
+            "used": 226
         }, 
         "real": {
-            "free": 31731, 
+            "free": 31613, 
             "total": 32223, 
-            "used": 492
+            "used": 610
         }, 
         "swap": {
             "cached": 0, 
@@ -529,7 +529,7 @@
             "fstype": "ext4", 
             "mount": "/", 
             "options": "rw,relatime,errors=remount-ro,data=ordered", 
-            "size_available": 90200911872, 
+            "size_available": 90206248960, 
             "size_total": 98293264384, 
             "uuid": "933a80ff-0815-4263-843b-e6d24fef9571"
         }
@@ -652,7 +652,7 @@
     ], 
     "ansible_system_capabilities_enforced": "True", 
     "ansible_system_vendor": "Dell Inc.", 
-    "ansible_uptime_seconds": 11441, 
+    "ansible_uptime_seconds": 10360, 
     "ansible_user_dir": "/root", 
     "ansible_user_gecos": "root", 
     "ansible_user_gid": 0, 

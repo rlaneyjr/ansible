@@ -169,10 +169,8 @@ storage.
 
    .. code-block:: shell-session
 
-pvcreate --metadatasize 2048 /dev/sda4
-vgcreate cinder-volumes /dev/sda4
-pvcreate --metadatasize 2048 /dev/sda5
-vgcreate cinder-volumes /dev/sda5
+       # pvcreate --metadatasize 2048 physical_volume_device_path
+       # vgcreate cinder-volumes physical_volume_device_path
 
 #. Optionally, create an LVM volume group named ``lxc`` for container file
    systems. If the ``lxc`` volume group does not exist, containers are

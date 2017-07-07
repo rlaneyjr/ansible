@@ -5,14 +5,14 @@
         "10.0.26.103"
     ], 
     "ansible_all_ipv6_addresses": [
-        "fe80::7056:2dff:fea2:8077", 
-        "fe80::1a03:73ff:feed:c43b", 
-        "fe80::1a03:73ff:feed:c43b", 
-        "fe80::1a03:73ff:feed:c437", 
-        "fe80::1a03:73ff:feed:c43b", 
-        "fe80::1a03:73ff:feed:c43b", 
-        "fe80::1a03:73ff:feed:c437", 
-        "fe80::21b:21ff:fe94:7770"
+        "fe80::f8c0:2fff:fefb:be3", 
+        "fe80::1a03:73ff:feed:c439", 
+        "fe80::1a03:73ff:feed:c439", 
+        "fe80::1a03:73ff:feed:c435", 
+        "fe80::1a03:73ff:feed:c439", 
+        "fe80::1a03:73ff:feed:c439", 
+        "fe80::1a03:73ff:feed:c435", 
+        "fe80::21b:21ff:fe94:7771"
     ], 
     "ansible_apparmor": {
         "status": "enabled"
@@ -71,20 +71,20 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::1a03:73ff:feed:c437", 
+                "address": "fe80::1a03:73ff:feed:c435", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
         "lacp_rate": "fast", 
-        "macaddress": "18:03:73:ed:c4:37", 
+        "macaddress": "18:03:73:ed:c4:35", 
         "miimon": "100", 
         "mode": "802.3ad", 
         "mtu": 1500, 
         "promisc": true, 
         "slaves": [
-            "eth1", 
-            "eth0"
+            "eth0", 
+            "eth1"
         ], 
         "speed": 2000, 
         "type": "bonding"
@@ -140,20 +140,20 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::1a03:73ff:feed:c43b", 
+                "address": "fe80::1a03:73ff:feed:c439", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
         "lacp_rate": "fast", 
-        "macaddress": "18:03:73:ed:c4:3b", 
+        "macaddress": "18:03:73:ed:c4:39", 
         "miimon": "100", 
         "mode": "802.3ad", 
         "mtu": 1500, 
         "promisc": true, 
         "slaves": [
-            "eth3", 
-            "eth2"
+            "eth2", 
+            "eth3"
         ], 
         "speed": 2000, 
         "type": "bonding"
@@ -209,12 +209,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::1a03:73ff:feed:c43b", 
+                "address": "fe80::1a03:73ff:feed:c439", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "18:03:73:ed:c4:3b", 
+        "macaddress": "18:03:73:ed:c4:39", 
         "mtu": 1500, 
         "promisc": true, 
         "speed": 2000, 
@@ -271,20 +271,20 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::21b:21ff:fe94:7770", 
+                "address": "fe80::21b:21ff:fe94:7771", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
         "lacp_rate": "fast", 
-        "macaddress": "00:1b:21:94:77:70", 
+        "macaddress": "00:1b:21:94:77:71", 
         "miimon": "100", 
         "mode": "802.3ad", 
         "mtu": 1500, 
         "promisc": true, 
         "slaves": [
-            "eth4", 
-            "eth5"
+            "eth5", 
+            "eth4"
         ], 
         "speed": 2000, 
         "type": "bonding"
@@ -338,7 +338,7 @@
             "udp_fragmentation_offload": "off [requested on]", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "id": "8000.180373edc437", 
+        "id": "8000.180373edc435", 
         "interfaces": [
             "bond0"
         ], 
@@ -350,12 +350,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::1a03:73ff:feed:c437", 
+                "address": "fe80::1a03:73ff:feed:c435", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "18:03:73:ed:c4:37", 
+        "macaddress": "18:03:73:ed:c4:35", 
         "mtu": 1500, 
         "promisc": false, 
         "stp": false, 
@@ -410,7 +410,7 @@
             "udp_fragmentation_offload": "off [requested on]", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "id": "8000.001b21947770", 
+        "id": "8000.001b21947771", 
         "interfaces": [
             "bond2"
         ], 
@@ -422,12 +422,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::7056:2dff:fea2:8077", 
+                "address": "fe80::f8c0:2fff:fefb:be3", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "00:1b:21:94:77:70", 
+        "macaddress": "00:1b:21:94:77:71", 
         "mtu": 1500, 
         "promisc": false, 
         "stp": false, 
@@ -482,18 +482,18 @@
             "udp_fragmentation_offload": "off [requested on]", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "id": "8000.180373edc43b", 
+        "id": "8000.180373edc439", 
         "interfaces": [
             "bond1"
         ], 
         "ipv6": [
             {
-                "address": "fe80::1a03:73ff:feed:c43b", 
+                "address": "fe80::1a03:73ff:feed:c439", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "18:03:73:ed:c4:3b", 
+        "macaddress": "18:03:73:ed:c4:39", 
         "mtu": 1500, 
         "promisc": false, 
         "stp": false, 
@@ -548,7 +548,7 @@
             "udp_fragmentation_offload": "on", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "id": "8000.180373edc43b", 
+        "id": "8000.180373edc439", 
         "interfaces": [
             "bond1.26"
         ], 
@@ -560,12 +560,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::1a03:73ff:feed:c43b", 
+                "address": "fe80::1a03:73ff:feed:c439", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "18:03:73:ed:c4:3b", 
+        "macaddress": "18:03:73:ed:c4:39", 
         "mtu": 1500, 
         "promisc": false, 
         "stp": false, 
@@ -580,23 +580,23 @@
         "root": "UUID=c04c8659-b885-4881-87c3-9aaf2a0b9409"
     }, 
     "ansible_date_time": {
-        "date": "2017-06-29", 
-        "day": "29", 
-        "epoch": "1498789307", 
+        "date": "2017-07-06", 
+        "day": "06", 
+        "epoch": "1499396048", 
         "hour": "22", 
-        "iso8601": "2017-06-30T02:21:47Z", 
-        "iso8601_basic": "20170629T222147866402", 
-        "iso8601_basic_short": "20170629T222147", 
-        "iso8601_micro": "2017-06-30T02:21:47.866473Z", 
-        "minute": "21", 
-        "month": "06", 
-        "second": "47", 
-        "time": "22:21:47", 
+        "iso8601": "2017-07-07T02:54:08Z", 
+        "iso8601_basic": "20170706T225408938557", 
+        "iso8601_basic_short": "20170706T225408", 
+        "iso8601_micro": "2017-07-07T02:54:08.938628Z", 
+        "minute": "54", 
+        "month": "07", 
+        "second": "08", 
+        "time": "22:54:08", 
         "tz": "EDT", 
         "tz_offset": "-0400", 
         "weekday": "Thursday", 
         "weekday_number": "4", 
-        "weeknumber": "26", 
+        "weeknumber": "27", 
         "year": "2017"
     }, 
     "ansible_default_ipv4": {
@@ -605,7 +605,7 @@
         "broadcast": "10.0.23.255", 
         "gateway": "10.0.23.1", 
         "interface": "br-mgmt", 
-        "macaddress": "18:03:73:ed:c4:37", 
+        "macaddress": "18:03:73:ed:c4:35", 
         "mtu": 1500, 
         "netmask": "255.255.255.0", 
         "network": "10.0.23.0", 
@@ -687,71 +687,6 @@
             "support_discard": "0", 
             "vendor": "DELL"
         }, 
-        "sdc": {
-            "holders": [], 
-            "host": "USB controller: Intel Corporation 82801I (ICH9 Family) USB2 EHCI Controller #2 (rev 02)", 
-            "model": "USB 2.0 FD", 
-            "partitions": {
-                "sdc1": {
-                    "holders": [], 
-                    "sectors": "8128", 
-                    "sectorsize": 512, 
-                    "size": "3.97 MB", 
-                    "start": "64", 
-                    "uuid": "5811-901A"
-                }, 
-                "sdc5": {
-                    "holders": [], 
-                    "sectors": "511968", 
-                    "sectorsize": 512, 
-                    "size": "249.98 MB", 
-                    "start": "8224", 
-                    "uuid": "4A9E-9268"
-                }, 
-                "sdc6": {
-                    "holders": [], 
-                    "sectors": "511968", 
-                    "sectorsize": 512, 
-                    "size": "249.98 MB", 
-                    "start": "520224", 
-                    "uuid": "4A9E-9267"
-                }, 
-                "sdc7": {
-                    "holders": [], 
-                    "sectors": "225248", 
-                    "sectorsize": 512, 
-                    "size": "109.98 MB", 
-                    "start": "1032224", 
-                    "uuid": null
-                }, 
-                "sdc8": {
-                    "holders": [], 
-                    "sectors": "585696", 
-                    "sectorsize": 512, 
-                    "size": "285.98 MB", 
-                    "start": "1257504", 
-                    "uuid": null
-                }, 
-                "sdc9": {
-                    "holders": [], 
-                    "sectors": "5242880", 
-                    "sectorsize": 512, 
-                    "size": "2.50 GB", 
-                    "start": "1843200", 
-                    "uuid": null
-                }
-            }, 
-            "removable": "1", 
-            "rotational": "1", 
-            "sas_address": null, 
-            "sas_device_handle": null, 
-            "scheduler_mode": "deadline", 
-            "sectors": "15950592", 
-            "sectorsize": "512", 
-            "size": "7.61 GB", 
-            "support_discard": "0", 
-            "vendor": "PNY"
-        }, 
         "sr0": {
             "holders": [], 
             "host": "IDE interface: Intel Corporation 82801IB (ICH9) 2 port SATA Controller [IDE mode] (rev 02)", 
@@ -797,7 +732,7 @@
         "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin", 
         "PWD": "/home/rlaney", 
         "SHELL": "/bin/bash", 
-        "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-edlqexjanloyfvpntqgullrcxjefbipp; /usr/bin/python /home/rlaney/.ansible/tmp/ansible-tmp-1498789305.34-276220498920016/setup.py; rm -rf \"/home/rlaney/.ansible/tmp/ansible-tmp-1498789305.34-276220498920016/\" > /dev/null 2>&1", 
+        "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-lhasvszpjbzbttezryziydthizjwmnfy; /usr/bin/python /home/rlaney/.ansible/tmp/ansible-tmp-1499396046.53-28481979266503/setup.py; rm -rf \"/home/rlaney/.ansible/tmp/ansible-tmp-1499396046.53-28481979266503/\" > /dev/null 2>&1", 
         "SUDO_GID": "1000", 
         "SUDO_UID": "1000", 
         "SUDO_USER": "rlaney", 
@@ -854,7 +789,7 @@
             "udp_fragmentation_offload": "off [fixed]", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "macaddress": "18:03:73:ed:c4:37", 
+        "macaddress": "18:03:73:ed:c4:35", 
         "module": "bnx2", 
         "mtu": 1500, 
         "pciid": "0000:01:00.0", 
@@ -911,7 +846,7 @@
             "udp_fragmentation_offload": "off [fixed]", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "macaddress": "18:03:73:ed:c4:37", 
+        "macaddress": "18:03:73:ed:c4:35", 
         "module": "bnx2", 
         "mtu": 1500, 
         "pciid": "0000:01:00.1", 
@@ -968,7 +903,7 @@
             "udp_fragmentation_offload": "off [fixed]", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "macaddress": "18:03:73:ed:c4:3b", 
+        "macaddress": "18:03:73:ed:c4:39", 
         "module": "bnx2", 
         "mtu": 1500, 
         "pciid": "0000:02:00.0", 
@@ -1025,7 +960,7 @@
             "udp_fragmentation_offload": "off [fixed]", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "macaddress": "18:03:73:ed:c4:3b", 
+        "macaddress": "18:03:73:ed:c4:39", 
         "module": "bnx2", 
         "mtu": 1500, 
         "pciid": "0000:02:00.1", 
@@ -1082,7 +1017,7 @@
             "udp_fragmentation_offload": "off [fixed]", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "macaddress": "00:1b:21:94:77:70", 
+        "macaddress": "00:1b:21:94:77:71", 
         "module": "igb", 
         "mtu": 1500, 
         "pciid": "0000:04:00.0", 
@@ -1139,7 +1074,7 @@
             "udp_fragmentation_offload": "off [fixed]", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "macaddress": "00:1b:21:94:77:70", 
+        "macaddress": "00:1b:21:94:77:71", 
         "module": "igb", 
         "mtu": 1500, 
         "pciid": "0000:04:00.1", 
@@ -1253,16 +1188,16 @@
     }, 
     "ansible_machine": "x86_64", 
     "ansible_machine_id": "ed3e813e0a3a7705b2c4cb665948437d", 
-    "ansible_memfree_mb": 71710, 
+    "ansible_memfree_mb": 71727, 
     "ansible_memory_mb": {
         "nocache": {
-            "free": 72102, 
-            "used": 441
+            "free": 72109, 
+            "used": 434
         }, 
         "real": {
-            "free": 71710, 
+            "free": 71727, 
             "total": 72543, 
-            "used": 833
+            "used": 816
         }, 
         "swap": {
             "cached": 0, 
@@ -1278,7 +1213,7 @@
             "fstype": "ext4", 
             "mount": "/", 
             "options": "rw,relatime,errors=remount-ro,data=ordered", 
-            "size_available": 138055135232, 
+            "size_available": 138041831424, 
             "size_total": 147906527232, 
             "uuid": "c04c8659-b885-4881-87c3-9aaf2a0b9409"
         }, 
@@ -1410,7 +1345,7 @@
     ], 
     "ansible_system_capabilities_enforced": "True", 
     "ansible_system_vendor": "Dell Inc.", 
-    "ansible_uptime_seconds": 11442, 
+    "ansible_uptime_seconds": 10358, 
     "ansible_user_dir": "/root", 
     "ansible_user_gecos": "root", 
     "ansible_user_gid": 0, 

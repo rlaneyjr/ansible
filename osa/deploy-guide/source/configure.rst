@@ -29,8 +29,6 @@ host.
    ``/opt/openstack-ansible/etc/openstack_deploy`` directory to the
    ``/etc/openstack_deploy`` directory.
 
-cp -r openstack_user_config.yml.example /etc/openstack_deploy/openstack_user_config.yml
-
 #. Change to the ``/etc/openstack_deploy`` directory.
 
 #. Copy the ``openstack_user_config.yml.example`` file to
@@ -190,16 +188,3 @@ To regenerate existing passwords, add the ``--regen`` flag.
    The playbooks do not currently manage changing passwords in an existing
    environment. Changing passwords and rerunning the playbooks will fail
    and might break your OpenStack environment.
-
-
-lineinfile hosts
-10.0.23.101     compute1.icloudmon.local        compute1
-lineinfile hosts
-compute1
-hostnamectl set-hostname compute1
-
-server ns1.icloudmon.local iburst
-server 10.0.10.5 iburst
-server het-remote01.icloudmon.local iburst
-server 10.101.14.1 iburst
-

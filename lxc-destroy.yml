@@ -1,0 +1,14 @@
+---
+- name: Destroy all LXC Containers on Ubuntu OSA servers
+  hosts: osa
+  become: yes
+  tasks:
+    - copy:
+        src: lxc-destroy.sh
+        dest: /root/lxc-destroy.sh
+        owner: root
+        group: root
+        mode: 0755
+
+    - name: run lxc-destroy.sh
+      command: /root/lxc-destroy.sh
