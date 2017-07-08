@@ -1,24 +1,38 @@
-infra1_galera_container-8d2a37e4
-infra2_galera_container-251fa544
+infra1_galera_container-1dd8c095
+infra2_galera_container-f6fb0892
+infra3_galera_container-96175001
 
 ansible galera_container -m shell -a "mysql -h localhost -e 'show status like \"%wsrep_cluster_%\";'"
 mysql -e "SET GLOBAL wsrep_provider_options='pc.bootstrap=yes';"
 ansible galera_container -m shell -a "cat /var/lib/mysql/grastate.dat"
 
-lxc-stop -n infra1_galera_container-8d2a37e4
-lxc-destroy -n infra1_galera_container-8d2a37e4
-rm -rf /openstack/infra1_galera_container-8d2a37e4/*
+================================================================================
+lxc-stop -n infra1_galera_container-1dd8c095
+lxc-destroy -n infra1_galera_container-1dd8c095
+rm -rf /openstack/infra1_galera_container-1dd8c095/*
 
-openstack-ansible setup-hosts.yml -l infra1 -l infra1_galera_container-8d2a37e4
-openstack-ansible setup-infrastructure.yml -l infra1_galera_container-8d2a37e4
+openstack-ansible setup-hosts.yml -l infra1 -l infra1_galera_container-1dd8c095
+openstack-ansible setup-infrastructure.yml -l infra1_galera_container-1dd8c095
 
-lxc-stop -n infra2_galera_container-251fa544
-lxc-destroy -n infra2_galera_container-251fa544
-rm -rf /openstack/infra2_galera_container-251fa544/*
+================================================================================
+lxc-stop -n infra2_galera_container-f6fb0892
+lxc-destroy -n infra2_galera_container-f6fb0892
+rm -rf /openstack/infra2_galera_container-f6fb0892/*
 
-openstack-ansible setup-hosts.yml -l infra2 -l infra2_galera_container-251fa544
-openstack-ansible setup-infrastructure.yml -l infra2_galera_container-251fa544
+openstack-ansible setup-hosts.yml -l infra2 -l infra2_galera_container-f6fb0892,infra3_galera_container-96175001
+openstack-ansible setup-infrastructure.yml -l infra2_galera_container-f6fb0892
 
+================================================================================
+lxc-stop -n infra3_galera_container-96175001
+lxc-destroy -n infra3_galera_container-96175001
+rm -rf /openstack/infra3_galera_container-96175001/*
+
+openstack-ansible setup-hosts.yml -l infra2 -l infra3_galera_container-96175001
+openstack-ansible setup-infrastructure.yml -l infra3_galera_container-96175001
+
+openstack-ansible setup-hosts.yml -l infra2 -l infra2_galera_container-f6fb0892,infra3_galera_container-96175001
+openstack-ansible setup-infrastructure.yml -l infra2_galera_container-f6fb0892,infra3_galera_container-96175001
+================================================================================
 fatal: [infra1_galera_container-8d2a37e4]: FAILED! => {"attempts": 3, "changed": false, "failed": true, "msg": "Unable to start service mysql: Job for mariadb.service failed because the control process exited with error code. See \"systemctl status mariadb.service\" and \"journalctl -xe\" for details.\n"}
 ...ignoring
 
@@ -26,7 +40,7 @@ fatal: [infra1_galera_container-8d2a37e4]: FAILED! => {"attempts": 6, "changed":
 
 ansible galera_container -m shell -a "mysql -h localhost -e 'show status like \"%wsrep_cluster_%\";'"
 Variable files: "-e @/etc/openstack_deploy/user_secrets.yml -e @/etc/openstack_deploy/user_variables.yml "
-infra2_galera_container-251fa544 | FAILED | rc=127 >>
+infra2_galera_container-f6fb0892 | FAILED | rc=127 >>
 /bin/sh: 1: mysql: not found
 
 infra1_galera_container-8d2a37e4 | FAILED | rc=1 >>
