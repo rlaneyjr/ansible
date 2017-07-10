@@ -3,7 +3,7 @@
         "10.0.23.110"
     ], 
     "ansible_all_ipv6_addresses": [
-        "fe80::862b:2bff:fe6f:e53c"
+        "fe80::862b:2bff:fe6f:e53b"
     ], 
     "ansible_apparmor": {
         "status": "enabled"
@@ -68,20 +68,20 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::862b:2bff:fe6f:e53c", 
+                "address": "fe80::862b:2bff:fe6f:e53b", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
         "lacp_rate": "fast", 
-        "macaddress": "84:2b:2b:6f:e5:3c", 
+        "macaddress": "84:2b:2b:6f:e5:3b", 
         "miimon": "100", 
         "mode": "802.3ad", 
         "mtu": 1500, 
         "promisc": false, 
         "slaves": [
-            "eth1", 
-            "eth0"
+            "eth0", 
+            "eth1"
         ], 
         "speed": 2000, 
         "type": "bonding"
@@ -95,22 +95,22 @@
         "root": "UUID=933a80ff-0815-4263-843b-e6d24fef9571"
     }, 
     "ansible_date_time": {
-        "date": "2017-07-07", 
-        "day": "07", 
-        "epoch": "1499460232", 
-        "hour": "16", 
-        "iso8601": "2017-07-07T20:43:52Z", 
-        "iso8601_basic": "20170707T164352629097", 
-        "iso8601_basic_short": "20170707T164352", 
-        "iso8601_micro": "2017-07-07T20:43:52.629179Z", 
-        "minute": "43", 
+        "date": "2017-07-09", 
+        "day": "09", 
+        "epoch": "1499652032", 
+        "hour": "22", 
+        "iso8601": "2017-07-10T02:00:32Z", 
+        "iso8601_basic": "20170709T220032598228", 
+        "iso8601_basic_short": "20170709T220032", 
+        "iso8601_micro": "2017-07-10T02:00:32.598324Z", 
+        "minute": "00", 
         "month": "07", 
-        "second": "52", 
-        "time": "16:43:52", 
+        "second": "32", 
+        "time": "22:00:32", 
         "tz": "EDT", 
         "tz_offset": "-0400", 
-        "weekday": "Friday", 
-        "weekday_number": "5", 
+        "weekday": "Sunday", 
+        "weekday_number": "0", 
         "weeknumber": "27", 
         "year": "2017"
     }, 
@@ -120,7 +120,7 @@
         "broadcast": "10.0.23.255", 
         "gateway": "10.0.23.1", 
         "interface": "bond0", 
-        "macaddress": "84:2b:2b:6f:e5:3c", 
+        "macaddress": "84:2b:2b:6f:e5:3b", 
         "mtu": 1500, 
         "netmask": "255.255.255.0", 
         "network": "10.0.23.0", 
@@ -155,7 +155,7 @@
                     "sectorsize": 512, 
                     "size": "249.98 MB", 
                     "start": "520224", 
-                    "uuid": "4AA1-0BAB"
+                    "uuid": null
                 }, 
                 "sda7": {
                     "holders": [], 
@@ -171,7 +171,7 @@
                     "sectorsize": 512, 
                     "size": "285.98 MB", 
                     "start": "1257504", 
-                    "uuid": null
+                    "uuid": "4AA1-0BAB"
                 }, 
                 "sda9": {
                     "holders": [], 
@@ -287,7 +287,7 @@
         "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin", 
         "PWD": "/home/rlaney", 
         "SHELL": "/bin/bash", 
-        "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-uangarwcgtmifgsdxunwjicewcqhfolx; /usr/bin/python /home/rlaney/.ansible/tmp/ansible-tmp-1499460225.05-124774380653305/setup.py; rm -rf \"/home/rlaney/.ansible/tmp/ansible-tmp-1499460225.05-124774380653305/\" > /dev/null 2>&1", 
+        "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-plarnegajzvppfkdkksxpbazekjuhkth; /usr/bin/python /home/rlaney/.ansible/tmp/ansible-tmp-1499652025.02-219018151565050/setup.py; rm -rf \"/home/rlaney/.ansible/tmp/ansible-tmp-1499652025.02-219018151565050/\" > /dev/null 2>&1", 
         "SUDO_GID": "1000", 
         "SUDO_UID": "1000", 
         "SUDO_USER": "rlaney", 
@@ -344,7 +344,7 @@
             "udp_fragmentation_offload": "off [fixed]", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "macaddress": "84:2b:2b:6f:e5:3c", 
+        "macaddress": "84:2b:2b:6f:e5:3b", 
         "module": "bnx2", 
         "mtu": 1500, 
         "pciid": "0000:01:00.0", 
@@ -401,7 +401,7 @@
             "udp_fragmentation_offload": "off [fixed]", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "macaddress": "84:2b:2b:6f:e5:3c", 
+        "macaddress": "84:2b:2b:6f:e5:3b", 
         "module": "bnx2", 
         "mtu": 1500, 
         "pciid": "0000:01:00.1", 
@@ -504,16 +504,16 @@
     }, 
     "ansible_machine": "x86_64", 
     "ansible_machine_id": "fbc299544b2ed71245648202594c3f31", 
-    "ansible_memfree_mb": 31261, 
+    "ansible_memfree_mb": 31833, 
     "ansible_memory_mb": {
         "nocache": {
-            "free": 31952, 
-            "used": 271
+            "free": 31999, 
+            "used": 224
         }, 
         "real": {
-            "free": 31261, 
+            "free": 31833, 
             "total": 32223, 
-            "used": 962
+            "used": 390
         }, 
         "swap": {
             "cached": 0, 
@@ -529,7 +529,7 @@
             "fstype": "ext4", 
             "mount": "/", 
             "options": "rw,relatime,errors=remount-ro,data=ordered", 
-            "size_available": 90193469440, 
+            "size_available": 90191085568, 
             "size_total": 98293264384, 
             "uuid": "933a80ff-0815-4263-843b-e6d24fef9571"
         }
@@ -652,7 +652,7 @@
     ], 
     "ansible_system_capabilities_enforced": "True", 
     "ansible_system_vendor": "Dell Inc.", 
-    "ansible_uptime_seconds": 32886, 
+    "ansible_uptime_seconds": 11462, 
     "ansible_user_dir": "/root", 
     "ansible_user_gecos": "root", 
     "ansible_user_gid": 0, 
