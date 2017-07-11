@@ -7,17 +7,15 @@
         "10.0.26.108"
     ], 
     "ansible_all_ipv6_addresses": [
-        "fe80::9:cff:fe6b:148e", 
-        "fe80::7ae7:d1ff:fe7c:6ec8", 
-        "fe80::7ae7:d1ff:fe7c:6ec4", 
-        "fe80::7ae7:d1ff:fe7c:6ec8", 
-        "fe80::7ae7:d1ff:fe7c:6ec4", 
-        "fe80::7ae7:d1ff:fe7c:6ec4", 
-        "fe80::9481:e5ff:fe6f:2406", 
-        "fe80::7ae7:d1ff:fe7c:6ec8", 
-        "fe80::7ae7:d1ff:fe7c:6ec8", 
-        "fe80::7ae7:d1ff:fe7c:6ec4", 
-        "fe80::6a05:caff:fe07:3f55"
+        "fe80::d0d9:3cff:fe21:73c5", 
+        "fe80::7ae7:d1ff:fe7c:6ec2", 
+        "fe80::215:17ff:fe20:ae2a", 
+        "fe80::7ae7:d1ff:fe7c:6ec2", 
+        "fe80::7ae7:d1ff:fe7c:6ec2", 
+        "fe80::4808:1cff:fe1d:4012", 
+        "fe80::215:17ff:fe20:ae2a", 
+        "fe80::215:17ff:fe20:ae2a", 
+        "fe80::6a05:caff:fe07:3f54"
     ], 
     "ansible_apparmor": {
         "status": "enabled"
@@ -74,22 +72,15 @@
             "udp_fragmentation_offload": "off [fixed]", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "ipv6": [
-            {
-                "address": "fe80::7ae7:d1ff:fe7c:6ec4", 
-                "prefix": "64", 
-                "scope": "link"
-            }
-        ], 
         "lacp_rate": "fast", 
-        "macaddress": "78:e7:d1:7c:6e:c4", 
+        "macaddress": "78:e7:d1:7c:6e:c2", 
         "miimon": "100", 
         "mode": "802.3ad", 
         "mtu": 1500, 
         "promisc": true, 
         "slaves": [
-            "eth1", 
-            "eth0"
+            "eth0", 
+            "eth1"
         ], 
         "speed": 2000, 
         "type": "bonding"
@@ -145,12 +136,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::7ae7:d1ff:fe7c:6ec4", 
+                "address": "fe80::7ae7:d1ff:fe7c:6ec2", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "78:e7:d1:7c:6e:c4", 
+        "macaddress": "78:e7:d1:7c:6e:c2", 
         "mtu": 1500, 
         "promisc": true, 
         "speed": 2000, 
@@ -207,21 +198,21 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::7ae7:d1ff:fe7c:6ec8", 
+                "address": "fe80::215:17ff:fe20:ae2a", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
         "lacp_rate": "fast", 
-        "macaddress": "78:e7:d1:7c:6e:c8", 
+        "macaddress": "00:15:17:20:ae:2a", 
         "miimon": "100", 
         "mode": "802.3ad", 
         "mtu": 1500, 
         "promisc": true, 
         "slaves": [
-            "eth3", 
             "eth6", 
-            "eth2"
+            "eth2", 
+            "eth3"
         ], 
         "speed": 3000, 
         "type": "bonding"
@@ -275,14 +266,7 @@
             "udp_fragmentation_offload": "on", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "ipv6": [
-            {
-                "address": "fe80::7ae7:d1ff:fe7c:6ec8", 
-                "prefix": "64", 
-                "scope": "link"
-            }
-        ], 
-        "macaddress": "78:e7:d1:7c:6e:c8", 
+        "macaddress": "00:15:17:20:ae:2a", 
         "mtu": 1500, 
         "promisc": true, 
         "speed": 3000, 
@@ -339,21 +323,21 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::6a05:caff:fe07:3f55", 
+                "address": "fe80::6a05:caff:fe07:3f54", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
         "lacp_rate": "fast", 
-        "macaddress": "68:05:ca:07:3f:55", 
+        "macaddress": "68:05:ca:07:3f:54", 
         "miimon": "100", 
         "mode": "802.3ad", 
         "mtu": 1500, 
         "promisc": true, 
         "slaves": [
+            "eth4", 
             "eth5", 
-            "eth7", 
-            "eth4"
+            "eth7"
         ], 
         "speed": 3000, 
         "type": "bonding"
@@ -407,7 +391,7 @@
             "udp_fragmentation_offload": "off [requested on]", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "id": "8000.78e7d17c6ec4", 
+        "id": "8000.78e7d17c6ec2", 
         "interfaces": [
             "bond0"
         ], 
@@ -419,12 +403,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::7ae7:d1ff:fe7c:6ec4", 
+                "address": "fe80::7ae7:d1ff:fe7c:6ec2", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "78:e7:d1:7c:6e:c4", 
+        "macaddress": "78:e7:d1:7c:6e:c2", 
         "mtu": 1500, 
         "promisc": false, 
         "stp": false, 
@@ -479,7 +463,7 @@
             "udp_fragmentation_offload": "off [requested on]", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "id": "8000.6805ca073f55", 
+        "id": "8000.6805ca073f54", 
         "interfaces": [
             "bond2"
         ], 
@@ -491,12 +475,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::9:cff:fe6b:148e", 
+                "address": "fe80::d0d9:3cff:fe21:73c5", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "68:05:ca:07:3f:55", 
+        "macaddress": "68:05:ca:07:3f:54", 
         "mtu": 1500, 
         "promisc": false, 
         "stp": false, 
@@ -551,18 +535,18 @@
             "udp_fragmentation_offload": "off [requested on]", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "id": "8000.78e7d17c6ec8", 
+        "id": "8000.00151720ae2a", 
         "interfaces": [
             "bond1"
         ], 
         "ipv6": [
             {
-                "address": "fe80::7ae7:d1ff:fe7c:6ec8", 
+                "address": "fe80::215:17ff:fe20:ae2a", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "78:e7:d1:7c:6e:c8", 
+        "macaddress": "00:15:17:20:ae:2a", 
         "mtu": 1500, 
         "promisc": false, 
         "stp": false, 
@@ -617,7 +601,7 @@
             "udp_fragmentation_offload": "on", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "id": "8000.78e7d17c6ec8", 
+        "id": "8000.00151720ae2a", 
         "interfaces": [
             "bond1.26"
         ], 
@@ -629,12 +613,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::7ae7:d1ff:fe7c:6ec8", 
+                "address": "fe80::215:17ff:fe20:ae2a", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "78:e7:d1:7c:6e:c8", 
+        "macaddress": "00:15:17:20:ae:2a", 
         "mtu": 1500, 
         "promisc": false, 
         "stp": false, 
@@ -648,23 +632,23 @@
         "root": "UUID=0716211f-b17a-4b4a-aade-20364bdbcfa3"
     }, 
     "ansible_date_time": {
-        "date": "2017-07-09", 
-        "day": "09", 
-        "epoch": "1499652063", 
+        "date": "2017-07-10", 
+        "day": "10", 
+        "epoch": "1499740845", 
         "hour": "22", 
-        "iso8601": "2017-07-10T02:01:03Z", 
-        "iso8601_basic": "20170709T220103858554", 
-        "iso8601_basic_short": "20170709T220103", 
-        "iso8601_micro": "2017-07-10T02:01:03.858696Z", 
-        "minute": "01", 
+        "iso8601": "2017-07-11T02:40:45Z", 
+        "iso8601_basic": "20170710T224045630530", 
+        "iso8601_basic_short": "20170710T224045", 
+        "iso8601_micro": "2017-07-11T02:40:45.630673Z", 
+        "minute": "40", 
         "month": "07", 
-        "second": "03", 
-        "time": "22:01:03", 
+        "second": "45", 
+        "time": "22:40:45", 
         "tz": "EDT", 
         "tz_offset": "-0400", 
-        "weekday": "Sunday", 
-        "weekday_number": "0", 
-        "weeknumber": "27", 
+        "weekday": "Monday", 
+        "weekday_number": "1", 
+        "weeknumber": "28", 
         "year": "2017"
     }, 
     "ansible_default_ipv4": {
@@ -673,7 +657,7 @@
         "broadcast": "10.0.23.255", 
         "gateway": "10.0.23.1", 
         "interface": "br-mgmt", 
-        "macaddress": "78:e7:d1:7c:6e:c4", 
+        "macaddress": "78:e7:d1:7c:6e:c2", 
         "mtu": 1500, 
         "netmask": "255.255.255.0", 
         "network": "10.0.23.0", 
@@ -825,7 +809,7 @@
         "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin", 
         "PWD": "/home/rlaney", 
         "SHELL": "/bin/bash", 
-        "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-wxztcpcldphupveciqzjnkabqhwmdoxw; /usr/bin/python /home/rlaney/.ansible/tmp/ansible-tmp-1499652024.4-69074341445186/setup.py; rm -rf \"/home/rlaney/.ansible/tmp/ansible-tmp-1499652024.4-69074341445186/\" > /dev/null 2>&1", 
+        "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-ublsaulxpwtzfvrpewnjoykmpfmdpsrc; /usr/bin/python /home/rlaney/.ansible/tmp/ansible-tmp-1499740803.63-263356800884289/setup.py; rm -rf \"/home/rlaney/.ansible/tmp/ansible-tmp-1499740803.63-263356800884289/\" > /dev/null 2>&1", 
         "SUDO_GID": "1000", 
         "SUDO_UID": "1000", 
         "SUDO_USER": "rlaney", 
@@ -882,7 +866,7 @@
             "udp_fragmentation_offload": "off [fixed]", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "macaddress": "78:e7:d1:7c:6e:c4", 
+        "macaddress": "78:e7:d1:7c:6e:c2", 
         "module": "bnx2", 
         "mtu": 1500, 
         "pciid": "0000:02:00.0", 
@@ -939,7 +923,7 @@
             "udp_fragmentation_offload": "off [fixed]", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "macaddress": "78:e7:d1:7c:6e:c4", 
+        "macaddress": "78:e7:d1:7c:6e:c2", 
         "module": "bnx2", 
         "mtu": 1500, 
         "pciid": "0000:02:00.1", 
@@ -996,7 +980,7 @@
             "udp_fragmentation_offload": "off [fixed]", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "macaddress": "78:e7:d1:7c:6e:c8", 
+        "macaddress": "00:15:17:20:ae:2a", 
         "module": "bnx2", 
         "mtu": 1500, 
         "pciid": "0000:03:00.0", 
@@ -1053,7 +1037,7 @@
             "udp_fragmentation_offload": "off [fixed]", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "macaddress": "78:e7:d1:7c:6e:c8", 
+        "macaddress": "00:15:17:20:ae:2a", 
         "module": "bnx2", 
         "mtu": 1500, 
         "pciid": "0000:03:00.1", 
@@ -1110,7 +1094,7 @@
             "udp_fragmentation_offload": "off [fixed]", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "macaddress": "68:05:ca:07:3f:55", 
+        "macaddress": "68:05:ca:07:3f:54", 
         "module": "e1000e", 
         "mtu": 1500, 
         "pciid": "0000:0a:00.0", 
@@ -1167,7 +1151,7 @@
             "udp_fragmentation_offload": "off [fixed]", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "macaddress": "68:05:ca:07:3f:55", 
+        "macaddress": "68:05:ca:07:3f:54", 
         "module": "e1000e", 
         "mtu": 1500, 
         "pciid": "0000:0a:00.1", 
@@ -1224,7 +1208,7 @@
             "udp_fragmentation_offload": "off [fixed]", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "macaddress": "78:e7:d1:7c:6e:c8", 
+        "macaddress": "00:15:17:20:ae:2a", 
         "module": "e1000e", 
         "mtu": 1500, 
         "pciid": "0000:0d:00.0", 
@@ -1281,7 +1265,7 @@
             "udp_fragmentation_offload": "off [fixed]", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "macaddress": "68:05:ca:07:3f:55", 
+        "macaddress": "68:05:ca:07:3f:54", 
         "module": "e1000e", 
         "mtu": 1500, 
         "pciid": "0000:0d:00.1", 
@@ -1346,7 +1330,7 @@
             "udp_fragmentation_offload": "on", 
             "vlan_challenged": "off [fixed]"
         }, 
-        "id": "8000.78e7d17c6ec4", 
+        "id": "8000.78e7d17c6ec2", 
         "interfaces": [
             "bond0.25"
         ], 
@@ -1358,12 +1342,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::7ae7:d1ff:fe7c:6ec4", 
+                "address": "fe80::7ae7:d1ff:fe7c:6ec2", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "78:e7:d1:7c:6e:c4", 
+        "macaddress": "78:e7:d1:7c:6e:c2", 
         "mtu": 1500, 
         "promisc": false, 
         "stp": false, 
@@ -1536,12 +1520,12 @@
         }, 
         "ipv6": [
             {
-                "address": "fe80::9481:e5ff:fe6f:2406", 
+                "address": "fe80::4808:1cff:fe1d:4012", 
                 "prefix": "64", 
                 "scope": "link"
             }
         ], 
-        "macaddress": "96:81:e5:6f:24:06", 
+        "macaddress": "4a:08:1c:1d:40:12", 
         "mtu": 1500, 
         "promisc": false, 
         "stp": false, 
@@ -1549,16 +1533,16 @@
     }, 
     "ansible_machine": "x86_64", 
     "ansible_machine_id": "87a195e1b6b05008dac6fcc5594aecaf", 
-    "ansible_memfree_mb": 31270, 
+    "ansible_memfree_mb": 31077, 
     "ansible_memory_mb": {
         "nocache": {
-            "free": 31854, 
-            "used": 307
+            "free": 31853, 
+            "used": 308
         }, 
         "real": {
-            "free": 31270, 
+            "free": 31077, 
             "total": 32161, 
-            "used": 891
+            "used": 1084
         }, 
         "swap": {
             "cached": 0, 
@@ -1574,7 +1558,7 @@
             "fstype": "ext4", 
             "mount": "/", 
             "options": "rw,relatime,errors=remount-ro,data=ordered", 
-            "size_available": 545326948352, 
+            "size_available": 545323802624, 
             "size_total": 581524594688, 
             "uuid": "0716211f-b17a-4b4a-aade-20364bdbcfa3"
         }, 
@@ -1715,7 +1699,7 @@
     ], 
     "ansible_system_capabilities_enforced": "True", 
     "ansible_system_vendor": "HP", 
-    "ansible_uptime_seconds": 11418, 
+    "ansible_uptime_seconds": 13827, 
     "ansible_user_dir": "/root", 
     "ansible_user_gecos": "root", 
     "ansible_user_gid": 0, 
