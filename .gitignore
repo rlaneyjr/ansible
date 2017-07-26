@@ -84,6 +84,8 @@ playbooks/logs
 
 # NOT my repo directory for references:
 repo**
+repo-osa
+refs
 
 # Directories potentially created on remote AFP share
 .AppleDB
