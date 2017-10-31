@@ -15,9 +15,13 @@
 
 - name: Installation and setup of Rally
   hosts: utility_all
-  gather_facts: "{{ gather_facts | default(True) }}"
+  gather_facts: "{{ osa_gather_facts | default(True) }}"
   user: root
   pre_tasks:
+    - include: common-tasks/unbound-clients.yml
+      static: no
+      when:
+        - hostvars['localhost']['resolvconf_enabled'] | bool
     - include: common-tasks/mysql-db-user.yml
       static: no
       vars:

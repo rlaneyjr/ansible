@@ -35,19 +35,16 @@
   tasks:
     - name: Prepare group of master repo servers
       add_host:
-        name: "{{ item }}"
+        name: "{{ groups[item][0] }}"
         groups: repo_masters
-      when:
-        - "item in groups['repo_servers_' + ansible_distribution_version + '_' + ansible_architecture][0]"
-      with_inventory_hostnames:
-        - repo_all
+      with_items: "{{ groups | select('match', '^repo_servers_') | list }}"
   tags:
     - always
     - repo-build
 
 - name: Build new repo packages for a given release
   hosts: repo_masters
-  gather_facts: "{{ gather_facts | default(True) }}"
+  gather_facts: "{{ osa_gather_facts | default(True) }}"
   any_errors_fatal: true
   user: root
   serial: 1
@@ -128,11 +125,6 @@
     - role: "repo_build"
   vars_files:
     - defaults/repo_packages/openstack_services.yml
-  vars:
-    pkg_locations:
-      - "{{ playbook_dir }}/../"
-      - /etc/ansible/roles
-      - /etc/openstack_deploy
   environment: "{{ deployment_environment_variables | default({}) }}"
   tags:
     - repo-build

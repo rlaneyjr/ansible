@@ -174,7 +174,7 @@ sync_roles_and_packages() {
         fi
 
         # post-sync user hook
-        post_sync_hook ${repo_name} ${os_branch} ${osa_branch} ${repo_address}
+        osa_post_sync_hook ${repo_name} ${os_branch} ${osa_branch} ${repo_address}
 
         osa_helper_cleanup_files ${osa_repo_tmp_path} ${os_repo_tmp_path}
       fi
@@ -188,19 +188,16 @@ sync_roles_and_packages() {
 }
 
 #
-# Updates pip options using PIP_CURRENT_OPTIONS env variable
+# Updates global requirement pins for pip, setuptools and wheel
 #
 update_pip_options() {
-  # Update the PIP_INSTALL_OPTIONS with the current versions of pip, wheel and setuptools
   PIP_CURRENT_OPTIONS=$(./scripts/get-pypi-pkg-version.py -p pip setuptools wheel -l horizontal)
-  sed -i.bak "s|^PIP_INSTALL_OPTIONS=.*|PIP_INSTALL_OPTIONS=\$\{PIP_INSTALL_OPTIONS:-'${PIP_CURRENT_OPTIONS}'\}|" scripts/scripts-library.sh
 
   for pin in ${PIP_CURRENT_OPTIONS}; do
     sed -i.bak "s|^$(echo ${pin} | cut -f1 -d=).*|${pin}|" global-requirement-pins.txt
-    sed -i.bak "s|^  - $(echo ${pin} | cut -f1 -d=).*|  - ${pin}|" group_vars/all/pip.yml
   done
 
-  echo "Updated pip install options/pins"
+  echo "Updated global requirement pins"
 }
 
 #
@@ -232,8 +229,8 @@ update_ansible_role_requirements() {
       role_name=$(sed 's/^[ \t-]*//' ansible-role-requirements.yml | awk '/src: / || /name: / {print $2}' | grep -B1 "${role_src}" | head -n 1)
       echo "... updating ${role_name}"
 
-      # If the role_src is NOT from git.openstack.org, try to get a tag first
-      if [[ ${role_src} != *"git.openstack.org"* ]]; then
+      # If the role_src is NOT from git.openstack.org, try to get a tag first unless we are working on master
+      if [[ ${role_src} != *"git.openstack.org"* ]] && [[ "${force_master}" != "true" ]]; then
         role_version=$(git ls-remote --tags ${role_src} | awk '{print $2}' | grep -v '{}' | cut -d/ -f 3 | sort -n | tail -n 1)
       fi
 

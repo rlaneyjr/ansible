@@ -15,7 +15,7 @@
 
 - name: Install the ceilometer components
   hosts: ceilometer_all
-  gather_facts: "{{ gather_facts | default(True) }}"
+  gather_facts: "{{ osa_gather_facts | default(True) }}"
   max_fail_percentage: 20
   user: root
   pre_tasks:
@@ -35,6 +35,10 @@
         log_dirs:
           - src: "/openstack/log/{{ inventory_hostname }}-ceilometer"
             dest: "/var/log/ceilometer"
+    - include: common-tasks/unbound-clients.yml
+      static: no
+      when:
+        - hostvars['localhost']['resolvconf_enabled'] | bool
     - include: common-tasks/package-cache-proxy.yml
   roles:
     - role: "os_ceilometer"

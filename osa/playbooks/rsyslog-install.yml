@@ -15,7 +15,7 @@
 
 - name: Install rsyslog
   hosts: rsyslog
-  gather_facts: "{{ gather_facts | default(True) }}"
+  gather_facts: "{{ osa_gather_facts | default(True) }}"
   max_fail_percentage: 20
   user: root
   pre_tasks:
@@ -25,7 +25,11 @@
           - bind_dir_path: "{{ rsyslog_server_storage_directory }}"
             mount_path: "/openstack/{{ inventory_hostname }}/log-storage"
         extra_container_config_no_restart:
-          - "lxc.start.order=99"
+          - "lxc.start.order=19"
+    - include: common-tasks/unbound-clients.yml
+      static: no
+      when:
+        - hostvars['localhost']['resolvconf_enabled'] | bool
     - include: common-tasks/package-cache-proxy.yml
   roles:
     - role: "rsyslog_server"

@@ -82,11 +82,23 @@
     line: "{{ item.split('=')[0] }} = {{ item.split('=', 1)[1] }}"
     insertafter: "^{{ item.split('=')[0] }}"
     backup: "true"
-  with_items: "{{ extra_container_config_no_restart | default([]) }}"
+  with_items: "{{ extra_container_config_no_restart | default(['lxc.start.order=100']) }}"
   delegate_to: "{{ physical_host }}"
   when: not is_metal | bool
   tags:
     - common-lxc
+
+- name: Check container state
+  command: "lxc-info -n {{ inventory_hostname }} --state"
+  changed_when: false
+  delegate_to: "{{ physical_host }}"
+  register: _lxc_container_state
+  until: _lxc_container_state | success
+  retries: 3
+  delay: 5
+  when:
+    - not is_metal | bool
+    - (_mc is defined and _mc | changed) or (_ec is defined and _ec | changed)
 
 # Due to https://github.com/ansible/ansible-modules-extras/issues/2691
 # this uses the LXC CLI tools to ensure that we get logging.
@@ -103,6 +115,7 @@
   when:
     - not is_metal | bool
     - (_mc is defined and _mc | changed) or (_ec is defined and _ec | changed)
+    - _lxc_container_state.stdout.find('RUNNING') != -1
   tags:
     - common-lxc
 

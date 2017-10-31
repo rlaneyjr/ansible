@@ -37,10 +37,10 @@ export UPGRADE_PLAYBOOKS="${SCRIPTS_PATH}/upgrade-utilities/playbooks"
 export I_REALLY_KNOW_WHAT_I_AM_DOING=${I_REALLY_KNOW_WHAT_I_AM_DOING:-"false"}
 
 # The expected source series name
-export SOURCE_SERIES="ocata"
+export SOURCE_SERIES="pike"
 
 # The expected target series name
-export TARGET_SERIES="pike"
+export TARGET_SERIES="queens"
 
 ## Functions -----------------------------------------------------------------
 
@@ -175,6 +175,7 @@ function main {
         RUN_TASKS+=("${UPGRADE_PLAYBOOKS}/deploy-config-changes.yml")
         RUN_TASKS+=("${UPGRADE_PLAYBOOKS}/user-secrets-adjustment.yml")
         RUN_TASKS+=("${UPGRADE_PLAYBOOKS}/pip-conf-removal.yml")
+        RUN_TASKS+=("${UPGRADE_PLAYBOOKS}/ceph-galaxy-removal.yml")
         # we don't want to trigger galera container restarts yet
         RUN_TASKS+=("setup-hosts.yml --limit '!galera_all'")
         # add new container config to galera containers but don't restart

@@ -16,7 +16,7 @@
 - name: Install glance services
   hosts: "{{ glance_hosts }}"
   serial: "{{ glance_serial }}"
-  gather_facts: "{{ gather_facts | default(True) }}"
+  gather_facts: "{{ osa_gather_facts | default(True) }}"
   user: root
   environment: "{{ deployment_environment_variables | default({}) }}"
   tags:
@@ -55,20 +55,16 @@
           - src: "/openstack/log/{{ inventory_hostname }}-glance"
             dest: "/var/log/glance"
 
+    - include: ../common-tasks/unbound-clients.yml
+      static: no
+      when:
+        - hostvars['localhost']['resolvconf_enabled'] | bool
+
     - name: Configure package proxy cache
       include: ../common-tasks/package-cache-proxy.yml
 
   roles:
     - role: "os_glance"
-
-    - role: "ceph_client"
-      openstack_service_system_user: "{{ glance_system_user_name }}"
-      openstack_service_venv_bin: "{{ glance_bin }}"
-      when:
-        - "'glance_api' in group_names"
-        - "{{ 'rbd' in [glance_default_store | default('none')] + glance_additional_stores | default([]) }}"
-      tags:
-        - ceph
 
     - role: "openstack_openrc"
       tags:

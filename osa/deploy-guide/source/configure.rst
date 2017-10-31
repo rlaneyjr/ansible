@@ -50,8 +50,13 @@ these services include databases, Memcached, and RabbitMQ. Several other
 host types contain other types of containers, and all of these are listed
 in the ``openstack_user_config.yml`` file.
 
-For examples, please see :ref:`test-environment-config` and
-:ref:`production-environment-config`.
+Some services, such as glance, heat, horizon and nova-infra, are not listed
+individually in the example file as they are contained in the os-infra hosts.
+You can specify image-hosts or dashboard-hosts if you want to scale out in a
+specific manner.
+
+For examples, please see :ref:`test-environment-config`,
+:ref:`production-environment-config`, and :ref:`pod-environment-config`
 
 For details about how the inventory is generated from the environment
 configuration, see
@@ -65,7 +70,7 @@ Installing additional services
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To install additional services, the files in
-``/etc/openstack_deploy/conf.d`` provide examples showing
+``etc/openstack_deploy/conf.d`` provide examples showing
 the correct host groups to use. To add another service, add the host group,
 allocate hosts to it, and then execute the playbooks.
 
@@ -178,8 +183,8 @@ values for the variables in each file that contains service credentials:
 
 .. code-block:: shell-session
 
-   # cd /opt/openstack-ansible/scripts
-   # python pw-token-gen.py --file /etc/openstack_deploy/user_secrets.yml
+   # cd /opt/openstack-ansible
+   # ./scripts/pw-token-gen.py --file /etc/openstack_deploy/user_secrets.yml
 
 To regenerate existing passwords, add the ``--regen`` flag.
 

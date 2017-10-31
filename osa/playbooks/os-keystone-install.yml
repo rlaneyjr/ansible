@@ -15,7 +15,7 @@
 
 - name: Prepare MQ/DB services
   hosts: keystone_all
-  gather_facts: "{{ gather_facts | default(True) }}"
+  gather_facts: no
   user: root
   environment: "{{ deployment_environment_variables | default({}) }}"
   tags:
@@ -61,7 +61,7 @@
 - name: Installation and setup of Keystone
   hosts: keystone_all
   serial: "{{ keystone_serial | default(['1', '100%']) }}"
-  gather_facts: "{{ gather_facts | default(True) }}"
+  gather_facts: "{{ osa_gather_facts | default(True) }}"
   max_fail_percentage: 20
   user: root
   environment: "{{ deployment_environment_variables | default({}) }}"
@@ -86,7 +86,7 @@
       include: common-tasks/os-lxc-container-setup.yml
       vars:
         extra_container_config_no_restart:
-          - "lxc.start.order=89"
+          - "lxc.start.order=19"
 
     - name: Configure log directories (on metal)
       include: common-tasks/os-log-dir-setup.yml
@@ -94,6 +94,11 @@
         log_dirs:
           - src: "/openstack/log/{{ inventory_hostname }}-keystone"
             dest: "/var/log/keystone"
+
+    - include: common-tasks/unbound-clients.yml
+      static: no
+      when:
+        - hostvars['localhost']['resolvconf_enabled'] | bool
 
     - name: Configure package proxy cache
       include: common-tasks/package-cache-proxy.yml
@@ -148,6 +153,7 @@
 # a long time if executed against a large inventory.
 - name: Finalise data migrations if required
   hosts: keystone_all
+  gather_facts: no
   max_fail_percentage: 20
   user: root
   environment: "{{ deployment_environment_variables | default({}) }}"
@@ -200,10 +206,7 @@
       ini_file:
         dest: "/etc/ansible/facts.d/openstack_ansible.fact"
         section: keystone
-        option: "{{ item }}"
+        option: "need_db_contract"
         value: False
-      with_items:
-        - "need_db_sync"
-        - "need_db_contract"
       when:
         - "dbsync_contract | succeeded"

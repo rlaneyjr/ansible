@@ -25,6 +25,7 @@ hosts:
 
 * `Ubuntu server 16.04 (Xenial Xerus) LTS 64-bit <http://releases.ubuntu.com/16.04/>`_
 * `Centos 7 64-bit <https://www.centos.org/download/>`_
+* `openSUSE 42.X 64-bit <https://software.opensuse.org/distributions/leap>`_
 
 Configure at least one network interface to access the Internet or suitable
 local repositories.
@@ -79,7 +80,7 @@ Before you begin, we recommend upgrading your system packages and kernel.
 
    .. code-block:: shell-session
 
-       # yum install https://rdoproject.org/repos/openstack-ocata/rdo-release-ocata.rpm
+       # yum install https://rdoproject.org/repos/openstack-pike/rdo-release-pike.rpm
        # yum install git ntp ntpdate openssh-server python-devel \
          sudo '@Development Tools'
 
@@ -101,6 +102,31 @@ Before you begin, we recommend upgrading your system packages and kernel.
     to create proper firewall rules for OpenStack services in OpenStack-Ansible
     deployments. Until that work is complete, deployers must maintain their
     own firewall rulesets or disable the firewall entirely.
+
+Configure the operating system (openSUSE)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Install additional software packages and configure Network Time Protocol (NTP).
+Before you begin, we recommend upgrading your system packages and kernel.
+
+#. Upgrade the system packages and kernel
+
+   .. code-block:: shell-session
+
+       # zypper up
+
+#. Reboot the host.
+
+#. Install additional software packages if they were not installed
+   during the operating system installation:
+
+   .. code-block:: shell-session
+
+       # zypper ar http://download.opensuse.org/repositories/Cloud:/OpenStack:/Pike/openSUSE_Leap_42.3 OBS:Cloud:OpenStack:Pike
+       # zypper install git-core ntp openssh python-devel \
+         sudo gcc libffi-devel libopenssl-devel
+
+#. Configure NTP to synchronize with a suitable time source.
 
 Configure the network
 ~~~~~~~~~~~~~~~~~~~~~

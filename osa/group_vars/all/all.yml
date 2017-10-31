@@ -14,7 +14,7 @@
 # limitations under the License.
 
 ## OpenStack Source Code Release
-openstack_release: master
+openstack_release: 17.0.0.0b1
 
 ## Verbosity Options
 debug: False
@@ -30,7 +30,10 @@ package_state: "latest"
 default_bind_mount_logs: true
 
 # Set distro variable
-os_distro_version: "{{ ansible_distribution | lower }}-{{ ansible_distribution_version.split('.')[:2] | join('.') }}-{{ ansible_architecture | lower }}"
+# NOTE(hwoarang): ansible_distribution may return a string with spaces
+# such as "openSUSE Leap" so we need to replace the space with underscore
+# in order to create a more sensible repo name for the distro.
+os_distro_version: "{{ (ansible_distribution | lower) | replace(' ', '_') }}-{{ ansible_distribution_version.split('.')[:2] | join('.') }}-{{ ansible_architecture | lower }}"
 
 # Ensure that the package state matches the global setting
 rsyslog_client_package_state: "{{ package_state }}"
@@ -82,7 +85,6 @@ service_ldap_backend_enabled: "{{ keystone_ldap is defined and keystone_ldap.Def
 venv_tag: "{{ openstack_release }}"
 venv_base_download_url: "{{ openstack_repo_url }}/venvs/{{ openstack_release }}/{{ os_distro_version }}"
 
-
 ## Gnocchi
 # Used in both Gnocchi and Swift roles.
 gnocchi_service_project_name: "{{ (gnocchi_storage_driver is defined and gnocchi_storage_driver == 'swift') | ternary('gnocchi_swift', 'service') }}"
@@ -98,7 +100,7 @@ openrc_region_name: "{{ service_region }}"
 # by applying security configurations from the STIG. Hardening is enabled by
 # default, but an option to opt out is available by setting the following
 # variable to 'false'.
-# Docs: http://docs.openstack.org/developer/ansible-hardening/
+# Docs: https://docs.openstack.org/ansible-hardening/latest/
 apply_security_hardening: true
 
 ## Ansible ssh configuration
@@ -116,4 +118,3 @@ ansible_ssh_extra_args: >
 
 # Toggle whether the service is deployed in a container or not
 is_metal: "{{ properties.is_metal | default(false) }}"
-

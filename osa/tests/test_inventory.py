@@ -26,16 +26,14 @@ import warnings
 import yaml
 
 INV_DIR = 'playbooks/inventory'
-LIB_DIR = 'osa_toolkit'
 
-sys.path.append(path.join(os.getcwd(), LIB_DIR))
 sys.path.append(path.join(os.getcwd(), INV_DIR))
 
-import dictutils
+from osa_toolkit import dictutils
 import dynamic_inventory
-import filesystem as fs
-import generate as di
-import tools
+from osa_toolkit import filesystem as fs
+from osa_toolkit import generate as di
+from osa_toolkit import tools
 
 TARGET_DIR = path.join(os.getcwd(), 'tests', 'inventory')
 BASE_ENV_DIR = INV_DIR
@@ -192,6 +190,11 @@ class TestAnsibleInventoryFormatConstraints(unittest.TestCase):
         'designate_worker',
         'designate_producer',
         'designate_sink',
+        'etcd',
+        'etcd_all',
+        'etcd_container',
+        'etcd_containers',
+        'etcd_hosts',
         'galera',
         'galera_all',
         'galera_container',
@@ -212,9 +215,8 @@ class TestAnsibleInventoryFormatConstraints(unittest.TestCase):
         'heat_api',
         'heat_api_cfn',
         'heat_api_cloudwatch',
-        'heat_apis_container',
+        'heat_api_container',
         'heat_engine',
-        'heat_engine_container',
         'horizon',
         'horizon_all',
         'horizon_container',
@@ -228,11 +230,15 @@ class TestAnsibleInventoryFormatConstraints(unittest.TestCase):
         'ironic-infra_all',
         'ironic-infra_containers',
         'ironic-infra_hosts',
+        'ironic-server_containers',
+        'ironic-server_hosts',
         'ironic_all',
         'ironic_api',
         'ironic_api_container',
         'ironic_conductor',
         'ironic_server',
+        'ironic_server_container',
+        'ironic_servers',
         'ironic_compute',
         'ironic_compute_container',
         'ironic-compute_containers',
@@ -243,16 +249,23 @@ class TestAnsibleInventoryFormatConstraints(unittest.TestCase):
         'keystone',
         'keystone_all',
         'keystone_container',
+        'kvm-compute_containers',
+        'kvm-compute_hosts',
         'log_all',
         'log_containers',
         'log_hosts',
         'lxc_hosts',
+        'lxd-compute_containers',
+        'lxd-compute_hosts',
         'magnum',
         'magnum-infra_all',
         'magnum-infra_containers',
         'magnum-infra_hosts',
         'magnum_all',
         'magnum_container',
+        'mano_all',
+        'mano_containers',
+        'mano_hosts',
         'octavia-infra_hosts',
         'octavia_all',
         'octavia-api',
@@ -262,6 +275,10 @@ class TestAnsibleInventoryFormatConstraints(unittest.TestCase):
         'octavia-health-manager',
         'octavia-infra_containers',
         'octavia-infra_all',
+        'powervm-compute_containers',
+        'powervm-compute_hosts',
+        'qemu-compute_containers',
+        'qemu-compute_hosts',
         'trove_all',
         'trove_api',
         'trove_conductor',
@@ -315,19 +332,15 @@ class TestAnsibleInventoryFormatConstraints(unittest.TestCase):
         'neutron_server_container',
         'nova_all',
         'nova_api_metadata',
-        'nova_api_metadata_container',
         'nova_api_os_compute',
-        'nova_api_os_compute_container',
+        'nova_api_container',
         'nova_api_placement',
-        'nova_api_placement_container',
         'nova_compute',
         'nova_compute_container',
         'nova_conductor',
-        'nova_conductor_container',
         'nova_console',
-        'nova_console_container',
         'nova_scheduler',
-        'nova_scheduler_container',
+        'opendaylight',
         'operator_containers',
         'operator_hosts',
         'orchestration_all',
@@ -384,6 +397,9 @@ class TestAnsibleInventoryFormatConstraints(unittest.TestCase):
         'swift_remote',
         'swift_remote_all',
         'swift_remote_container',
+        'tacker_all',
+        'tacker_container',
+        'tacker_server',
         'unbound',
         'unbound_all',
         'unbound_container',
@@ -483,8 +499,8 @@ class TestIps(unittest.TestCase):
         self.longMessage = True
         self.env = fs.load_environment(BASE_ENV_DIR, {})
 
-    @mock.patch('filesystem.load_environment')
-    @mock.patch('filesystem.load_user_configuration')
+    @mock.patch('osa_toolkit.filesystem.load_environment')
+    @mock.patch('osa_toolkit.filesystem.load_user_configuration')
     def test_duplicates(self, mock_load_config, mock_load_env):
         """Test that no duplicate IPs are made on any network."""
 
@@ -554,9 +570,20 @@ class TestConfigCheckBase(unittest.TestCase):
         self.user_defined_config[key] = value
         self.write_config()
 
+    def add_provider_network(self, net_name, cidr):
+        self.user_defined_config['cidr_networks'][net_name] = cidr
+        self.write_config()
+
     def delete_provider_network(self, net_name):
         del self.user_defined_config['cidr_networks'][net_name]
         self.write_config()
+
+    def add_provider_network_key(self, net_name, key, value):
+        pns = self.user_defined_config['global_overrides']['provider_networks']
+        for net in pns:
+            if 'ip_from_q' in net['network']:
+                if net['network']['ip_from_q'] == net_name:
+                    net['network'][key] = value
 
     def delete_provider_network_key(self, net_name, key):
         pns = self.user_defined_config['global_overrides']['provider_networks']
@@ -1182,8 +1209,8 @@ class TestNetworkEntry(unittest.TestCase):
 
 
 class TestDebugLogging(unittest.TestCase):
-    @mock.patch('generate.logging')
-    @mock.patch('generate.logger')
+    @mock.patch('osa_toolkit.generate.logging')
+    @mock.patch('osa_toolkit.generate.logger')
     def test_logging_enabled(self, mock_logger, mock_logging):
         # Shadow the real value so tests don't complain about it
         mock_logging.DEBUG = 10
@@ -1194,8 +1221,8 @@ class TestDebugLogging(unittest.TestCase):
         self.assertTrue(mock_logger.info.called)
         self.assertTrue(mock_logger.debug.called)
 
-    @mock.patch('generate.logging')
-    @mock.patch('generate.logger')
+    @mock.patch('osa_toolkit.generate.logging')
+    @mock.patch('osa_toolkit.generate.logger')
     def test_logging_disabled(self, mock_logger, mock_logging):
         get_inventory(extra_args={"debug": False})
 
@@ -1239,7 +1266,7 @@ class TestLxcHosts(TestConfigCheckBase):
         inventory['lxc_hosts']['hosts'].append('compute1')
         faked_path = INV_DIR
 
-        with mock.patch('filesystem.load_inventory') as inv_mock:
+        with mock.patch('osa_toolkit.filesystem.load_inventory') as inv_mock:
             inv_mock.return_value = (inventory, faked_path)
             new_inventory = get_inventory()
         # host should no longer be in lxc_hosts
@@ -1255,7 +1282,7 @@ class TestLxcHosts(TestConfigCheckBase):
         self.assertNotIn('lxc_hosts', inventory.keys())
 
         faked_path = INV_DIR
-        with mock.patch('filesystem.load_inventory') as inv_mock:
+        with mock.patch('osa_toolkit.filesystem.load_inventory') as inv_mock:
             inv_mock.return_value = (inventory, faked_path)
             new_inventory = get_inventory()
 
@@ -1372,7 +1399,7 @@ class TestInventoryGroupConstraints(unittest.TestCase):
             'load_user_configuration': mock.DEFAULT
         }
 
-        with mock.patch.multiple('filesystem', **kwargs) as mocks:
+        with mock.patch.multiple('osa_toolkit.filesystem', **kwargs) as mocks:
             mocks['load_environment'].return_value = env
             mocks['load_user_configuration'].return_value = config
 
@@ -1398,6 +1425,33 @@ class TestInventoryGroupConstraints(unittest.TestCase):
 
         self.assertTrue(result)
 
+class TestL3ProviderNetworkConfig(TestConfigCheckBase):
+    def setUp(self):
+        super(TestL3ProviderNetworkConfig, self).setUp()
+        self.delete_provider_network('container')
+        self.add_provider_network('pod1_container', '172.29.236.0/22')
+        self.add_provider_network_key('container', 'ip_from_q',
+                                      'pod1_container')
+        self.add_provider_network_key('pod1_container', 'address_prefix',
+                                      'management')
+        self.add_provider_network_key('pod1_container', 'reference_group',
+                                      'pod1_hosts')
+        self.add_config_key('pod1_hosts', {})
+        self.add_host('pod1_hosts', 'aio2', '172.29.236.101')
+        self.add_host('compute_hosts', 'aio2', '172.29.236.101')
+        self.write_config()
+        self.inventory = get_inventory()
+
+    def test_address_prefix_name_applied(self):
+         aio2_host_vars = self.inventory['_meta']['hostvars']['aio2']
+         aio2_container_networks = aio2_host_vars['container_networks']
+         self.assertIsInstance(aio2_container_networks['management_address'],
+                               dict)
+
+    def test_host_outside_reference_group_excluded(self):
+         aio1_host_vars = self.inventory['_meta']['hostvars']['aio1']
+         aio1_container_networks = aio1_host_vars['container_networks']
+         self.assertNotIn('management_address', aio1_container_networks)
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(catchbreak=True)
