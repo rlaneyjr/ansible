@@ -119,7 +119,7 @@ delegator.py==0.0.12
 decorator==4.0.11
 Cython==0.25.2
 curtsies==0.2.11
-cryptography==1.9
+cryptography==3.2
 crochet==1.7.0
 crayons==0.1.2
 constantly==15.1.0
