@@ -27,7 +27,7 @@ scp==0.10.2
 scapy==2.3.3
 scandir==1.5
 s3transfer==0.1.10
-rsa==3.4.2
+rsa==4.2
 requirements-parser==0.1.0
 requests==2.18.1
 redis==2.10.5
