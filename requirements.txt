@@ -61,7 +61,7 @@ powerline-docker==1.0.4
 ply==3.10
 pipfile==0.0.2
 pipenv==5.1.1
-pip==9.0.1
+pip==21.1
 pip-purge==0.1.0
 Pillow==4.1.1
 pickleshare==0.7.4
