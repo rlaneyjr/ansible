@@ -63,7 +63,7 @@ pipfile==0.0.2
 pipenv==5.1.1
 pip==9.0.1
 pip-purge==0.1.0
-Pillow==4.1.1
+Pillow==9.0.0
 pickleshare==0.7.4
 pexpect==4.2.1
 pew==0.1.26
