@@ -22,7 +22,7 @@ SimpleParse==2.2.0
 simplejson==3.11.1
 simplegeneric==0.8.1
 shutilwhich==1.1.0
-setuptools==36.0.1
+setuptools==65.5.1
 scp==0.10.2
 scapy==2.3.3
 scandir==1.5
